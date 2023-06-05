@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Times Now Light';
+    src: url('../fonts/TimesNow-Light.ttf');
+  }
+  
+  .navigation-container {
+    position: fixed; /* Position the container relative to the viewport */
+    top: 0; /* Align the container to the top */
+    left: 0; /* Align the container to the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%; /* Occupy the full width of the viewport */
+    z-index: 999; /* Set a higher z-index to ensure the buttons appear on top */
+  }
+  
+  .top-buttons,
+  .bottom-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .about,
+  .projects,
+  .resume,
+  .linkedin,
+  .github,
+  .email {
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    font-family: 'Times Now Light';
+  }
+  
+  .top-buttons {
+    padding-top: 10px;
+  }
+  
+  .bottom-buttons {
+    padding-bottom: 20px;
+    align-self: flex-end;
+  }
+  

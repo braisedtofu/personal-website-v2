@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Times Now Light';
+    src: url('../fonts/TimesNow-Light.ttf');
+  }
+  
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 580px;
+    margin-top: auto; /* Pushes the container to the top */
+    margin-bottom: 190px; /* Adds some space at the bottom */
+    justify-content: flex-start; /* Aligns items to the top */  
+  }
+  
+  .about-title {
+    font-family: 'Times Now Light';
+    font-size: 100px;
+    color: black;
+    margin-bottom: 0px;
+    display: flex;
+  }
+  
+  .about-details {
+    margin-top: 0px;
+    font-family: 'Times Now Light';
+    font-size: 14px;
+    color: black;
+    text-align: justify;
+    border-left: 2px solid black; 
+    padding-left: 10px; 
+  }
+  
+  .about-details-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .about-details-bar {
+    width: 2px;
+    background-color: black;
+    margin-right: 10px;
+  }
+  
+  .about-details-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    margin-right: 70px;
+  }
+  
+  .about-details-list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 80px;
+    font-family: 'Times Now Light';
+    font-size: 14px;
+    color: black;
+
+  }
+  
+  .about-details-list-item:before {
+    content: "-"; /* Add a bullet point or desired list style */
+    margin-right: 5px;
+  }
+    
