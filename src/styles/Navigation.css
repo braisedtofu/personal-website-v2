@@ -13,7 +13,6 @@
     align-items: center;
     height: 100vh;
     width: 100%; /* Occupy the full width of the viewport */
-    z-index: 999; /* Set a higher z-index to ensure the buttons appear on top */
   }
   
   .top-buttons,
