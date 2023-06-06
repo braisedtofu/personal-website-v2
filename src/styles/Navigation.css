@@ -36,11 +36,13 @@
   }
   
   .top-buttons {
-    padding-top: 10px;
+    padding-top: 0px;
+    margin:0; 
+    padding:0; 
   }
   
   .bottom-buttons {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     align-self: flex-end;
   }
   
