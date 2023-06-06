@@ -78,7 +78,7 @@ export default function Home() {
                 Sponsorships and Partnerships Manager @ Robogals Auckland
             </p>
             <p className="experience-details-date">
-                Jan 2022 - Nov 2023
+                Jan 2022 - Nov 2022
             </p>
             <ul className="experience-details-item-container">
                 <li className="experience-detail-item">
