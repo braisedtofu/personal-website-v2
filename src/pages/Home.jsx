@@ -12,6 +12,7 @@ export default function Home() {
     const [showContent, setShowContent] = useState(false);
     const [showAboutContent, setAboutShowContent] = useState(false);
     const { isNightMode } = useContext(NightModeContext);
+    const { color } = useContext(NightModeContext);
 
     // if about is true, then show about details
     // if about is false, then show experience details
@@ -185,7 +186,7 @@ export default function Home() {
       );
                   
     return (
-        <div className={`container ${isNightMode ? 'night-mode' : ''}`}>
+        <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color }}> 
             <Navigation />
                 <div className="about-container">
                     <div className="about-title">
@@ -194,9 +195,9 @@ export default function Home() {
                             cursor
                             cursorStyle='|'
                             typeSpeed={150}
-                            delaySpeed={1000}
+                            delaySpeed={3000}
                             deleteSpeed={50}
-                            cursorColor={isNightMode ? 'white' : 'black'}
+                            cursorColor={color}
                             />
                     </div>
 

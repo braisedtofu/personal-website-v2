@@ -1,27 +1,13 @@
-.container,
-.container *,
-.container ul,
-.container ul li,
-.container p,
-.container{
-  color: black;
-}
-
-.container *{
-    background-color: #E9EAE4; /* Update the color here */
+:root {
+    --main-color: black; /* Define a CSS variable for the main color */
   }
   
-.container .experience-list-item::after,
-.container .about-details-list-item::after{
-    background-color: black; /* Update the color here */
-  }
-
   .container.night-mode,
   .container.night-mode *,
   .container.night-mode ul,
   .container.night-mode ul li,
   .container.night-mode p {
-    color: #DEDFDE; /* Dark mode text color */
+    color: var(--main-color); /* Dark mode text color */
   }
   
   .container.night-mode * {
@@ -30,6 +16,23 @@
   
   .container.night-mode .about-details-list-item::after,
   .container.night-mode .experience-list-item::after {
-    background-color: #DEDFDE; /* Common color for list item pseudo-element */
+    background-color: var(--main-color); /* Common color for list item pseudo-element */
+  }
+  
+  .container.day-mode,
+  .container.day-mode *,
+  .container.day-mode ul,
+  .container.day-mode ul li,
+  .container.day-mode p {
+    color: var(--main-color); /* Dark mode text color */
+  }
+  
+  .container.day-mode * {
+    background-color: #DEDFDE; /* Dark mode background color */
+  }
+  
+  .container.day-mode .about-details-list-item::after,
+  .container.day-mode .experience-list-item::after {
+    background-color: var(--main-color); /* Common color for list item pseudo-element */
   }
   
