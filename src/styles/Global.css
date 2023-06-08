@@ -1,6 +1,35 @@
-:root{
-    --light-beige: #E9EAE4;
+.container,
+.container *,
+.container ul,
+.container ul li,
+.container p,
+.container{
+  color: black;
 }
 
-.container{
-}
+.container *{
+    background-color: #E9EAE4; /* Update the color here */
+  }
+  
+.container .experience-list-item::after,
+.container .about-details-list-item::after{
+    background-color: black; /* Update the color here */
+  }
+
+  .container.night-mode,
+  .container.night-mode *,
+  .container.night-mode ul,
+  .container.night-mode ul li,
+  .container.night-mode p {
+    color: #DEDFDE; /* Dark mode text color */
+  }
+  
+  .container.night-mode * {
+    background-color: #262B29; /* Dark mode background color */
+  }
+  
+  .container.night-mode .about-details-list-item::after,
+  .container.night-mode .experience-list-item::after {
+    background-color: #DEDFDE; /* Common color for list item pseudo-element */
+  }
+  

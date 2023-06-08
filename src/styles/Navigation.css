@@ -22,6 +22,10 @@
     width: 100%;
   }
   
+  .about {
+    margin-right: auto;
+  }
+  
   .about,
   .projects,
   .resume,
@@ -29,20 +33,25 @@
   .github,
   .email {
     border: none;
+    border-color: transparent;
     background-color: transparent;
     color: black;
     font-size: 18px;
+    outline:none; 
     font-family: 'Times Now Light';
+    cursor: pointer; 
   }
   
   .top-buttons {
     padding-top: 0px;
     margin:0; 
     padding:0; 
+    align-self:flex-start;
   }
   
   .bottom-buttons {
     padding-bottom: 0px;
-    align-self: flex-end;
+    align-self:flex-start;
   }
   
+      

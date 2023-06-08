@@ -1,33 +1,60 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import Navigation from "../components/Navigation";
 import "../styles/Global.css";
 import "../styles/Home.css";
 import { Typewriter } from 'react-simple-typewriter'
+import NightModeContext from '../NightModeContext';
 
 export default function Home() {
 
-    const [about, setAbout] = useState(true);
+    const [about, setAbout] = useState("about");
     const [experience, setExperience] = useState("Beca");
+    const [showContent, setShowContent] = useState(false);
+    const [showAboutContent, setAboutShowContent] = useState(false);
+    const { isNightMode } = useContext(NightModeContext);
 
     // if about is true, then show about details
     // if about is false, then show experience details
     const handleButtonClick = (button) => {
         if (button === "about") {
-            setAbout(true);
-        } else {
-            setAbout(false);
+          setAboutShowContent(false); // Set showContent to false when experience changes
+          setTimeout(() => {
+            setAbout(button);
+          }, 500); // Wait for 500 milliseconds before updating experience
+        } else if (button === "experience") {
+          setAboutShowContent(false); // Set showContent to false when experience changes
+          setTimeout(() => {
+            setAbout(button);
+          }, 500); // Wait for 500 milliseconds before updating experience
         }
-    }
-
-    const handleExperienceClick = (button) => {
-            setExperience(button);
-    }
+      };
+          
+    const handleExperienceClick = (selectedExperience) => {
+        if ( experience  != selectedExperience){
+        setShowContent(false); // Set showContent to false when experience changes
+        }
+        setTimeout(() => {
+          setExperience(selectedExperience);
+        }, 500); // Wait for 500 milliseconds before updating experience
+      };
+    
+    useEffect(() => {
+        setShowContent(true); // Set showContent to true after a short delay
+      }, [experience]);
+    
+    useEffect(() => {
+        setAboutShowContent(true); // Set showContent to true after a short delay
+      }, [about]);
+    
 
     let experienceContent = null; 
-
+    
     if (experience === "Beca") {
         experienceContent = (
-          <div className="experience-details-container">
+        <div
+        className={`experience-details-container ${
+          showContent ? "fade-in" : ""
+        }`} >            
             <p className="experience-details-title">
                 Digital Consulting Intern @ Beca
             </p>
@@ -53,8 +80,11 @@ export default function Home() {
         );
       } else if (experience === "Robogals") {
         experienceContent = (
-            <div className="experience-details-container">
-            <p className="experience-details-title">
+            <div
+            className={`experience-details-container ${
+              showContent ? "fade-in" : ""
+            }`} >            
+                <p className="experience-details-title">
                 Vice President @ Robogals Auckland
             </p>
             <p className="experience-details-date">
@@ -98,7 +128,10 @@ export default function Home() {
         );
       } else if (experience === "Rainbow Engineering") {
         experienceContent = (
-            <div className="experience-details-container">
+        <div
+        className={`experience-details-container ${
+          showContent ? "fade-in" : ""
+        }`} >            
             <p className="experience-details-title">
                 Events Manager @ Rainbow Engineering
             </p>
@@ -123,19 +156,48 @@ export default function Home() {
           </p>
         );
       }
-    
+
+      let bioContent = null;
+
+      bioContent = (
+        <div className={`experience-container ${showAboutContent ? "fade-in-experience-container" : ""}`}>
+          {about === "about" ? (
+            <p className={`about-details ${showAboutContent ? "fade-in-about-details" : ""}`}>
+              Passionate about coding, designing, and crafting captivating web experiences, I am a final year Computer Systems Engineering student at the University of Auckland. My goal is to build virtual spaces that challenge what an exceptional user experience means. My specialty in computer systems has encouraged me to combine my technical skills in coding and systems engineering, and my love for human-centered design.<br/><br/>Outside of university, I’m involved in extracurricular roles dedicated to giving back to the community. As the Events Manager at Rainbow Engineering, I organize events that connect LGBTQ individuals in the field of engineering. I am the current Vice President at Robogals, an international student-led organization. Our unified goal is to inspire young women to pursue STEM education and careers.
+            </p>
+          ) : (
+            <>
+              <ul className="experience-list">
+                <li className="experience-list-item" onClick={() => handleExperienceClick("Beca")}>
+                  (Beca)
+                </li>
+                <li className="experience-list-item" onClick={() => handleExperienceClick("Robogals")}>
+                  (Robogals)
+                </li>
+                <li className="experience-list-item" onClick={() => handleExperienceClick("Rainbow Engineering")}>
+                  (Rainbow Engineering)
+                </li>
+              </ul>
+              {experienceContent}
+            </>
+          )}
+        </div>
+      );
+                  
     return (
-        <div className="container">
+        <div className={`container ${isNightMode ? 'night-mode' : ''}`}>
             <Navigation />
                 <div className="about-container">
-                    {/* <p className="about-title">Hi, Wynn here</p> */}
                     <div className="about-title">
                     <Typewriter
                             words={['Hi, Wynn here']}
                             cursor
                             cursorStyle='|'
-                            typeSpeed={100}
-                        />
+                            typeSpeed={150}
+                            delaySpeed={1000}
+                            deleteSpeed={50}
+                            cursorColor={isNightMode ? 'white' : 'black'}
+                            />
                     </div>
 
                     <div className="about-details-container">
@@ -147,27 +209,7 @@ export default function Home() {
                             (experience)
                             </li>
                         </ul>
-                    {about ? (
-                        <p className="about-details">Passionate about coding, designing, and crafting captivating web experiences, I am a final year Computer Systems Engineering student at the University of Auckland. My goal is to build virtual spaces that challenge what an exceptional user experience means. My specialty in computer systems has encouraged me to combine my technical skills in coding and systems engineering, and my love for human-centered design.<br/><br/>Outside of university, I’m involved in extracurricular roles dedicated to giving back to the community. As the Events Manager at Rainbow Engineering, I organize events that connect LGBTQ individuals in the field of engineering. I am the current Vice President at Robogals, an international student-led organization. Our unified goal is to inspire young women to pursue STEM education and careers.</p>
-                    ) : 
-                    <div className="experience-container">
-                        <ul className="experience-list">
-                            <li className="experience-list-item" onClick={() => handleExperienceClick("Beca")}>
-                                (Beca)
-                            </li>
-                            <li className="experience-list-item" onClick={() => handleExperienceClick("Robogals")}>
-                                (Robogals)
-                            </li>
-                            <li className="experience-list-item" onClick={() => handleExperienceClick("Rainbow Engineering")}>
-                                (Rainbow Engineering)
-                            </li>
-                        </ul>
-                            
-                        {experienceContent}
-
-                    </div>
-                    }
-
+                        {bioContent}
                     </div>
                 </div>
 
