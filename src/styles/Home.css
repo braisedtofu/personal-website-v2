@@ -49,7 +49,7 @@
 .about-details {
   margin-top: 0px;
   font-family: 'Times Now Light';
-  font-size: 14px;
+  font-size: 15px;
   color: black;
   text-align: justify;
   opacity: 0;
@@ -86,7 +86,7 @@
   align-items: flex-start;
   margin-bottom: 10px;
   font-family: 'Times Now Light';
-  font-size: 14px;
+  font-size: 15px;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -143,7 +143,7 @@
   font-family: 'Times Now Light';
   margin-top: 0;
   padding-top: 0;
-  font-size: 14px;
+  font-size: 15px;
   padding: 0;
   margin-right: 20px;
   color: black;
@@ -185,7 +185,7 @@
 .experience-details-title {
   margin-top: 0px;
   font-family: 'Times Now Bold';
-  font-size: 14px;
+  font-size: 15px;
   color: black;
   width: 100%;
   margin-bottom: 0;
@@ -213,7 +213,7 @@
 
 .experience-detail-item {
   font-family: 'Times Now Light';
-  font-size: 14px;
+  font-size: 15px;
   color: black;
   margin-bottom: 3px;
 }
@@ -229,7 +229,7 @@
     text-shadow: 0 0 0 rgba(var(--main-color), 0); /* Start with transparent text shadow */
   }
   to {
-    text-shadow: 0 0 13px var(--main-color); /* Transition to the desired text shadow style */
+    text-shadow: 0 0 17px var(--main-color); /* Transition to the desired text shadow style */
   }
 }
 

@@ -37,12 +37,12 @@
     left: 50%;
     transform: translate(-50%, -40%);
     color: var(--main-color);
-    font-size: 0.7em;
+    font-size: 0.9em;
     background-color: transparent;
     cursor: pointer;
     width: 10vw; 
     height: 5vh;
-    text-align: justify;
+    text-align: center;
   }
   
   .summary {
@@ -131,3 +131,4 @@
   align-items: left;
   text-align: left;
 }
+
