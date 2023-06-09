@@ -13,16 +13,25 @@ export default function Home() {
     const [showAboutContent, setAboutShowContent] = useState(false);
     const { isNightMode } = useContext(NightModeContext);
     const { color } = useContext(NightModeContext);
+    const { backgroundColor } = useContext(NightModeContext);
 
+    const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+    console.log(backgroundColor);
+
+    useEffect(() => {
+      setIsPageLoaded(true); // Set the state variable to indicate that the page has loaded
+    }, []);
+  
     // if about is true, then show about details
     // if about is false, then show experience details
     const handleButtonClick = (button) => {
-        if (button === "about") {
+        if (button === "about" && about != "about") {
           setAboutShowContent(false); // Set showContent to false when experience changes
           setTimeout(() => {
             setAbout(button);
           }, 500); // Wait for 500 milliseconds before updating experience
-        } else if (button === "experience") {
+        } else if (button === "experience" && about != "experience") {
           setAboutShowContent(false); // Set showContent to false when experience changes
           setTimeout(() => {
             setAbout(button);
@@ -169,13 +178,22 @@ export default function Home() {
           ) : (
             <>
               <ul className="experience-list">
-                <li className="experience-list-item" onClick={() => handleExperienceClick("Beca")}>
+                <li
+                  className={`experience-list-item ${experience === 'Beca' ? 'selected-experience' : ''}`}
+                  onClick={() => handleExperienceClick('Beca')}
+                >
                   (Beca)
                 </li>
-                <li className="experience-list-item" onClick={() => handleExperienceClick("Robogals")}>
+                <li
+                  className={`experience-list-item ${experience === 'Robogals' ? 'selected-experience' : ''}`}
+                  onClick={() => handleExperienceClick('Robogals')}
+                >
                   (Robogals)
                 </li>
-                <li className="experience-list-item" onClick={() => handleExperienceClick("Rainbow Engineering")}>
+                <li
+                  className={`experience-list-item ${experience === 'Rainbow Engineering' ? 'selected-experience' : ''}`}
+                  onClick={() => handleExperienceClick('Rainbow Engineering')}
+                >
                   (Rainbow Engineering)
                 </li>
               </ul>
@@ -186,16 +204,16 @@ export default function Home() {
       );
                   
     return (
-        <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color }}> 
+        <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor }}> 
             <Navigation />
-                <div className="about-container">
+            <div className={`about-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
                     <div className="about-title">
                     <Typewriter
                             words={['Hi, Wynn here']}
                             cursor
                             cursorStyle='|'
                             typeSpeed={150}
-                            delaySpeed={3000}
+                            delaySpeed={1000}
                             deleteSpeed={50}
                             cursorColor={color}
                             />
@@ -213,7 +231,6 @@ export default function Home() {
                         {bioContent}
                     </div>
                 </div>
-
-        </div>
+            </div>
     );
 }

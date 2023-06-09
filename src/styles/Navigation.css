@@ -32,7 +32,7 @@
     border-color: transparent;
     background-color: transparent;
     color: black;
-    font-size: 18px;
+    font-size: 15px;
     outline:none; 
     font-family: 'Times Now Light';
     cursor: pointer; 
@@ -43,6 +43,7 @@
     margin:0; 
     padding:0; 
     align-self:flex-start;
+    
   }
   
   .bottom-buttons {

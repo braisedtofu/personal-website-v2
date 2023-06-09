@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Times Now Light';
+  src: url('../fonts/TimesNow-Light.ttf');
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 60px;
+  width: 100vw;
+  position: relative;
+  overflow-y: scroll;
+  row-gap:inherit;
+}
+  
+  .grid-list-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .grid-list-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: 'Times Now Light';
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .grid-list-item:hover .summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: var(--main-color);
+    font-size: 0.7em;
+    background-color: transparent;
+    cursor: pointer;
+    width: 10vw; 
+    height: 5vh;
+    text-align: justify;
+  }
+  
+  .summary {
+    display: none;
+  }
+  
+  .grid-list-item img {
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px var(--box-shadow);
+    transition: opacity 0.2s ease; /* Add transition property */
+  }
+  
+  .grid-list-item:hover img {
+    opacity: 0.1;
+  }
+  
+  .caption {
+    margin-top: 10px;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 0px;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    transform: translate(-50%);
+    position: relative;
+    width: 100vw;
+    height: 88vh;
+  }
+
+  .grid-inner{
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100vw;
+    position: relative;
+  }
+
+  .grid-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw; 
+    height: 8%; /* Adjust the height of the gradient as needed */
+    background: linear-gradient(to bottom, var(--background-color), transparent);
+  }
+
+  
+  .grid-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width:100vw;
+    height: 3%; /* Adjust the height of the gradient as needed */
+    background: linear-gradient(to top, var(--background-color), transparent);
+  }
+  
+  .grid-container.fade-enter {
+    opacity: 1;
+  }
+  
+.sub-caption{
+  font-family: 'Times Now Light';
+  font-size: 10px;
+  margin-top: 10px;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}

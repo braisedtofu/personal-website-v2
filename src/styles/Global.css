@@ -8,10 +8,11 @@
   .container.night-mode ul li,
   .container.night-mode p {
     color: var(--main-color); /* Dark mode text color */
+
   }
   
   .container.night-mode * {
-    background-color: #262B29; /* Dark mode background color */
+    background-color: var(--background-color); /* Dark mode background color */
   }
   
   .container.night-mode .about-details-list-item::after,
@@ -28,7 +29,7 @@
   }
   
   .container.day-mode * {
-    background-color: #DEDFDE; /* Dark mode background color */
+    background-color: var(--background-color); /* Dark mode background color */
   }
   
   .container.day-mode .about-details-list-item::after,

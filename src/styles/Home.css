@@ -24,10 +24,17 @@
   margin-bottom: 0px;
   top: 3%;
   left: 50%;
+  opacity:0; 
+  transition: opacity 1s ease-in-out;
   transform: translate(-50%);
   position: fixed;
   background-color: transparent !important;
 }
+
+.about-container.fade-enter {
+  opacity: 1; /* When the fade-enter class is applied, set opacity to 1 */
+}
+
 
 .about-title {
   font-family: 'Times Now Light';
@@ -210,3 +217,24 @@
   color: black;
   margin-bottom: 3px;
 }
+
+
+.selected-experience {
+  text-shadow: 0 0 0 var(--main-color); /* Set initial text shadow to transparent */
+  animation: text-shadow-fade-in 0.5s ease-in-out forwards; /* Apply the fade-in animation */
+}
+
+@keyframes text-shadow-fade-in {
+  from {
+    text-shadow: 0 0 0 rgba(var(--main-color), 0); /* Start with transparent text shadow */
+  }
+  to {
+    text-shadow: 0 0 13px var(--main-color); /* Transition to the desired text shadow style */
+  }
+}
+
+
+
+
+
+
