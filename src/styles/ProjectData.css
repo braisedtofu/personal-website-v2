@@ -9,26 +9,33 @@
   }
   
 .project-details-container {
-    left: 50%;
-    transform: translate(-50%);
     width: 100vw;
     flex-direction: row;
     display: flex;
-    position: fixed;
+    position: relative;
+    overflow-y: scroll;
   }
 
-  .project-details-container::after {
+  .gradient-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+  }
+  
+  .gradient-overlay::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    width: 100vw; 
-    height: 4%; /* Adjust the height of the gradient as needed */
-    background: linear-gradient(to bottom, var(--background-color), transparent);
+    height: 2vh;
+    background: linear-gradient(to top, transparent, var(--background-color));
   }
-
+  
   .project-details-inner {
+    overflow: scroll;
     top: 6vh;
     left: 50%;
     transform: translate(-50%);
@@ -63,10 +70,11 @@
     margin-top: auto;
     align-items: flex-start; /* Align items to the left */
     margin-bottom: 0px;
-    position: relative;
+    position: sticky;
+    top: 0; /* Adjust the top position as needed */
+    z-index: 2; /* Adjust the z-index as needed */
     width: 50vw;
     height: 88vh;
-    overflow: hidden;
     margin-left:22px; 
     max-width: 50%; /* Set the maximum width to 50% of the viewport width */
   }
@@ -80,22 +88,29 @@
     margin-bottom: 0px;
     position: relative;
     height: 88vh;
+    padding-bottom: 20px;
     width:50vw;
-    max-width: 50%; /* Set the maximum width to 50% of the viewport width */
+    margin-bottom: 20px; /* Add a desired margin at the bottom */
     overflow-y: scroll;
   }
   
   
   .image-container {
-    margin-bottom: 5px;
+    height:100vh;
+    width:50vw;
     padding:46px;
+    padding-top: 5%; 
+  }
+
+  .image-container:last-child {
+    margin-bottom: 50px; /* Adjust the margin-bottom value as needed */
   }
   
   .image-container img {
     width: 80%;
-    display: block;
+    display: initial;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     box-shadow: 0 0 10px 2px var(--box-shadow);
   }
   

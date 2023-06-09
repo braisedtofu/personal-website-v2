@@ -35,6 +35,7 @@ const ProjectDetails = () => {
         <Navigation />
         <div className={`project-details-inner fade ${isPageLoaded ? 'fade-enter' : ''}`}>
         <div className="project-details-container">
+        <div className="gradient-overlay"></div> {/* Add this line for the gradient overlay */}
             <div className="project-information">
                 <button className="return" onClick={handleProjectsClick} >(return)</button>
                 <p className="project-title">{project.title}</p>
@@ -42,18 +43,16 @@ const ProjectDetails = () => {
                 <p className="project-collab">{project.collab}</p>
                 <p className="project-description">{project.description}</p>
             </div>
-            <div className="project-images">
                 <div className="image-container">
                     <img src={project.image} alt={project.title} />
                     <img src={project.image} alt={project.title} />
                     <img src={project.image} alt={project.title} />
                 </div>
-                <div className="scroll-container">
+                {/* <div className="scroll-container">
                     <div className="arrow up"></div>
-                    <div className="scroll">Scroll</div>
+                    <div className="scroll">scroll</div>
                     <div className="arrow down"></div>
-                </div>
-            </div>
+                </div> */}
         </div>
         </div>
     </div>
