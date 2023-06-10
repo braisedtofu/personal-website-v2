@@ -35,5 +35,18 @@
   .container.day-mode .about-details-list-item::after,
   .container.day-mode .experience-list-item::after {
     background-color: var(--main-color); /* Common color for list item pseudo-element */
+
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Set the background color of the scrollbar track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* Set the color of the scrollbar thumb */
   }
   

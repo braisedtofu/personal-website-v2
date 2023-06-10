@@ -13,21 +13,22 @@ const ProjectDetails = () => {
   const project = ProjectData.find((item) => item.ProjectId === ProjectId);
   const navigate = useNavigate();
   const [isPageLoaded, setIsPageLoaded] = useState(false);
-  const projectImagesContainer = document.querySelector('.project-images');
-
-  window.addEventListener('scroll', (event) => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    projectImagesContainer.scrollTop = scrollTop;
-  });
   
 
   useEffect(() => {
-    setIsPageLoaded(true); // Set the state variable to indicate that the page has loaded
+    setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 200);
+    return () => {
+    };
   }, []);
 
   const handleProjectsClick = () => {
-    navigate('/projects'); // Navigate to the projects page
+      navigate('/projects'); // Navigate to the projects page after a delay
   };
+  useEffect(() => {
+    console.log("Screen width: " + window.innerWidth);
+  }, []);
 
   // Render the project details
   return (
@@ -43,11 +44,11 @@ const ProjectDetails = () => {
                 <p className="project-collab">{project.collab}</p>
                 <p className="project-description">{project.description}</p>
             </div>
-                <div className="image-container">
-                    <img src={project.image} alt={project.title} />
-                    <img src={project.image} alt={project.title} />
-                    <img src={project.image} alt={project.title} />
-                </div>
+            <div className="image-container">
+              {project.images.map((image, index) => (
+                <img key={index} src={image} alt={project.title} />
+              ))}
+            </div>
                 {/* <div className="scroll-container">
                     <div className="arrow up"></div>
                     <div className="scroll">scroll</div>

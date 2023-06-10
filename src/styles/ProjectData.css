@@ -35,7 +35,6 @@
   }
   
   .project-details-inner {
-    overflow: scroll;
     top: 6vh;
     left: 50%;
     transform: translate(-50%);
@@ -78,7 +77,8 @@
     margin-left:22px; 
     max-width: 50%; /* Set the maximum width to 50% of the viewport width */
   }
-  
+
+
   .project-images {
     display: flex;
     pointer-events: auto; /* Enable pointer events */
@@ -91,29 +91,29 @@
     padding-bottom: 20px;
     width:50vw;
     margin-bottom: 20px; /* Add a desired margin at the bottom */
-    overflow-y: scroll;
   }
   
   
   .image-container {
-    height:100vh;
-    width:50vw;
-    padding:46px;
-    padding-top: 5%; 
-  }
-
-  .image-container:last-child {
-    margin-bottom: 50px; /* Adjust the margin-bottom value as needed */
+    width: 50vw;
+    height: 200vh; /* Adjust the height for larger screens */
+    padding: 46px;
+    padding-top: 5%;
+    flex-direction: column;
+    overflow-x:hidden;
+    display: inline-table;
   }
   
   .image-container img {
-    width: 80%;
-    display: initial;
+    width: 450px;
+    display: block;
     margin: 0 auto;
-    margin-bottom: 90px;
+    margin-bottom: 20px;
     box-shadow: 0 0 10px 2px var(--box-shadow);
   }
-  
+
+
+
   .image-container:first-child img {
     position: relative;
     top: 4%;
@@ -132,7 +132,7 @@
 
   .project-title{
     font-family: 'Times Now Light';
-    font-size: 3.8em;
+    font-size: 4rem;
     top:0; 
     margin-top:0; 
     margin-bottom: 0px;
@@ -153,9 +153,10 @@
 
   .project-description{
     font-family: 'Times Now Light';
-    font-size: 0.9em;
+    font-size:0.8em;
     text-align:justify;
   }
+
 
   .return{
   border: none;
@@ -208,4 +209,104 @@
     -webkit-transform: rotate(45deg);
   }
   
+  @media screen and (min-width: 1439px) {
+    .image-container {
+      height: 220vh;
+    }
+  }
+  
+  @media screen and (min-width: 1539px) {
+    .project-title {
+      font-size: 4em;
+    }
+  
+    .project-description {
+      font-size: 1em;
+    }
+  
+    .project-technologies,
+    .project-collab {
+      font-size: 1em;
+    }
+  
+    .image-container img {
+      width: 500px;
+    }
+  }
+  
+  @media screen and (min-width: 2339px) {
+    .project-technologies,
+    .project-collab {
+      font-size: 2em;
+    }
+  
+    .project-title {
+      font-size: 8em;
+    }
+  
+    .project-description {
+      font-size: 1em;
+    }
+  
+    .image-container img {
+      width: 700px;
+    }
+  }
+  
+  @media screen and (min-width: 1900px) {
+    .project-technologies,
+    .project-collab {
+      font-size: 2em;
+    }
+  
+    .project-title {
+      font-size: 5em;
+    }
+  
+    .project-description {
+      font-size: 1em;
+    }
+  
+    .image-container img {
+      width: 600px;
+    }
+  }
+  
+  @media screen and (min-width: 2900px) {
+    .project-technologies,
+    .project-collab {
+      font-size: 2em;
+    }
+  
+    .project-title {
+      font-size: 8em;
+    }
+  
+    .project-description {
+      font-size: 1.5em;
+    }
+  
+    .image-container img {
+      width: 1200px;
+    }
+  }
+  
+  @media screen and (min-width: 5000px) {
+    .project-technologies,
+    .project-collab {
+      font-size: 2.5em;
+    }
+  
+    .project-title {
+      font-size: 16em;
+    }
+  
+    .project-description {
+      font-size: 3em;
+    }
+  
+    .image-container img {
+      width: 1800px;
+    }
+  }
   

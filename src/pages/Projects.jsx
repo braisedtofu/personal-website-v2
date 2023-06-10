@@ -5,7 +5,14 @@ import '../styles/Home.css';
 import { Typewriter } from 'react-simple-typewriter';
 import NightModeContext from '../NightModeContext';
 import ProjectList from '../components/ProjectList';
+import village from '../assets/pikatune/village.png';
 import predict4 from '../assets/AlphabetPrediction/predict4.png';
+import ml1 from '../assets/AlphabetPrediction/ml1.jpeg';
+import dogtitle from '../assets/bodypawsitive/dogtitle9.png';
+import line1 from '../assets/linefollowingrobot/line1.png';
+import circle1 from '../assets/circlemecircleyou/circle1.png';
+import trebuchet1 from '../assets/terribletrebuchet/trebuchet1.jpg';
+import box3 from '../assets/flappybox/box3.png';
 
 export default function Projects() {
   const { isNightMode } = useContext(NightModeContext);
@@ -14,33 +21,34 @@ export default function Projects() {
   const { boxShadow } = useContext(NightModeContext);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
-
   useEffect(() => {
-    setIsPageLoaded(true); // Set the state variable to indicate that the page has loaded
+    setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 200);
+    return () => {
+    };
   }, []);
 
   const dataList = [
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4, name: 'handwriting-prediction', caption: '(1) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: village, name: 'pikatune', caption: '(1) Pikatune', subcaption: 'Mongo DB, Express, Node, React, Spotify API', summary: 'A Pokémon-themed playlist generator game. Have gym battles, add friends, customise your playlist, and level up!'},
+    { image: dogtitle, name: 'bodypawsitive', caption: '(2) Body Pawsitive', subcaption: 'MERN Stack, Raspberry Pico W, C/C++', summary: 'A smart scale system designed from scratch to weigh and log the weights of our furry friends, all managed through a web application.'},
+    { image: trebuchet1, name: 'handwriting-prediction', caption: '(3) The Terrible Trebuchet', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: line1, name: 'handwriting-prediction', caption: '(4) Line Following Robot', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: predict4, name: 'handwriting-prediction', caption: '(5) Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: circle1, name: 'handwriting-prediction', caption: '(6) Circle Me, Circle You', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: box3, name: 'handwriting-prediction', caption: '(7) Flappy Box ', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: predict4, name: 'handwriting-prediction', caption: '(8) Pokedex', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: predict4, name: 'handwriting-prediction', caption: '(9) Design Scholarship Board', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: predict4, name: 'handwriting-prediction', caption: '(10) Object Detection', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: predict4, name: 'handwriting-prediction', caption: '(11) wynnmo.com', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: predict4, name: 'handwriting-prediction', caption: '(12) Julie Fractals', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: predict4, name: 'handwriting-prediction', caption: '(13) Bootleg Spotify', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: predict4, name: 'handwriting-prediction', caption: '(14) Ripples', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: predict4, name: 'handwriting-prediction', caption: '(15) I See, therefore I Am', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
     
     // Add more items as needed
   ];
       
-  console.log(boxShadow);
-
   return (
     <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor, '--box-shadow': boxShadow}}>
         <Navigation />

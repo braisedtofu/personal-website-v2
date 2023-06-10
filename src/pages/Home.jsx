@@ -17,11 +17,14 @@ export default function Home() {
 
     const [isPageLoaded, setIsPageLoaded] = useState(false);
 
-    console.log(backgroundColor);
-
     useEffect(() => {
-      setIsPageLoaded(true); // Set the state variable to indicate that the page has loaded
+      setTimeout(() => {
+        setIsPageLoaded(true);
+      }, 200);
+      return () => {
+      };
     }, []);
+    
   
     // if about is true, then show about details
     // if about is false, then show experience details
