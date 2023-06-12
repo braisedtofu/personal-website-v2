@@ -209,6 +209,7 @@ export default function Home() {
     return (
         <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor }}> 
             <Navigation />
+            
             <div className={`about-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
                     <div className="about-title">
                     <Typewriter

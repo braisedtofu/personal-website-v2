@@ -32,7 +32,31 @@
     transition: opacity 0.2s ease; /* Add transition property */
   }
   
-  @media screen and (min-width: 1539px) {
+  @media screen and (max-width: 434px) {
+    .grid-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 435px) and (max-width: 636px) {
+    .grid-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+  }
+  
+  @media screen and (min-width: 637px) and (max-width: 921px) {
+    .grid-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .grid-list-item img {
+      height: 12vh;
+    }
+
+
+  }
+
+    @media screen and (min-width: 1539px) {
     .grid-list-item img {
       height:27vh;
       max-width: 100%; /* Set a maximum width for the image */
@@ -43,12 +67,6 @@
 
   }
 
-  @media screen and (max-width: 1039px) {
-    .grid-list-item img {
-      height: 10vh;
-
-    }
-  }
 
   .grid-list-item {
     display: flex;
