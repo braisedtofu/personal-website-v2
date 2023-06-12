@@ -20,7 +20,7 @@ export default function Home() {
     useEffect(() => {
       setTimeout(() => {
         setIsPageLoaded(true);
-      }, 200);
+      }, 50);
       return () => {
       };
     }, []);

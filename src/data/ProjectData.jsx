@@ -13,7 +13,6 @@ import generate2 from '../assets/pikatune/generate2.png';
 import pikatune1 from '../assets/pikatune/pikatune1.png';
 import pikatune2 from '../assets/pikatune/pikatune2.png';
 import playlist from '../assets/pikatune/playlist.png';
-import ml1 from '../assets/AlphabetPrediction/ml1.jpeg';
 import predict1 from '../assets/AlphabetPrediction/predict1.png';
 import predict2 from '../assets/AlphabetPrediction/predict2.png';
 import predict3 from '../assets/AlphabetPrediction/predict3.png';

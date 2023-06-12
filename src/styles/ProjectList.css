@@ -6,7 +6,7 @@
 .grid-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 60px;
+  grid-gap: 0px;
   width: 100vw;
   position: relative;
   overflow-y: scroll;
@@ -28,15 +28,19 @@
     align-items: center;
     object-fit: cover;
     cursor: pointer;
-    box-shadow: 0 0 10px 2px var(--box-shadow);
+    box-shadow: 0 0 14px 8px var(--box-shadow);
     transition: opacity 0.2s ease; /* Add transition property */
   }
   
   @media screen and (min-width: 1539px) {
     .grid-list-item img {
-      height: 30vh;
+      height:27vh;
       max-width: 100%; /* Set a maximum width for the image */
     }
+    .grid-list {
+      column-gap: 0px
+    }
+
   }
 
   @media screen and (max-width: 1039px) {
@@ -49,7 +53,7 @@
   .grid-list-item {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 40px;
     font-family: 'Times Now Light';
     font-size: 15px;
     position: relative;
@@ -82,7 +86,7 @@
   }
   
   .caption {
-    margin-top: 10px;
+    margin-top: 35px;
     justify-content: left;
     align-items: left;
     text-align: left;
@@ -91,7 +95,7 @@
 
   @media screen and (min-width: 1539px) {
     .caption{
-      font-size: 1.3em;
+      font-size: 1.1em;
     }
   }
 
@@ -158,7 +162,7 @@
 
 @media screen and (min-width: 1539px) {
   .sub-caption{
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 

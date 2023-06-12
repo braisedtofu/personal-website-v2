@@ -18,7 +18,7 @@ const ProjectDetails = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsPageLoaded(true);
-    }, 200);
+    }, 50);
     return () => {
     };
   }, []);
