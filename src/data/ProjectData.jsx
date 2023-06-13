@@ -49,7 +49,7 @@ const ProjectData = [
         ],
         title: "Pikatune",
         technologies: "Technologies: MERN stack, Spotify API",
-        collab: "In collaboration with Alan Lin, Danika Chhour, and May Sribunwongsa",
+        collab: "In collaboration with Alan Lin, Danika Chhour, Saakshi Hedge, and May Sribunwongsa",
         description: (
           <>
             <p>
