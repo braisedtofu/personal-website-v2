@@ -216,22 +216,20 @@ export default function Home() {
                             words={['Hi, Wynn here']}
                             cursor
                             cursorStyle='|'
-                            typeSpeed={150}
-                            delaySpeed={1000}
-                            deleteSpeed={50}
+                            typeSpeed={220}
                             cursorColor={color}
                             />
                     </div>
 
                     <div className="about-details-container">
-                        <ul className="about-details-list">
-                            <li className="about-details-list-item" onClick={() => handleButtonClick("about")}>
+                        <div className="about-details-list">
+                            <p className={`about-details-list-item ${about === 'about' ? 'selected-about' : ''}`} onClick={() => handleButtonClick("about")}>
                             (about)
-                            </li>
-                            <li className="about-details-list-item" onClick={() => handleButtonClick("experience")}>
+                            </p>
+                            <p className={`about-details-list-item ${about === 'experience' ? 'selected-about' : ''}`} onClick={() => handleButtonClick("experience")}>
                             (experience)
-                            </li>
-                        </ul>
+                            </p>
+                        </div>
                         {bioContent}
                     </div>
                 </div>

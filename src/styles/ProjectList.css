@@ -3,32 +3,52 @@
   src: url('../fonts/TimesNow-Light.ttf');
 }
 
+@font-face {
+  font-family: 'Times Now Bold';
+  src: url('../fonts/TimesNow-Bold.ttf');
+}
+
+
+@font-face {
+  font-family: 'Times Now ExtraLight';
+  src: url('../fonts/TimesNow-ExtraLight.ttf');
+}
+
+
 .grid-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 0px;
-  width: 100vw;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   position: relative;
-  overflow-y: scroll;
-  overflow-x:hidden;
-  row-gap:inherit;
+  overflow: hidden;
+  row-gap: inherit;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  box-sizing: border-box; /* Add this line */
+
+  padding-left: 100px; /* Adjust the left padding value as desired */
+  padding-right: 100px; /* Adjust the right padding value as desired */
 }
-  
   .grid-list-row {
     display: grid;
+    margin-bottom: 40px;
+    
     grid-template-columns: repeat(1, 1fr);
   }
   
+  
   .grid-list-item img {
-    height: 24vh;
+    height: 31vh;
     max-width: 100%; /* Set a maximum width for the image */
     flex-shrink: 0;
     display: flex;
+    margin-right: 20px;
     justify-content: center;
     align-items: center;
     object-fit: cover;
     cursor: pointer;
-    box-shadow: 0 0 14px 8px var(--box-shadow);
+    box-shadow: 0 0 8px 3px var(--box-shadow);
     transition: opacity 0.2s ease; /* Add transition property */
   }
   
@@ -58,7 +78,7 @@
 
     @media screen and (min-width: 1539px) {
     .grid-list-item img {
-      height:27vh;
+      height:30vh;
       max-width: 100%; /* Set a maximum width for the image */
     }
     .grid-list {
@@ -71,11 +91,13 @@
   .grid-list-item {
     display: flex;
     flex-direction: column;
-    padding: 40px;
     font-family: 'Times Now Light';
-    font-size: 15px;
+    font-size: 10px;
     position: relative;
     cursor: pointer;
+    width:100%;
+    background: transparent;
+    background-color: transparent;
   }
 
   .grid-list-item:hover .summary {
@@ -83,14 +105,14 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 39%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    top: 40%;
+    left: 45%;
+    transform: translate(-45%, -40%);
     color: var(--main-color);
-    font-size: 0.9em;
+    font-size: 1.5em;
     background-color: transparent;
     cursor: pointer;
-    width: 10vw; 
+    width: 12vw; 
     height: 5vh;
     text-align: center;
   }
@@ -104,11 +126,30 @@
   }
   
   .caption {
-    margin-top: 35px;
+    margin-top: 10px;
+    font-size: 11px;
     justify-content: left;
     align-items: left;
     text-align: left;
     user-select: none;
+    font-family: 'Times Now Bold'
+  }
+  
+  .number {
+    background: transparent;
+    color: none;
+    margin-top: 0;
+    margin-right: 20px;
+    font-family: 'Times Now ExtraLight';
+    font-size: 10px;
+  }
+
+  .grid-image-number{
+    display:flex;
+    flex-direction: row; 
+    background-color:transparent;
+    margin-top: 18px;
+    justify-content: center;
   }
 
   @media screen and (min-width: 1539px) {
@@ -171,7 +212,6 @@
 .sub-caption{
   font-family: 'Times Now Light';
   font-size: 10px;
-  margin-top: 10px;
   justify-content: left;
   align-items: left;
   text-align: left;
