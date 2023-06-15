@@ -27,8 +27,8 @@
   overflow: auto;
   box-sizing: border-box; /* Add this line */
 
-  padding-left: 100px; /* Adjust the left padding value as desired */
-  padding-right: 100px; /* Adjust the right padding value as desired */
+  padding-left: 80px; /* Adjust the left padding value as desired */
+  padding-right: 80px; /* Adjust the right padding value as desired */
 }
   .grid-list-row {
     display: grid;
@@ -39,7 +39,7 @@
   
   
   .grid-list-item img {
-    height: 31vh;
+    height: 30vh;
     max-width: 100%; /* Set a maximum width for the image */
     flex-shrink: 0;
     display: flex;
@@ -48,13 +48,24 @@
     align-items: center;
     object-fit: cover;
     cursor: pointer;
-    box-shadow: 0 0 8px 3px var(--box-shadow);
+    box-shadow: 0 0 10px 4px var(--box-shadow);
     transition: opacity 0.2s ease; /* Add transition property */
   }
   
   @media screen and (max-width: 434px) {
     .grid-list {
       grid-template-columns: repeat(1, 1fr);
+      padding-left:20px;
+      padding-right:20px;
+    }
+    .grid-list-item img {
+      height: 20vh;
+    }
+
+    .summary {
+      width: 54vw !important; 
+      font-size: 1em;
+
     }
   }
 
@@ -62,12 +73,20 @@
     .grid-list {
       grid-template-columns: repeat(3, 1fr);
     }
+    .grid-list-item img {
+      height: 12vh;
+    }
+    .grid-list-item:hover .summary {
+      width: 80vw; 
+      font-size: 1em;
+
+    }
 
   }
   
   @media screen and (min-width: 637px) and (max-width: 921px) {
     .grid-list {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
     .grid-list-item img {
       height: 12vh;
@@ -109,10 +128,10 @@
     left: 45%;
     transform: translate(-45%, -40%);
     color: var(--main-color);
-    font-size: 1.5em;
+    font-size: 1.2em;
     background-color: transparent;
     cursor: pointer;
-    width: 12vw; 
+    width: 20vw; 
     height: 5vh;
     text-align: center;
   }
@@ -122,11 +141,11 @@
   }
     
   .grid-list-item:hover img {
-    opacity: 0.1;
+    opacity: 0.08;
   }
   
   .caption {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 11px;
     justify-content: left;
     align-items: left;

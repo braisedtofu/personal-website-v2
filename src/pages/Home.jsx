@@ -162,6 +162,30 @@ export default function Home() {
           </div>
 
         );
+      }
+      else if (experience === "UoA") {
+        experienceContent = (
+        <div
+        className={`experience-details-container ${
+          showContent ? "fade-in" : ""
+        }`} >            
+            <p className="experience-details-title">
+                Teaching Assistant @ University of Auckland
+            </p>
+            <p className="experience-details-date">
+                Incoming Semester 2, 17th July
+            </p>
+            <ul className="experience-details-item-container">
+                <li className="experience-detail-item">
+                  TA for COMPSYS 306: Artificial Intelligence and Machine Learning
+                </li>
+                <li className="experience-detail-item">
+                  As an incoming TA, I will be responsible for assisting in marking assignments, tests, exams, and providing academic assistance to students.
+                </li>
+            </ul>
+          </div>
+
+        );
       } else {
         experienceContent = (
           <p className="experience-details-title">
@@ -199,6 +223,13 @@ export default function Home() {
                 >
                   (Rainbow Engineering)
                 </li>
+                <li
+                  className={`experience-list-item ${experience === 'UoA' ? 'selected-experience' : ''}`}
+                  onClick={() => handleExperienceClick('UoA')}
+                >
+                  (UoA)
+                </li>
+
               </ul>
               {experienceContent}
             </>
