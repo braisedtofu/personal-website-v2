@@ -45,15 +45,15 @@ const ProjectDetails = () => {
                 <p className="project-description">{project.description}</p>
             </div>
             <div className="image-container">
-              {project.images.map((image, index) => (
+            {project.video && (
+                <video controls autoplay>
+                  <source src={project.video} type="video/mp4" />
+                </video>
+              )}
+              {project.images && project.images.map((image, index) => (
                 <img key={index} src={image} alt={project.title} />
               ))}
             </div>
-                {/* <div className="scroll-container">
-                    <div className="arrow up"></div>
-                    <div className="scroll">scroll</div>
-                    <div className="arrow down"></div>
-                </div> */}
         </div>
         </div>
     </div>

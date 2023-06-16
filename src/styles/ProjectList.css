@@ -18,7 +18,7 @@
 .grid-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap:0px;
   position: relative;
   overflow: hidden;
   row-gap: inherit;
@@ -26,9 +26,9 @@
   align-items: center;
   overflow: auto;
   box-sizing: border-box; /* Add this line */
-
-  padding-left: 80px; /* Adjust the left padding value as desired */
-  padding-right: 80px; /* Adjust the right padding value as desired */
+  width:100vw;
+  padding-left: 40px;
+  padding-right: 40px;
 }
   .grid-list-row {
     display: grid;
@@ -39,7 +39,7 @@
   
   
   .grid-list-item img {
-    height: 30vh;
+    height: 29vh;
     max-width: 100%; /* Set a maximum width for the image */
     flex-shrink: 0;
     display: flex;
@@ -186,7 +186,7 @@
     margin-bottom: 0px;
     left: 50%;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 2s ease-in-out;
     transform: translate(-50%);
     position: relative;
     width: 100vw;

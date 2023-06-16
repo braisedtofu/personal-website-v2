@@ -3,6 +3,12 @@
     src: url('../fonts/TimesNow-Light.ttf');
   }
   
+@font-face {
+    font-family: 'Times Now Bold';
+    src: url('../fonts/TimesNow-Bold.ttf');
+  }
+  
+  
   .navigation-container {
     position: fixed; /* Position the container relative to the viewport */
     top: 0; /* Align the container to the top */
@@ -18,17 +24,9 @@
   .top-buttons {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-
+    justify-content: left;
   }
   
-  .bottom-buttons {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-
-  }
-
     
   .about,
   .projects,
@@ -40,24 +38,39 @@
     border-color: transparent;
     background-color: transparent;
     color: black;
-    font-size: 15px;
+    font-size:16px;
     outline:none; 
     font-family: 'Times Now Light';
     cursor: pointer; 
     opacity: 0.3;
   }
   
+
+.about:hover,
+.projects:hover,
+.resume:hover,
+.linkedin:hover,
+.github:hover,
+.email:hover {
+  opacity: 1;
+}
+
   .top-buttons {
+    width: 100vw;
     padding-top: 0px;
     margin:0; 
-    padding:0; 
-    align-self:flex-start;
+    align-self:center;
     
   }
   
   .bottom-buttons {
+    display: flex;
+    width:100vw;
+    justify-content: space-between;
     padding-bottom: 0px;
-    align-self:flex-start;
+    width:100vw;
+    margin:0; 
+    align-self:center;
   }
   
   .projects{
@@ -71,4 +84,17 @@
   .unclicked{
     color: var(--main-color);
     opacity: 1 !important;
+  }
+
+  @media screen and (max-width: 756px) {
+
+    .about,
+    .projects,
+    .resume,
+    .linkedin,
+    .github,
+    .email {
+      padding: 1.2em !important;
+    }
+  
   }

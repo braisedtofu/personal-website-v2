@@ -200,7 +200,7 @@ export default function Home() {
         <div className={`experience-container ${showAboutContent ? "fade-in-experience-container" : ""}`}>
           {about === "about" ? (
             <p className={`about-details ${showAboutContent ? "fade-in-about-details" : ""}`}>
-              Passionate about coding, designing, and crafting captivating web experiences, I am a final year Computer Systems Engineering student at the University of Auckland. My goal is to build virtual spaces that challenge what an exceptional user experience means. My specialty in computer systems has encouraged me to combine my technical skills in coding and systems engineering, and my love for human-centered design.<br/><br/>Outside of university, I’m involved in extracurricular roles dedicated to giving back to the community. As the Events Manager at Rainbow Engineering, I organize events that connect LGBTQ individuals in the field of engineering. I am the current Vice President at Robogals, an international student-led organization. Our unified goal is to inspire young women to pursue STEM education and careers.
+              I am a final year Computer Systems Engineering student at the University of Auckland, driven by my passion for coding, design, and crafting exceptional user experiences. My goal is to combine my technical skills in coding and systems engineering with my love for human-centered design principles to create innovative solutions.<br/><br/>Outside of university, I’m involved in extracurricular roles dedicated to giving back to the community. As the Events Manager at Rainbow Engineering, I organize events that connect LGBTQ individuals in the field of engineering. I am the current Vice President at Robogals, an international student-led organization. Our unified goal is to inspire young women to pursue STEM education and careers.
             </p>
           ) : (
             <>
@@ -247,7 +247,7 @@ export default function Home() {
                             words={['Hi, Wynn here']}
                             cursor
                             cursorStyle='|'
-                            typeSpeed={220}
+                            typeSpeed={150}
                             cursorColor={color}
                             />
                     </div>
@@ -255,10 +255,10 @@ export default function Home() {
                     <div className="about-details-container">
                         <div className="about-details-list">
                             <p className={`about-details-list-item ${about === 'about' ? 'selected-about' : ''}`} onClick={() => handleButtonClick("about")}>
-                            (about)
+                            about
                             </p>
                             <p className={`about-details-list-item ${about === 'experience' ? 'selected-about' : ''}`} onClick={() => handleButtonClick("experience")}>
-                            (experience)
+                            experience
                             </p>
                         </div>
                         {bioContent}

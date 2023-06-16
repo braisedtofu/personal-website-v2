@@ -74,7 +74,7 @@
     z-index: 2; /* Adjust the z-index as needed */
     width: 50vw;
     height: 88vh;
-    margin-left:22px; 
+    margin-left:35px; 
     max-width: 50%; /* Set the maximum width to 50% of the viewport width */
   }
 
@@ -96,16 +96,17 @@
   
   .image-container {
     width: 50vw;
-    height: 200vh; /* Adjust the height for larger screens */
-    padding: 46px;
+    margin-top:0px;
+    padding: 39px;
     padding-top: 5%;
     flex-direction: column;
     overflow-x:hidden;
     display: inline-table;
   }
   
-  .image-container img {
-    width: 450px;
+  .image-container img,
+  .image-container video {
+    width: 600px;
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -210,6 +211,14 @@
   }
 
 
+  @media screen and (min-width: 756px) and (max-width: 1000px) {
+    .image-container img,
+    .image-container video{
+      width: 300px;
+    }
+
+  }
+
   @media screen and (max-width: 756px) {
     .project-details-container {
       flex-direction: column;
@@ -218,15 +227,24 @@
     .project-information {
       position: relative; 
       width:100vw;
+      margin-left:22px; 
       max-width: 90%;
+      height: fit-content;
+      top: 0px;
+      margin-top: 0px;
     }
     .image-container {
       width: 100vw;
-      padding:0px;
+      padding-top: 20px;
+      padding-left:0px;
+      padding-right:0px;
+      padding-bottom:0px;
+
     }
 
-    .image-container img{
-      width: 300px;
+    .image-container img,
+    .image-container video{
+      width: 340px;
     }
 
   }
@@ -252,7 +270,8 @@
       font-size: 1em;
     }
   
-    .image-container img {
+    .image-container img,
+    .image-container video {
       width: 500px;
     }
   }
@@ -271,7 +290,8 @@
       font-size: 1em;
     }
   
-    .image-container img {
+    .image-container img,
+    .image-container video {
       width: 700px;
     }
   }
@@ -290,7 +310,8 @@
       font-size: 1em;
     }
   
-    .image-container img {
+    .image-container img,
+    .image-container video {
       width: 800px;
       margin-bottom:80px;
     }
@@ -310,7 +331,8 @@
       font-size: 1.5em;
     }
   
-    .image-container img {
+    .image-container img,
+    .image-container video {
       width: 1200px;
     }
   }
@@ -329,7 +351,8 @@
       font-size: 3em;
     }
   
-    .image-container img {
+    .image-container img,
+    .image-container video {
       width: 1800px;
     }
   }

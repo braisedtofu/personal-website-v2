@@ -17,7 +17,7 @@ import pokedex1 from '../assets/pokedex/pokedex1.png';
 import board1 from '../assets/designboard/board1.png';
 import wynn1 from '../assets/wynnmodotcom/wynn1.png';
 import julia1 from '../assets/juliafractals/julia1.png';
-import bootleg1 from '../assets/bootlegspotify/bootleg1.png';
+import bootleg1 from '../assets/bootlegspotify/app1.png';
 import ripple1 from '../assets/ripples/ripple1.png';
 
 export default function Projects() {
@@ -30,27 +30,27 @@ export default function Projects() {
   useEffect(() => {
     setTimeout(() => {
       setIsPageLoaded(true);
-    }, 50);
+    }, 250);
     return () => {
     };
   }, []);
 
   const dataList = [
-    { image: village, number:'(1)', name: 'pikatune', caption: 'Pikatune', subcaption: 'Mongo DB, Express, Node, React, Spotify API', summary: 'A Pokémon-themed playlist generator game. Have gym battles, add friends, customise your playlist, and level up!'},
-    { image: dogtitle, number:'(2)', name: 'bodypawsitive', caption: 'Body Pawsitive', subcaption: 'MERN Stack, Raspberry Pico W, C/C++', summary: 'A smart scale system designed from scratch to weigh and log the weights of our furry friends, all managed through a web application.'},
+    { image: village, number:'(1)', name: 'pikatune', caption: 'Pikatune', subcaption: 'Mongo DB, Express, React, Node, Spotify API', summary: 'A Pokémon-themed playlist generator game. Have gym battles, add friends, customise your playlist, and level up!'},
+    { image: dogtitle, number:'(2)', name: 'bodypawsitive', caption: 'Body Pawsitive', subcaption: 'Mongo DB, Express, React, Node, Raspberry Pico W, C/C++', summary: 'A smart scale system designed from scratch to weigh and log the weights of our furry friends, all managed through a web application.'},
     { image: trebuchet1, number:'(3)', name: 'sleep-is-a-crime', caption: 'Sleep Is A Crime', subcaption: 'Raspberry Pi Pico, Servo Motor, Woodwork', summary: 'A trebuchet that is so terrible it launches marshmellows at you and sings Rick Astley!'},
     { image: line1, number:'(4)', name: 'line-following-robot', caption: 'Line Following Robot', subcaption: 'PSoC Microcontroller, PCB Design, Altium, C Language', summary: 'A robot with sensors that can navigate a maze by following black lines, and find the shortest path.'},
     { image: predict4, number:'(5)', name: 'handwriting-prediction', caption: 'Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
     { image: circle1, number:'(6)', name: 'circle-me-circle-you', caption: 'Circle Me, Circle You', subcaption: 'React, Vite, React-P5, P5.js', summary: 'An exploration into creative coding, this website transforms webcam input into a live video composed solely of circles.'},
     { image: box3, number:'(7)', name: 'flappy-box', caption: 'Flappy Box ', subcaption: 'Quartus, DE0 Board (FPGA Board), VHDL', summary: 'A game created on an FPGA board that allows users to play a game similar to Flappy Bird using the board\'s switches'},
-    { image: pokedex1,number:'(8)',  name: 'handwriting-prediction', caption: 'Pokedex', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: board1, number:'(9)', name: 'handwriting-prediction', caption: 'Scholarship Design Board', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: ml1, number:'(10)',  name: 'handwriting-prediction', caption: 'Object Detection', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: wynn1, number:'(12)', name: 'handwriting-prediction', caption: 'wynnmo.com', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: julia1, number:'(13)', name: 'handwriting-prediction', caption: 'Julia Fractals', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: bootleg1, number:'(14)',name: 'handwriting-prediction', caption: 'Bootleg Spotify', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: ripple1, number:'(15)',name: 'handwriting-prediction', caption: 'Ripples', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    { image: predict4,number:'(16)', name: 'handwriting-prediction', caption: 'I See, therefore I Am', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
+    { image: pokedex1,number:'(8)',  name: 'pokedex', caption: 'Pokedex', subcaption: 'Mongo DB, Express, React, Node', summary: 'Catch \'em all! This app lets you explore and personalize your Pokémon collection. Choose your favorites, add them to your list, and have a blast managing your own dream team!'},
+    { image: board1, number:'(9)', name: 'designboard', caption: 'Scholarship Design Board', subcaption: 'Adobe Illustrator', summary: 'A three-panel art design board showcasing a cutting-edge tech company, blending futuristic themes with a hint of dystopian through typography, web and app mock-ups, and posters created with Adobe Illustrator.'},
+    { image: ml1, number:'(10)',  name: 'objectdetection', caption: 'Object Detection', subcaption: 'CocoSSD, p5.js', summary: 'Used the p5.js library and its webcam function to detect objects with the coco ssd pre-trained model'},
+    { image: wynn1, number:'(11)', name: 'wynnmodotcom', caption: 'wynnmo.com', subcaption: 'Html, css', summary: 'My first personal website.'},
+    { image: julia1, number:'(12)', name: 'julia-fractals', caption: 'Julia Fractals', subcaption: 'Matlab', summary: 'A Matlab program that generates Julia fractals based on user input'},
+    { image: bootleg1, number:'(13)',name: 'bootleg-spotify', caption: 'Bootleg Spotify', subcaption: 'Android Studio, Java, Figma, Git Control', summary: 'An Android app that allow users to discover new music based on genres, and buy them on the spot'},
+    { image: ripple1, number:'(14)',name: 'ripples', caption: 'Ripples', subcaption: 'p5.js', summary: 'A p5.js program that generates ripples which changes in size and noise depending on mouse position'},
+    { image: predict4,number:'(15)', name: 'handwriting-prediction', caption: 'I See, therefore I Am', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
     
     // Add more items as needed
   ];

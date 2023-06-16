@@ -47,7 +47,7 @@
 
 .about-details {
   margin-top: 0px;
-  font-family: 'Times Now Light';
+  font-family: 'Times Now ExtraLight';
   font-size: 13px;
   color: black;
   text-align: justify;
@@ -88,7 +88,7 @@
   display: flex;
   align-items: flex-start;
   margin-bottom: 10px;
-  font-family: 'Times Now Light';
+  font-family: 'Times Now Bold';
   font-size: 13px;
   padding-right: 15px;
   opacity:0.5;
@@ -187,7 +187,7 @@
 }
 
 .experience-detail-item {
-  font-family: 'Times Now Light';
+  font-family: 'Times Now ExtraLight';
   font-size: 13px;
   color: black;
   margin-bottom: 3px;
