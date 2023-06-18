@@ -3,8 +3,7 @@ import "../styles/Navigation.css";
 import NightModeContext from '../NightModeContext';
 import { useNavigate, useLocation} from 'react-router-dom';
 import "../styles/Global.css";
-
-
+import resume from "../assets/WynnMoCV.pdf";
 
 export default function Navigation() {
 
@@ -73,7 +72,7 @@ export default function Navigation() {
 
       const handleResumeClick = () => {
         var link = document.createElement("a");
-        link.href = "../src/assets/WynnMoCV.pdf";
+        link.href = resume;
         link.download = "WynnMoCV.pdf";
         link.click();
       };
