@@ -48,7 +48,7 @@
     align-items: center;
     object-fit: cover;
     cursor: pointer;
-    /* box-shadow: 0 0 10px 4px var(--box-shadow); */
+    box-shadow: 0 0 10px 4px var(--box-shadow);
     transition: opacity 0.2s ease; /* Add transition property */
   }
   
