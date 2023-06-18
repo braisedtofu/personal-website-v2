@@ -206,12 +206,12 @@
   }
 
   .grid-inner{
-    top: 5dvh;
-    overflow-y:hidden;
+    top: 6dvh;
+    overflow-y:scroll;
     left: 50%;
     transform: translate(-50%);
     width: 100vw;
-    position: relative;
+    position: fixed;
   }
 
   .grid-inner::after {
