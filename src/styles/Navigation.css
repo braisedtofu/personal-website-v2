@@ -18,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100dvh;
+    overflow:hidden;
     width: 100%; /* Occupy the full width of the viewport */
   }
   

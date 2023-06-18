@@ -35,7 +35,7 @@
   }
   
   .project-details-inner {
-    top: 6vh;
+    top: 6dvh;
     left: 50%;
     transform: translate(-50%);
     width: 100vw;
