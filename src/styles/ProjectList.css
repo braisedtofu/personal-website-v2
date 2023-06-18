@@ -96,11 +96,11 @@
 
     @media screen and (min-width: 1539px) {
     .grid-list-item img {
-      height:30vh;
+      height:26vh;
       max-width: 100%; /* Set a maximum width for the image */
     }
     .grid-list {
-      column-gap: 0px
+      column-gap: 40px
     }
 
   }
@@ -184,7 +184,7 @@
 
   @media screen and (min-width: 1539px) {
     .caption{
-      font-size: 1.1em;
+      font-size: 1.8em;
     }
   }
 
@@ -250,7 +250,10 @@
 
 @media screen and (min-width: 1539px) {
   .sub-caption{
-    font-size: 0.8em;
+    font-size: 1.5em;
+  }
+  .number{
+    font-size: 1em;
   }
 }
 

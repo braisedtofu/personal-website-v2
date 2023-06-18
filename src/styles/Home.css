@@ -282,7 +282,44 @@ width: 100%;
     transition: opacity 1s ease-in-out;
 }
 
+}
 
+@media screen and (min-width: 1500px) and (max-width: 2400px){
+  .about-title {
+    font-size: 80px;
+  }
+  .about-details {
+    font-size: 20px;
+  }
+  .about-details-list-item{
+    font-size: 20px;
+  }
+  .experience-list-item {
+    font-size: 20px;
+  }
+  .experience-details-title {
+    font-size: 20px;
+  }
+  .experience-detail-item {
+    font-size: 20px;
+  }
+
+  .about-details-list{
+    font-size: 20px;
+  }
+  .experience-list {
+    font-size: 20px;
+  }
+
+  .experience-container{
+    max-width: 600px;
+  }
+  .about-container {
+    top: 10%;
+    position: fixed;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
 }
 
 
