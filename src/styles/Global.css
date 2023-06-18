@@ -2,6 +2,10 @@
     --main-color: black; /* Define a CSS variable for the main color */
   }
   
+  .container{
+    overflow: hidden;
+  }
+  
   .container.night-mode,
   .container.night-mode *,
   .container.night-mode ul,

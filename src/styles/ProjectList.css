@@ -20,7 +20,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap:0px;
   position: relative;
-  overflow: hidden;
   row-gap: inherit;
   justify-content: center;
   align-items: center;
