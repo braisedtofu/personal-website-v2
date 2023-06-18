@@ -142,7 +142,7 @@ const ProjectData = [
             I worked on the embedded software, specifically programming the Raspberry Pi Pico W, as well as the UX design and frontend development. Collaborating with such a diverse team was an incredible experience, and I made wonderful friends along the way!
             </p>
             <p>
-            Give <a href="https://www.bodypawsitive.org/" target="_blank">Body Pawsitive</a> a visit! You can use my account: Username - Wynn, Passowrd - 12345.           
+            Give <a href="https://www.bodypawsitive.org/" target="_blank">Body Pawsitive</a> a visit! You can use my account: Username - Wynn, Password - 12345.           
             </p>
 
           </>
