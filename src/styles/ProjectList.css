@@ -197,6 +197,7 @@
     margin-bottom: 0px;
     left: 50%;
     opacity: 0;
+    overflow-y:hidden;
     transition: opacity 1s ease-in-out;
     transform: translate(-50%);
     position: relative;
@@ -206,6 +207,7 @@
 
   .grid-inner{
     top: 5dvh;
+    overflow-y:hidden;
     left: 50%;
     transform: translate(-50%);
     width: 100vw;
