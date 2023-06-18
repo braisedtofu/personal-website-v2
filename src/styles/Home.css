@@ -252,26 +252,22 @@ left: 21px;
 width: 100%;
 }
   .about-details {
-    font-size: 10px;
+    font-size: 15px;
   }
   .about-details-list-item{
-    font-size: 10px;
+    font-size: 15px;
   }
   .experience-list-item {
-    font-size: 10px;
+    font-size: 13px;
   }
   .experience-details-title {
-    font-size: 10px;
+    font-size: 15px;
   }
-  .experience-detail-item {
-    font-size: 10px;
-  }
-
   .about-details-list{
-    font-size: 10px;
+    font-size: 15px;
   }
   .experience-list {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .about-container {
