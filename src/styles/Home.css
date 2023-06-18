@@ -248,15 +248,9 @@
 .site-from-scratch{
 left: 21px;
 }
-  @keyframes lineAnimation {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  
+.about-title::after {
+width: 100%;
+}
   .about-details {
     font-size: 10px;
   }

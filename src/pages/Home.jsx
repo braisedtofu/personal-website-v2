@@ -247,7 +247,7 @@ export default function Home() {
                             words={['Hi, Wynn here']}
                             cursor
                             cursorStyle='|'
-                            typeSpeed={80}
+                            typeSpeed={120}
                             cursorColor={color}
                             />
                     </div>

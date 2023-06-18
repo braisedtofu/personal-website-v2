@@ -106,7 +106,7 @@ export default function Navigation() {
             <div className="bottom-buttons">
                 <button onClick={handleGithubClick} className="github">github</button>
                 <button onClick={handleLinkedinClick} className="linkedin">linkedin</button>
-                <button onClick={handleColorChange} className="about">color</button>
+                <button onClick={handleColorChange} className="github">color</button>
                 <button className="github" onClick={toggleNightMode}>
                     {isNightMode ? 'day' + '\u00A0' + '\u00A0' : 'night'}
                 </button>
