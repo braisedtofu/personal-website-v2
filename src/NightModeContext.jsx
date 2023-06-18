@@ -8,6 +8,7 @@ export function NightModeProvider({ children }) {
   const [color, setColor] = useState('#000000'); // Initial color, replace with your desired initial color
   const [backgroundColor, changeBackgroundColor] = useState('#DEDFDE'); // Initial color, replace with your desired initial color
   const [boxShadow, changeBoxShadow] = useState('rgba(0, 0, 0, 0.3)'); // Initial color, replace with your desired initial color
+  const [emoji, changeEmojis] = useState('(◕‿◕)');
 
   const toggleNightMode = () => {
     setIsNightMode(!isNightMode);
@@ -29,7 +30,7 @@ export function NightModeProvider({ children }) {
   };
 
   return (
-    <NightModeContext.Provider value={{ isNightMode, toggleNightMode, color, changeColor, backgroundColor, changeBackgroundColor, boxShadow, changeBoxShadow }}>
+    <NightModeContext.Provider value={{ isNightMode, toggleNightMode, color, changeColor, backgroundColor, changeBackgroundColor, boxShadow, changeBoxShadow, emoji, changeEmojis }}>
       {children}
     </NightModeContext.Provider>
   );

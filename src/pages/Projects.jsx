@@ -46,12 +46,10 @@ export default function Projects() {
     { image: pokedex1,number:'(8)',  name: 'pokedex', caption: 'Pokedex', subcaption: 'Mongo DB, Express, React, Node', summary: 'Catch \'em all! This app lets you explore and personalize your Pokémon collection. Choose your favorites, add them to your list, and have a blast managing your own dream team!'},
     { image: board1, number:'(9)', name: 'designboard', caption: 'Scholarship Design Board', subcaption: 'Adobe Illustrator', summary: 'A three-panel art design board showcasing a cutting-edge tech company, blending futuristic themes with a hint of dystopian through typography, web and app mock-ups, and posters created with Adobe Illustrator.'},
     { image: ml1, number:'(10)',  name: 'objectdetection', caption: 'Object Detection', subcaption: 'CocoSSD, p5.js', summary: 'Used the p5.js library and its webcam function to detect objects with the coco ssd pre-trained model'},
-    { image: wynn1, number:'(11)', name: 'wynnmodotcom', caption: 'wynnmo.com', subcaption: 'Html, css', summary: 'My first personal website.'},
+    { image: wynn1, number:'(11)', name: 'mowynndotcom', caption: 'mowynn.com', subcaption: 'Html, css', summary: 'My first personal website.'},
     { image: julia1, number:'(12)', name: 'julia-fractals', caption: 'Julia Fractals', subcaption: 'Matlab', summary: 'A Matlab program that generates Julia fractals based on user input'},
     { image: bootleg1, number:'(13)',name: 'bootleg-spotify', caption: 'Bootleg Spotify', subcaption: 'Android Studio, Java, Figma, Git Control', summary: 'An Android app that allow users to discover new music based on genres, and buy them on the spot'},
-    { image: ripple1, number:'(14)',name: 'ripples', caption: 'Ripples', subcaption: 'p5.js', summary: 'A p5.js program that generates ripples which changes in size and noise depending on mouse position'},
-    { image: predict4,number:'(15)', name: 'handwriting-prediction', caption: 'I See, therefore I Am', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
-    
+    { image: ripple1, number:'(14)',name: 'ripples', caption: 'Ripples', subcaption: 'p5.js', summary: 'A p5.js program that generates ripples which changes in size and noise depending on mouse position'}    
     // Add more items as needed
   ];
       

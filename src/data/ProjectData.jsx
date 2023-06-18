@@ -362,21 +362,21 @@ const ProjectData = [
 },
 
 {
-  ProjectId: "wynnmodotcom",
+  ProjectId: "mowynndotcom",
   images: [
     page1,
     page2,
     page3,
   ],
-  title: "wynnmo.com",
+  title: "mowynn.com",
   technologies: "Technologies: Html, css",
   description: (
     <>
       <p>
         My first ever personal website! I needed a repository to store all my personal projects, so I created this one with a simple white/blue 8-bit theme. I drew and animated the stars and friendly ghost too.
-      </p>
+      </p>  
       <p>
-        The website is outdated, but I still keep it up as a reminder of how far I've come in my coding journey! You can still visit it at <a href="https://wynnmo.com" target="_blank">wynnmo.com</a>
+        The website is outdated, but I still keep it up as a reminder of how far I've come in my coding journey! You can still visit it at <a href="https://mowynn.com" target="_blank">mowynn.com</a>
       </p>
 
     </>

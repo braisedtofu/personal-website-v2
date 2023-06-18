@@ -39,7 +39,7 @@
   
   
   .grid-list-item img {
-    height: 29vh;
+    height: 30vh;
     max-width: 100%; /* Set a maximum width for the image */
     flex-shrink: 0;
     display: flex;
@@ -48,7 +48,7 @@
     align-items: center;
     object-fit: cover;
     cursor: pointer;
-    box-shadow: 0 0 10px 4px var(--box-shadow);
+    /* box-shadow: 0 0 10px 4px var(--box-shadow); */
     transition: opacity 0.2s ease; /* Add transition property */
   }
   
@@ -151,7 +151,18 @@
     align-items: left;
     text-align: left;
     user-select: none;
+    position:relative;
     font-family: 'Times Now Bold'
+  }
+
+  .caption::after {
+    content: "";
+    display: block;
+    width: 94.5%;
+    height: 1px;
+    margin-bottom:6px;
+    background-color: var(--main-color);
+    /* animation: lineAnimation 3s cubic-bezier(0.4, 0, 0.2, 1) forwards; */
   }
   
   .number {
@@ -186,7 +197,7 @@
     margin-bottom: 0px;
     left: 50%;
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
     transform: translate(-50%);
     position: relative;
     width: 100vw;

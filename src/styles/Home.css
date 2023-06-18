@@ -16,16 +16,14 @@
 .about-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 670px;
-  width: calc(100% - 80px); /* Adjust the margin value as needed */
+  align-items: left;
+  text-align: left;
   padding:20px;
-  top: 10%;
-  left: 50%;
+  top: 5%;
+  left: 1%;
   opacity:0; 
+  width:100%;
   transition: opacity 1s ease-in-out;
-  transform: translate(-50%);
   position: fixed;
   background-color: transparent !important;
 }
@@ -37,18 +35,38 @@
 
 .about-title {
   font-family: 'Times Now Light';
-  font-size: 75px;
+  font-size: 40px;
   color: black;
+  position:relative;
   margin-bottom: 0px;
   margin-top: 40px;
-  display: flex;
   background-color: transparent !important;
 }
+
+.about-title::after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 2px;
+  background-color: var(--main-color);
+  /* animation: lineAnimation 3s cubic-bezier(0.4, 0, 0.2, 1) forwards; */
+}
+
+@keyframes lineAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+
 
 .about-details {
   margin-top: 0px;
   font-family: 'Times Now ExtraLight';
   font-size: 13px;
+  width:100%;
   color: black;
   text-align: justify;
   opacity: 0;
@@ -105,8 +123,7 @@
   max-width: 436px;
   width: 100%;
   align-items: center;
-  text-align: center;
-  margin: 0 auto;
+  text-align: justify;
   margin-top: 0;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -203,7 +220,16 @@
   opacity:1;
 }
 
-
+.site-from-scratch{
+  font-family: 'Times Now ExtraLight';
+  font-size: 13px;
+  color: var(--main-color);
+  bottom: 50px;
+  left: 39px;
+  margin-bottom: 0%;
+  opacity: 0.5  ;
+  position:fixed;
+}
 
 @keyframes text-shadow-fade-in {
   from {
@@ -217,8 +243,20 @@
 
 @media screen and (max-width: 625px) {
   .about-title {
-    font-size: 48px;
+    font-size: 40px;
   }
+.site-from-scratch{
+left: 21px;
+}
+  @keyframes lineAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
   .about-details {
     font-size: 10px;
   }
@@ -243,13 +281,7 @@
   }
 
   .about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 900px;
-    justify-items: flex-start;
-    justify-content: flex-start;
+    max-width: 340px;
     top: 10%;
     position: fixed;
     opacity: 0;

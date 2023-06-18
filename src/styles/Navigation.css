@@ -33,7 +33,7 @@
   .resume,
   .linkedin,
   .github,
-  .email {
+  .email{
     border: none;
     border-color: transparent;
     background-color: transparent;
@@ -42,9 +42,22 @@
     outline:none; 
     font-family: 'Times Now Light';
     cursor: pointer; 
-    opacity: 0.3;
+    opacity: 0.5;
   }
   
+.emoji{
+  border-color: transparent;
+  background-color: transparent;
+  font-size:12px;
+  border-width: 1px;
+  margin-left: auto;
+  margin-right: 5px;
+  color: var(--main-color);
+}
+
+.emoji:hover{
+  opacity: 0.5;
+}
 
 .about:hover,
 .projects:hover,
@@ -54,6 +67,8 @@
 .email:hover {
   opacity: 1;
 }
+
+
 
   .top-buttons {
     width: 100vw;
@@ -70,6 +85,7 @@
     padding-bottom: 0px;
     width:100vw;
     margin:0; 
+    opacity: 1 !important;
     align-self:center;
   }
   
