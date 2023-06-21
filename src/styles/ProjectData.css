@@ -173,44 +173,7 @@
   cursor: pointer; 
   }
   
-  .scroll-container{
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    top:50%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .scroll {
-    font-family: 'Times Now Light';
-    font-size: 13px;
-  }
-
   
-  .arrow {
-    border: solid var(--main-color);
-    border-width: 0 0.5px 0.5px 0;
-    display: inline-block;
-    margin-top:0;
-    padding: 3px;
-
-  }
-
-  .up {
-    margin-bottom: 5px;
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-    }
-
-  .down {
-    margin-top: 5px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
-
-
   @media screen and (min-width: 756px) and (max-width: 1000px) {
     .image-container img,
     .image-container video{

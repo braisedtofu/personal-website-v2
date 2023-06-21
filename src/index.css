@@ -1,7 +1,7 @@
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: transparent;
   font-size: 1em;
   padding-bottom:10px;
   font-weight: 500;
@@ -10,7 +10,6 @@ button {
   padding-left: 2.4em;
   padding-right: 2.4em;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: transparent;
   cursor: pointer;
-  transition: border-color 0.25s;
 }

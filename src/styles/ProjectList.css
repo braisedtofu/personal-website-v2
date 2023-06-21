@@ -23,7 +23,8 @@
   row-gap: inherit;
   justify-content: center;
   align-items: center;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
   box-sizing: border-box; /* Add this line */
   width:100vw;
   padding-left: 20px;
@@ -198,6 +199,7 @@
     left: 50%;
     opacity: 0;
     overflow-y:hidden;
+    overflow-x:hidden;
     transition: opacity 1s ease-in-out;
     transform: translate(-50%);
     position: relative;
@@ -207,7 +209,8 @@
 
   .grid-inner{
     top: 6dvh;
-    overflow-y:scroll;
+    overflow-y:hidden;
+    overflow-x:hidden;
     left: 50%;
     transform: translate(-50%);
     width: 100vw;
@@ -260,5 +263,4 @@
     font-size: 1em;
   }
 }
-
 
