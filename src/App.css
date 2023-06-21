@@ -2,12 +2,16 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center; 
-  height: 90vh; 
+  height: 95dvh; 
   padding:0; 
+  overflow-y:hidden;
+  overflow-x:hidden;
 }
 
 .App{
   background-color: var(--light-beige);
   display: flex;
+  overflow-y:hidden;
+  overflow-x:hidden;
 
 }

@@ -18,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100dvh;
+    
     overflow:hidden;
     width: 100%; /* Occupy the full width of the viewport */
   }
@@ -84,6 +85,10 @@
 
 
   .top-buttons {
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    outline:none;
     width: 100vw;
     padding-top: 0px;
     margin:0; 
@@ -92,6 +97,10 @@
   }
   
   .bottom-buttons {
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    outline:none;
     display: flex;
     width:100vw;
     justify-content: space-between;
