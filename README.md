@@ -5,7 +5,9 @@
   The second iteration of <a href="https://wynnmo.com" target="_blank">wynnmo.com</a> built with React.js.
 </p>
 
-<img width="1306" src="https://github.com/braisedtofu/personal-website-v2/tree/main/src/assets/Screen Shot 2023-07-15 at 7.03.26 PM.png?raw=true">
+<p align="center">
+  <img width="1306" src="https://raw.githubusercontent.com/braisedtofu/personal-website-v2/main/src/assets/Screen%20Shot%202023-07-15%20at%207.03.26%20PM.png" alt="Screenshot">
+</p>
 
 ## 🛠 set-up
 
