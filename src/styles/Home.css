@@ -374,6 +374,19 @@
 }
 
 
+@media screen and ((max-width: 900px) ) {
+  .home-details-inner {
+    flex-direction: column !important;
+    display: flex!important;
+    position: fixed!important;
+  }
+  
+  .project-information-home{
+    flex-direction: column !important;
+  }
+}
+
+
 @media screen and ((min-width: 200px) and (max-width: 390px) ) {
   .about-title {
     font-size: 10px !important;
