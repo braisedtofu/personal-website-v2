@@ -364,6 +364,59 @@
   position:fixed;
 }
 
+.home-details-container {
+  width: 100vw;
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  overflow-y: scroll;
+}
+
+
+.home-details-inner {
+  top: 6dvh;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100vw;
+  flex-direction: row;
+  display: flex;
+  position: fixed;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  bottom: 6vh; /* Add bottom: 0 to position it at the bottom of the page */
+}
+
+.home-details-inner::after {
+  content: '';
+  z-index: 999999;
+  position: absolute;
+  bottom: -1px; /* Set bottom: 0 to keep it at the bottom of the container */
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 5%; /* Adjust the height of the gradient as needed */
+  background: linear-gradient(to top, var(--background-color), transparent);
+}
+
+.home-details-inner.fade-enter {
+  opacity: 1;
+}
+
+.project-information-home {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  align-items: flex-start; /* Align items to the left */
+  margin-bottom: 0px;
+  top: 0; /* Adjust the top position as needed */
+  z-index: 0; /* Adjust the z-index as needed */
+  width: 100vw;
+  height: 88vh;
+  margin-left:35px; 
+  max-width: 100%; /* Set the maximum width to 50% of the viewport width */
+}
+
 @keyframes text-shadow-fade-in {
   from {
     text-shadow: 0 0 0 rgba(var(--main-color), 0); /* Start with transparent text shadow */
@@ -592,58 +645,6 @@ width: 100%;
 
 }
 
-.home-details-container {
-  width: 100vw;
-  flex-direction: row;
-  display: flex;
-  position: relative;
-  overflow-y: scroll;
-}
-
-
-.home-details-inner {
-  top: 6dvh;
-  left: 50%;
-  transform: translate(-50%);
-  width: 100vw;
-  flex-direction: row;
-  display: flex;
-  position: fixed;
-  z-index: 0;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-  bottom: 6vh; /* Add bottom: 0 to position it at the bottom of the page */
-}
-
-.home-details-inner::after {
-  content: '';
-  z-index: 999999;
-  position: absolute;
-  bottom: -1px; /* Set bottom: 0 to keep it at the bottom of the container */
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height: 5%; /* Adjust the height of the gradient as needed */
-  background: linear-gradient(to top, var(--background-color), transparent);
-}
-
-.home-details-inner.fade-enter {
-  opacity: 1;
-}
-
-.project-information-home {
-  display: flex;
-  flex-direction: row;
-  margin-top: auto;
-  align-items: flex-start; /* Align items to the left */
-  margin-bottom: 0px;
-  top: 0; /* Adjust the top position as needed */
-  z-index: 0; /* Adjust the z-index as needed */
-  width: 100vw;
-  height: 88vh;
-  margin-left:35px; 
-  max-width: 100%; /* Set the maximum width to 50% of the viewport width */
-}
 
 @media screen and (min-width: 1500px) and (max-width: 6400px){
   .about-title {
