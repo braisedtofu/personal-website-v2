@@ -374,7 +374,7 @@
 }
 
 
-@media screen and ((max-width: 900px) ) {
+@media screen and ((min-width: 200px) and (max-width: 1000px)){
   .home-details-inner {
     flex-direction: column !important;
     display: flex!important;
@@ -387,7 +387,7 @@
 }
 
 
-@media screen and ((min-width: 200px) and (max-width: 390px) ) {
+@media screen and ((min-width: 200px) and (max-width: 380px) ) {
   .about-title {
     font-size: 10px !important;
     max-width: 80vw;
@@ -479,7 +479,7 @@
 
 }
 
-@media screen and ( (min-width: 390px) and (max-width: 1025px)) {
+@media screen and ( (min-width: 380px) and (max-width: 1025px)) {
   .about-title {
     font-size: 18px !important;
     max-width: 80vw;
