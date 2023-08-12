@@ -428,7 +428,7 @@
 
 
 
-@media screen and ((min-width: 200px) and (max-width: 380px) ) {
+@media screen and (min-width: 200px) and (max-width: 380px){
   .about-title {
     font-size: 10px;
     max-width: 80vw;
@@ -520,7 +520,7 @@
 
 }
 
-@media screen and ( (min-width: 380px) and (max-width: 1025px)) {
+@media screen and (min-width: 380px) and (max-width: 1025px){
   .about-title {
     font-size: 18px;
     max-width: 80vw;
