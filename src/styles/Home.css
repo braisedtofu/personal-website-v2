@@ -466,7 +466,7 @@
 
 }
 
-@media screen and ( (min-width: 390px) and (max-width: 625px)) {
+@media screen and ( (min-width: 390px) and (max-width: 1025px)) {
   .about-title {
     font-size: 18px !important;
     max-width: 80vw;
