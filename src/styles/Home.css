@@ -481,7 +481,7 @@ left: 21px;
 
 .home-details-inner {
   flex-direction: column ;
-  display: flex;
+  display: -webkit-flex;
   position: fixed;
 }
 
@@ -637,7 +637,6 @@ width: 100%;
   margin-top: auto;
   align-items: flex-start; /* Align items to the left */
   margin-bottom: 0px;
-  position: sticky;
   top: 0; /* Adjust the top position as needed */
   z-index: 0; /* Adjust the z-index as needed */
   width: 100vw;
