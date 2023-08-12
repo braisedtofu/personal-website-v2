@@ -23,7 +23,7 @@
   left: 1%;
   opacity:0; 
   width:100%;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 5s ease-in-out;
   position: fixed;
   background-color: transparent !important;
 }
@@ -32,25 +32,156 @@
   opacity: 1; /* When the fade-enter class is applied, set opacity to 1 */
 }
 
+.home-image-container {
+  overflow-x:hidden;
+  margin-left:4%;
+  margin-top:0%;
+  display: inline-table;
+}
+
+
+.home-image-container img,
+.home-image-container video {
+  z-index: 0; /* Adjust the z-index as needed */
+  cursor:pointer;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
+
+.sky{
+  width:270px !important;
+  margin-left: 2% !important;
+  margin-top: 4% !important;
+  border-radius:5px;
+  position:absolute;
+}
+
+.mbot{
+  width:300px !important;
+  margin-left: 0% !important;
+  margin-top: 4% !important;
+  border-radius:5px;
+  position:absolute;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
+
+.wrkshp{
+  width:300px !important;
+  margin-left: 25% !important;
+  margin-top: 20% !important;
+  border-radius:5px;
+  position:absolute;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
+
+.wrkshp2{
+  width:370px !important;
+  margin-left: 45% !important;
+  margin-top: 4% !important;
+  border-radius:5px;
+  position:absolute;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in-robo {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out-robo {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+
+
+
+.mememe{
+  margin-top:20px;
+  position:absolute;
+  margin-left: 25% !important;
+  margin-top: 5% !important;
+  width:350px !important;
+  border-radius:5px;
+}
+
+.cows{
+  margin-top:20px;
+  position:absolute;
+  margin-left: 48% !important;
+  margin-top: 1% !important;
+  width:220px !important;
+  border-radius:5px;
+}
+
+.matcha{
+  margin-top:20px;
+  position:absolute;
+  margin-left:8% !important;
+  margin-top: 3% !important;
+  width:200px !important;
+  border-radius:4px;
+}
+
+.goodboy{
+  width:260px !important;
+  margin-left: 1% !important;
+  margin-top: 25% !important;
+  border-radius:5px;
+  position:absolute;
+}
+
+.bestfriend{
+  width:200px !important;
+  margin-left: 55% !important;
+  margin-top: 18% !important;
+  border-radius:4px;
+  position:absolute;
+}
+
+
+
 
 .about-title {
   font-family: 'Times Now Light';
-  font-size: 40px;
-  color: black;
-  position:relative;
+  font-size: 15px;
   margin-bottom: 0px;
-  margin-top: 40px;
-  background-color: transparent !important;
+  justify-content: left;
+  z-index: 99999;
+  user-select: none;
+  background-color: transparent;
+  align-items: left;
+  margin-top: 3%;
+  margin-left:0%;
+  width:50vw;
+  max-width:20%;
+  text-align: left;
+  position: relative;
 }
 
-.about-title::after {
-  content: "";
-  display: block;
-  width: 95%;
-  height: 2px;
-  background-color: var(--main-color);
-  /* animation: lineAnimation 3s cubic-bezier(0.4, 0, 0.2, 1) forwards; */
+
+.hover-text {
+  cursor: pointer;
+  text-decoration: underline;
 }
+
+.hover-image {
+  display: none;
+  max-width: 300px; /* Adjust image dimensions as needed */
+  margin-top: 10px;
+}
+
 
 @keyframes lineAnimation {
   0% {
@@ -81,6 +212,7 @@
   display: flex;
   flex-direction: column;
   z-index: 1;
+  margin-top:2%;
   position: relative;
   align-items: flex-start;
 }
@@ -138,6 +270,7 @@
   list-style-type: none;
   margin: 0;
   padding-left:0;
+  flex-direction: row;
   padding-bottom: 12px;
   justify-content: flex-start;
   align-items: flex-start;
@@ -241,13 +374,120 @@
 }
 
 
-@media screen and (max-width: 625px) {
+@media screen and ((min-width: 300px) and (max-width: 380px) ) {
   .about-title {
-    font-size: 40px;
+    font-size: 10px !important;
+    max-width: 80vw;
+    margin-top:10%;
+    margin-bottom: 30%;
+    width: 80vw !important;
+  }
+
+.home-details-inner {
+  flex-direction: column !important;
+  display: flex!important;
+  position: fixed!important;
+}
+
+.project-information-home{
+  flex-direction: column !important;
+}
+
+.mememe{
+  margin-top:40px;
+  position:absolute;
+  margin-left: 25% !important;
+  margin-top: 150px !important;
+  width:100px !important;
+  border-radius:5px;
+}
+
+.cows{
+  margin-top:20px;
+  position:absolute;
+  margin-left: 48% !important;
+  margin-top: 2% !important;
+  width:80px !important;
+  border-radius:5px;
+}
+
+.matcha{
+  margin-top:20px;
+  position:absolute;
+  margin-left:0% !important;
+  margin-top: 3% !important;
+  width:50px !important;
+  border-radius:4px;
+}
+
+.goodboy{
+  width:130px !important;
+  margin-left: 10px !important;
+  margin-top: 100px !important;
+  border-radius:7px;
+  position:absolute;
+  
+}
+
+.bestfriend{
+  width:80px !important;
+  margin-left: 55% !important;
+  margin-top: 100px !important;
+  border-radius:4px;
+  position:absolute;
+}
+
+.mbot{
+  width:80px !important;
+  margin-left: 0% !important;
+  margin-top: 4% !important;
+  border-radius:5px;
+  position:absolute;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
+
+.wrkshp{
+  width: 80px !important;
+  margin-left: 25% !important;
+  margin-top: 20% !important;
+  border-radius:5px;
+  position:absolute;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
+
+.wrkshp2{
+  width:120px !important;
+  margin-left: 45% !important;
+  margin-top: 4% !important;
+  border-radius:5px;
+  position:absolute;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
+
+}
+
+@media screen and ( (min-width: 390px) and (max-width: 625px)) {
+  .about-title {
+    font-size: 18px !important;
+    max-width: 80vw;
+    margin-top:10%;
+    margin-bottom: 20% !important;
+    width: 80vw !important;
   }
 .site-from-scratch{
 left: 21px;
 }
+
+.home-details-inner {
+  flex-direction: column !important;
+  display: flex!important;
+  position: fixed!important;
+}
+
+.project-information-home{
+  flex-direction: column !important;
+}
+
 .about-title::after {
 width: 100%;
 }
@@ -272,17 +512,142 @@ width: 100%;
 
   .about-container {
     max-width: 340px;
-    top: 10%;
+    top: 15%;
     position: fixed;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+.mememe{
+  margin-top:40px;
+  position:absolute;
+  margin-left: 25% !important;
+  margin-top: 150px !important;
+  width:100px !important;
+  border-radius:5px;
+}
+
+.cows{
+  margin-top:20px;
+  position:absolute;
+  margin-left: 48% !important;
+  margin-top: 2% !important;
+  width:80px !important;
+  border-radius:5px;
+}
+
+.matcha{
+  margin-top:20px;
+  position:absolute;
+  margin-left:0% !important;
+  margin-top: 3% !important;
+  width:50px !important;
+  border-radius:4px;
+}
+
+.goodboy{
+  width:130px !important;
+  margin-left: 10px !important;
+  margin-top: 100px !important;
+  border-radius:7px;
+  position:absolute;
+  
+}
+
+.bestfriend{
+  width:80px !important;
+  margin-left: 55% !important;
+  margin-top: 100px !important;
+  border-radius:4px;
+  position:absolute;
+}
+
+
+.mbot{
+  width:80px !important;
+  margin-left: 0% !important;
+  margin-top: 4% !important;
+  border-radius:5px;
+  position:absolute;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
+
+.wrkshp{
+  width: 80px !important;
+  margin-left: 25% !important;
+  margin-top: 20% !important;
+  border-radius:5px;
+  position:absolute;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
+
+.wrkshp2{
+  width:120px !important;
+  margin-left: 45% !important;
+  margin-top: 4% !important;
+  border-radius:5px;
+  position:absolute;
+  box-shadow: 0 0 25px 10px var(--box-shadow);
+}
 
 }
 
-@media screen and (min-width: 1500px) and (max-width: 2400px){
+.home-details-container {
+  width: 100vw;
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  overflow-y: scroll;
+}
+
+
+.home-details-inner {
+  top: 6dvh;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100vw;
+  flex-direction: row;
+  display: flex;
+  position: fixed;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  bottom: 6vh; /* Add bottom: 0 to position it at the bottom of the page */
+}
+
+.home-details-inner::after {
+  content: '';
+  z-index: 999999;
+  position: absolute;
+  bottom: -1px; /* Set bottom: 0 to keep it at the bottom of the container */
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 5%; /* Adjust the height of the gradient as needed */
+  background: linear-gradient(to top, var(--background-color), transparent);
+}
+
+.home-details-inner.fade-enter {
+  opacity: 1;
+}
+
+.project-information-home {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  align-items: flex-start; /* Align items to the left */
+  margin-bottom: 0px;
+  position: sticky;
+  top: 0; /* Adjust the top position as needed */
+  z-index: 0; /* Adjust the z-index as needed */
+  width: 100vw;
+  height: 88vh;
+  margin-left:35px; 
+  max-width: 100%; /* Set the maximum width to 50% of the viewport width */
+}
+
+@media screen and (min-width: 1500px) and (max-width: 6400px){
   .about-title {
-    font-size: 80px;
+    font-size: 1.2rem;
   }
   .about-details {
     font-size: 20px;
@@ -316,6 +681,66 @@ width: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+
+.home-image-container img,
+.home-image-container video {
+  width: 300px;
+}
+
+.sky{
+  width:270px !important;
+  margin-left: 2% !important;
+  margin-top: 4% !important;
+  border-radius:5px;
+  position:absolute;
+}
+
+.mememe{
+  margin-top:20px;
+  position:absolute;
+  margin-left: 25% !important;
+  margin-top: 5% !important;
+  width:450px !important;
+  border-radius:5px;
+}
+
+.cows{
+  margin-top:20px;
+  position:absolute;
+  margin-left: 48% !important;
+  margin-top: 2% !important;
+  width:330px !important;
+  border-radius:5px;
+}
+
+.matcha{
+  margin-top:20px;
+  position:absolute;
+  margin-left:6% !important;
+  margin-top: 3% !important;
+  width:300px !important;
+  border-radius:4px;
+}
+
+.goodboy{
+  width:380px !important;
+  margin-left: 3% !important;
+  margin-top: 25% !important;
+  border-radius:7px;
+  position:absolute;
+}
+
+.bestfriend{
+  width:280px !important;
+  margin-left: 55% !important;
+  margin-top: 18% !important;
+  border-radius:4px;
+  position:absolute;
+}
+
+
+
+
 }
 
 

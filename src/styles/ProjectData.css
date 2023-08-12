@@ -20,6 +20,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 99999;
     right: 0;
     width: 100vw;
   }
@@ -30,7 +31,7 @@
     top: -1px;
     left: 0;
     right: 0;
-    height: 2vh;
+    height: 5vh;
     background: linear-gradient(to top, transparent, var(--background-color));
   }
   
@@ -43,7 +44,7 @@
     display: flex;
     position: fixed;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 2s ease-in-out;
     bottom: 6vh; /* Add bottom: 0 to position it at the bottom of the page */
   }
   

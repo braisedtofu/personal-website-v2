@@ -2,8 +2,17 @@ import React, {useState, useEffect, useContext} from "react";
 import Navigation from "../components/Navigation";
 import "../styles/Global.css";
 import "../styles/Home.css";
-import { Typewriter } from 'react-simple-typewriter'
+import Draggable from 'react-draggable'
 import NightModeContext from '../NightModeContext';
+import sky from '../assets/HomeImages/sky.jpeg'
+import mememe from '../assets/HomeImages/mememe.png'
+import cows from '../assets/HomeImages/cows.png'
+import matcha from '../assets/HomeImages/matcha.png'
+import bestfriend from '../assets/HomeImages/bestfriend.png'
+import goodboy from '../assets/HomeImages/goodboy.png'
+import wrkshp from '../assets/HomeImages/wrkshp.png'
+import wrkshp2 from '../assets/HomeImages/wrkshp2.png'
+import mbot from '../assets/HomeImages/mbot.png'
 
 export default function Home() {
 
@@ -13,10 +22,20 @@ export default function Home() {
     const [showAboutContent, setAboutShowContent] = useState(false);
     const { isNightMode } = useContext(NightModeContext);
     const { color } = useContext(NightModeContext);
-    const { backgroundColor } = useContext(NightModeContext);
+    const { backgroundColor, boxShadow } = useContext(NightModeContext);
 
     const [isPageLoaded, setIsPageLoaded] = useState(false);
 
+    const [showImage, setShowImage] = useState(false);
+
+    const handleHover = () => {
+      setShowImage(true);
+    };
+  
+    const handleMouseLeave = () => {
+      setShowImage(false);
+    };
+  
     useEffect(() => {
       setTimeout(() => {
         setIsPageLoaded(true);
@@ -198,12 +217,6 @@ export default function Home() {
 
       bioContent = (
         <div className={`experience-container ${showAboutContent ? "fade-in-experience-container" : ""}`}>
-          {about === "about" ? (
-            <p className={`about-details ${showAboutContent ? "fade-in-about-details" : ""}`}>
-              I am a final year Computer Systems Engineering student at the University of Auckland, driven by my passion for coding, design, and crafting exceptional user experiences. My goal is to combine my technical skills in coding and systems engineering with my love for human-centered design principles to create innovative solutions.<br/><br/>Outside of university, I’m involved in extracurricular roles dedicated to giving back to the community. As the Events Manager at Rainbow Engineering, I organize events that connect LGBTQ individuals in the field of engineering. I am the current Vice President at Robogals Auckland, an international student-led organization. Our unified goal is to inspire young women to pursue STEM education and careers.
-            </p>
-          ) : (
-            <>
               <ul className="experience-list">
                 <li
                   className={`experience-list-item ${experience === 'Beca' ? 'selected-experience' : ''}`}
@@ -232,39 +245,75 @@ export default function Home() {
 
               </ul>
               {experienceContent}
-            </>
-          )}
         </div>
       );
-                  
-    return (
-        <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor }}> 
+
+          
+          return (
+        <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor, '--box-shadow': boxShadow }}> 
             <Navigation />
             
-            <div className={`about-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
+            {/* <div className={`about-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
                     <div className="about-title">
-                    <Typewriter
-                            words={['Hi, Wynn here']}
-                            cursor
-                            cursorStyle='|'
-                            typeSpeed={120}
-                            cursorColor={color}
-                            />
+                    Hi, Wynn here. I’m an artist and a final year Computer Systems Engineering student at the University of Auckland. I love to make things that bring people joy.      
                     </div>
 
                     <div className="about-details-container">
-                        <div className="about-details-list">
-                            <p className={`about-details-list-item ${about === 'about' ? 'selected-about' : ''}`} onClick={() => handleButtonClick("about")}>
-                            about
-                            </p>
-                            <p className={`about-details-list-item ${about === 'experience' ? 'selected-about' : ''}`} onClick={() => handleButtonClick("experience")}>
-                            experience
-                            </p>
-                        </div>
                         {bioContent}
                     </div>
+                    
                     <p className="site-from-scratch">site from scratch by wynn („• ᴗ •„) </p>
-                </div>
+                </div> */}
+
+        <div className={`home-details-inner fade ${isPageLoaded ? 'fade-enter' : ''}`}>
+          <div className="home-details-container">
+            <div className="gradient-overlay"></div> {/* Add this line for the gradient overlay */}
+              <div className="project-information-home">
+                <p className="about-title">
+                    Hi, Wynn here.
+                    I’m an artist and a final year Computer Systems Engineering student at the University of Auckland.
+                    I love to make things that bring people joy. <br></br><br></br> I'm currently the Vice President of       
+                    
+                    <span
+
+                              onMouseEnter={handleHover}
+                              onMouseLeave={handleMouseLeave}
+                              style={{ textDecoration:"underline", cursor:"pointer"}}>
+                      Robogals Auckland
+                    </span>, 
+                      and work part time as a Teaching Assistant for a stage 3 Machine Learning/AI paper (COMPSYS 306) at UoA.  <br></br><br></br> Outside of work, I enjoy hanging out with my dog Calcifer, going on long walks, and drinking matcha.
+                  </p>  
+            <div className='home-image-container'>
+              <div className={`prop-container-robo ${showImage ? 'fade-in-robo' : 'fade-out-robo'}`}>
+                <img className="mbot" draggable="false" src={mbot} alt="mbot" />
+                <img className="wrkshp" draggable="false" src={wrkshp} alt="wrkshp" />
+                <img className="wrkshp2"  draggable="false" src={wrkshp2} alt="wrkshp2" />
+              </div>
+
+              <div className={`prop-container-drag ${showImage ? 'fade-out' : 'fade-in'}`}>
+                <Draggable> 
+                  <img className='mememe'  src={mememe} draggable="false" id="draggable-image"></img>
+                </Draggable>
+
+                <Draggable>
+                  <img className='cows'  src={cows} draggable="false" id="draggable-image"></img>
+                </Draggable>
+                <Draggable>
+                  <img className='bestfriend' src={bestfriend} draggable="false" id="draggable-image"></img>
+                </Draggable>
+                <Draggable>
+                  <img className='matcha'  src={matcha} draggable="false" id="draggable-image"></img>
+                </Draggable>
+                <Draggable>
+                  <img className='goodboy'  src={goodboy} draggable="false" id="draggable-image"></img>
+                </Draggable>
+              </div>
+
             </div>
+            </div>
+        </div>
+        </div>
+
+      </div>
     );
 }
