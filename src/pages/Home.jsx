@@ -272,14 +272,12 @@ export default function Home() {
                 <p className="about-title">
                     Hi, Wynn here.
                     I’m an artist and a final year Computer Systems Engineering student at the University of Auckland.
-                    I love to make things that bring people joy. <br></br><br></br> I'm currently the Vice President of       
-                    
+                    I love to make things that bring people joy. <br></br><br></br> I'm currently the Vice President of
                     <span
 
                               onMouseEnter={handleHover}
                               onMouseLeave={handleMouseLeave}
-                              style={{ textDecoration:"underline", cursor:"pointer"}}>
-                      Robogals Auckland
+                              style={{ textDecoration:"underline", cursor:"pointer"}}> Robogals Auckland
                     </span>, 
                       and work part time as a Teaching Assistant for a stage 3 Machine Learning/AI paper (COMPSYS 306) at UoA.  <br></br><br></br> Outside of work, I enjoy hanging out with my dog Calcifer, going on long walks, and drinking matcha.
                   </p>  
