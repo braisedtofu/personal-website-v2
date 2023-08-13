@@ -279,7 +279,7 @@ export default function Home() {
                               onMouseLeave={handleMouseLeave}
                               style={{ textDecoration:"underline", cursor:"pointer"}}> Robogals Auckland
                     </span>, 
-                      and work part time as a Teaching Assistant for a stage 3 Machine Learning/AI paper (COMPSYS 306) at UoA.  <br></br><br></br> Outside of work, I enjoy hanging out with my dog Calcifer, going on long walks, and drinking matcha.
+                      and work part time as a Teaching Assistant for a stage 3 Machine Learning/AI paper at UoA.  <br></br><br></br> Outside of work, I enjoy hanging out with my dog Calcifer, going on long walks, and drinking matcha.
                   </p>  
             <div className='home-image-container'>
               <div className={`prop-container-robo ${showImage ? 'fade-in-robo' : 'fade-out-robo'}`}>
