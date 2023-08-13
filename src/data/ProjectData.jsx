@@ -132,7 +132,7 @@ const ProjectData = [
           dog11,
         ],
         title: "Body Pawsitive",
-        technologies: "Mongo DB, Express, React, Node, Raspberry Pico W, C/C++",
+        technologies: "Technologies: Mongo DB, Express, React, Node, Raspberry Pico W, C/C++",
         collab: "In collaboration with Alexander Wiseman, Julie Kim, Kian Jazayeri, Lexin Lin, Owen Xu, and Violet Liu",
         description: (
           <>
