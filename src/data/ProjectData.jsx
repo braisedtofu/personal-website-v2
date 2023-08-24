@@ -70,6 +70,11 @@ import julia1 from '../assets/juliafractals/julia1.png';
 import ripplesvid from '../assets/ripples/ripplesvid.mp4';
 import ripple1 from '../assets/ripples/ripple1.png';
 import trebuchetvid from '../assets/terribletrebuchet/trebuchetvid.mp4';
+import sounds1 from '../assets/soundsihear/soundsihear1.png';
+import sounds2 from '../assets/soundsihear/soundsihear2.png';
+import sounds3 from '../assets/soundsihear/soundsihear3.png';
+import sounds4 from '../assets/soundsihear/soundsihear4.png';
+
 
 const ProjectData = [
     {
@@ -148,6 +153,29 @@ const ProjectData = [
           </>
         )
     },
+
+      {
+        ProjectId: "soundsihear",
+        images: [
+          sounds1,
+          sounds2,
+          sounds3,
+          sounds4
+        ],
+        title: "sounds i hear",
+        technologies: "Technologies: Mongo DB, Express, React, Node",
+        description: (
+          <>
+            <p>
+            I wanted to create a lyric bank that contains all my favourite lines.   
+            </p>
+            <p>
+            <a href="https://www.soundsihear.com/" target="_blank">sounds i hear</a> 
+            </p>
+          </>
+        )
+    },
+
 
       {
         ProjectId: "handwriting-prediction",
