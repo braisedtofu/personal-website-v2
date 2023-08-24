@@ -39,7 +39,7 @@ export default function Projects() {
 
   const dataList = [
     { image: village, number:'(1)', name: 'pikatune', caption: 'Pikatune', subcaption: 'Mongo DB, Express, React, Node, Spotify API', summary: 'A Pokémon-themed playlist generator game. Have gym battles, add friends, customise your playlist, and level up!'},
-    { image: soundsihear, number:'(2)', name: 'soundsihear', caption: 'sounds i hear', subcaption: 'Mongo DB, Express, React, Node', summary: 'A lyirc bank that shows all my favoutie song lines.'},
+    { image: soundsihear, number:'(2)', name: 'soundsihear', caption: 'sounds i hear', subcaption: 'Mongo DB, Express, React, Node', summary: 'A lyric bank that shows all my favourite song lines.'},
     { image: dogtitle, number:'(3)', name: 'bodypawsitive', caption: 'Body Pawsitive', subcaption: 'Mongo DB, Express, React, Node, Raspberry Pico W, C/C++', summary: 'A smart scale system designed from scratch to weigh and log the weights of our furry friends, all managed through a web application.'},
     { image: trebuchet1, number:'(4)', name: 'sleep-is-a-crime', caption: 'Sleep Is A Crime', subcaption: 'Raspberry Pi Pico, Servo Motor, Woodwork', summary: 'A trebuchet that is so terrible it launches marshmellows at you and sings Rick Astley!'},
     { image: line1, number:'(5)', name: 'line-following-robot', caption: 'Line Following Robot', subcaption: 'PSoC Microcontroller, PCB Design, Altium, C Language', summary: 'A robot with sensors that can navigate a maze by following black lines, and find the shortest path.'},
