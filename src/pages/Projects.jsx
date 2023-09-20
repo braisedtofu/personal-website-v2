@@ -2,7 +2,6 @@ import React, {useState, useEffect, useContext} from "react";
 import Navigation from '../components/Navigation';
 import '../styles/Global.css';
 import '../styles/Home.css';
-import { Typewriter } from 'react-simple-typewriter';
 import NightModeContext from '../NightModeContext';
 import ProjectList from '../components/ProjectList';
 import village from '../assets/pikatune/village.png';

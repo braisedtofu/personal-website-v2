@@ -3,7 +3,7 @@ import "../styles/Navigation.css";
 import NightModeContext from '../NightModeContext';
 import { useNavigate, useLocation} from 'react-router-dom';
 import "../styles/Global.css";
-import resume from "../assets/WynnMoCV.pdf";
+import resume from "../assets/WynnMo_CV.pdf";
 
 export default function Navigation() {
 
