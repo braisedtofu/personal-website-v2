@@ -179,9 +179,9 @@
   text-align:justify;
   position: relative;
   font-family: 'Times Now Light';
-  font-size: 12px;
+  font-size: 11px;
   width: 20vw;
-  margin-bottom:20%;
+  margin-bottom:25%;
 }
 
 .about-title-box {
@@ -562,7 +562,7 @@
 
 }
 
-@media screen and (min-width: 380px) and (max-width: 1025px){
+@media screen and (min-width: 380px) and (max-width: 825px){
   .about-title {
     font-size: 14px;
     max-width: 80vw;
