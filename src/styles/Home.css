@@ -181,7 +181,7 @@
   font-family: 'Times Now Light';
   font-size: 11px;
   width: 20vw;
-  margin-bottom:25%;
+  margin-bottom:20%;
 }
 
 .about-title-box {
@@ -564,7 +564,7 @@
 
 @media screen and (min-width: 380px) and (max-width: 825px){
   .about-title {
-    font-size: 14px;
+    font-size: 11px;
     max-width: 80vw;
     margin-top:10%;
     margin-bottom: 20%;
@@ -712,7 +712,7 @@ width: 100%;
 
 @media screen and (min-width: 1500px) and (max-width: 6400px){
   .about-title {
-    font-size: 1rem;  
+    font-size: 0.8rem;  
   }
   .about-details {
     font-size: 20px;
