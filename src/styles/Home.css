@@ -29,27 +29,28 @@
 }
 
 .about-container.fade-enter {
-  opacity: 1; /* When the fade-enter class is applied, set opacity to 1 */
+  opacity: 1; 
 }
 
 .home-image-container {
   overflow-x:hidden;
-  margin-left:4%;
+  height:100vh;
   margin-top:0%;
+  width: 100vw;
   display: inline-table;
 }
 
 
 .home-image-container img,
 .home-image-container video {
-  z-index: 0; /* Adjust the z-index as needed */
+  z-index: 9999; 
   cursor:pointer;
   display: block;
   margin: 0 auto;
   box-shadow: 0 0 25px 10px var(--box-shadow);
 }
 
-.sky{
+.sky{   
   width:270px !important;
   margin-left: 2% !important;
   margin-top: 4% !important;
@@ -104,72 +105,93 @@
   transition: opacity 0.5s ease;
 }
 
+.books_jpg5{
+  position:fixed;
+  margin-left: 28% !important;
+  margin-top: 15% !important;
+  width:140px !important;
+  border-radius:2px;
+}
 
+.calcifer_jpg1{
+  margin-top:3% !important;
+  position:fixed;
+  margin-left: 62% !important;
+  width:140px !important;
+  border-radius:2px;
+}
 
-
-.mememe{
-  margin-top:20px;
-  position:absolute;
-  margin-left: 25% !important;
+.cam_jpg3{
+  position:fixed;
+  margin-left: 50% !important;
   margin-top: 5% !important;
-  width:350px !important;
-  border-radius:5px;
+  width:140px !important;
+  border-radius:2px;
 }
 
-.cows{
-  margin-top:20px;
-  position:absolute;
-  margin-left: 48% !important;
+.ceramic_jpg6{
+  width:140px !important;
+  margin-left: 53% !important;
+  margin-top: 15% !important;
+  border-radius:2px;
+  position:fixed;
+  
+}
+
+.me_jpg7{
+  width:140px !important;
+  margin-left: 38% !important;
   margin-top: 1% !important;
-  width:220px !important;
-  border-radius:5px;
+  border-radius:2px;
+  position:fixed;
 }
 
-.matcha{
-  margin-top:20px;
-  position:absolute;
-  margin-left:8% !important;
-  margin-top: 3% !important;
-  width:200px !important;
-  border-radius:4px;
+.jpg41{
+  width:140px !important;
+  margin-left: 41% !important;
+  margin-top: 180px !important;
+  border-radius:2px;
+  position:fixed;
 }
 
-.goodboy{
-  width:260px !important;
-  margin-left: 1% !important;
-  margin-top: 25% !important;
-  border-radius:5px;
-  position:absolute;
+.matcha_jpg2{
+  width:140px !important;
+  margin-left: 26% !important;
+  margin-top: 4% !important;
+  border-radius:2px;
+  position:fixed;
 }
 
-.bestfriend{
-  width:200px !important;
-  margin-left: 55% !important;
-  margin-top: 18% !important;
-  border-radius:4px;
-  position:absolute;
+.hike_mov{
+  width:140px !important;
+  margin-left: 65% !important;
+  margin-top: 12% !important;
+  border-radius:2px;
+  position:fixed;
+  
 }
-
-
-
 
 .about-title {
-  font-family: 'Times Now Light';
-  font-size: 15px;
-  margin-bottom: 0px;
   justify-content: left;
-  z-index: 99999;
   user-select: none;
   background-color: transparent;
   align-items: left;
-  margin-top: 3%;
-  margin-left:0%;
-  width:50vw;
-  max-width:20%;
-  text-align: left;
+  text-align:justify;
   position: relative;
+  font-family: 'Times Now Light';
+  font-size: 12px;
+  width: 20vw;
+  margin-bottom:20%;
 }
 
+.about-title-box {
+  z-index: 0;
+  margin-left:50%; 
+  transform: translate(-50%);
+  margin-bottom: 0px;
+  
+  background-color: transparent;
+}
 
 .hover-text {
   cursor: pointer;
@@ -178,7 +200,7 @@
 
 .hover-image {
   display: none;
-  max-width: 300px; /* Adjust image dimensions as needed */
+  max-width: 300px; 
   margin-top: 10px;
 }
 
@@ -366,10 +388,9 @@
 
 .home-details-container {
   width: 100vw;
-  flex-direction: row;
   display: flex;
-  position: relative;
   overflow-y: scroll;
+  overflow-x:hidden;
 }
 
 
@@ -384,18 +405,17 @@
   z-index: 0;
   opacity: 0;
   transition: opacity 2s ease-in-out;
-  bottom: 6vh; /* Add bottom: 0 to position it at the bottom of the page */
+  bottom: 6vh;
 }
 
 .home-details-inner::after {
   content: '';
-  z-index: 999999;
   position: absolute;
-  bottom: -1px; /* Set bottom: 0 to keep it at the bottom of the container */
+  bottom: -1px; 
   left: 0;
   right: 0;
   width: 100vw;
-  height: 5%; /* Adjust the height of the gradient as needed */
+  height: 5%; 
   background: linear-gradient(to top, var(--background-color), transparent);
 }
 
@@ -404,25 +424,24 @@
 }
 
 .project-information-home {
-  display: flex;
-  flex-direction: row;
+  display: flex;  
+  flex-direction: column;
   margin-top: auto;
-  align-items: flex-start; /* Align items to the left */
+  align-items: flex-start; 
   margin-bottom: 0px;
-  top: 0; /* Adjust the top position as needed */
-  z-index: 0; /* Adjust the z-index as needed */
+  top: 0; 
+  z-index: 3; 
   width: 100vw;
   height: 88vh;
-  margin-left:35px; 
-  max-width: 100%; /* Set the maximum width to 50% of the viewport width */
+  max-width: 100%;
 }
 
 @keyframes text-shadow-fade-in {
   from {
-    text-shadow: 0 0 0 rgba(var(--main-color), 0); /* Start with transparent text shadow */
+    text-shadow: 0 0 0 rgba(var(--main-color), 0); 
   }
   to {
-    text-shadow: 0 0 17px var(--main-color); /* Transition to the desired text shadow style */
+    text-shadow: 0 0 17px var(--main-color); 
   }
 }
 
@@ -447,49 +466,72 @@
   flex-direction: column;
 }
 
-.mememe{
-  margin-top:40px;
-  position:absolute;
-  margin-left: 25% !important;
-  margin-top: 150px !important;
-  width:100px !important;
-  border-radius:5px;
+.books_jpg5{
+  position:fixed;
+  margin-left: 28% !important;
+  margin-top: 15% !important;
+  width:140px !important;
+  border-radius:2px;
 }
 
-.cows{
-  margin-top:20px;
-  position:absolute;
-  margin-left: 48% !important;
-  margin-top: 2% !important;
-  width:80px !important;
-  border-radius:5px;
+.calcifer_jpg1{
+  margin-top:3% !important;
+  position:fixed;
+  margin-left: 62% !important;
+  width:140px !important;
+  border-radius:2px;
 }
 
-.matcha{
-  margin-top:20px;
-  position:absolute;
-  margin-left:0% !important;
-  margin-top: 3% !important;
-  width:50px !important;
-  border-radius:4px;
+.cam_jpg3{
+  position:fixed;
+  margin-left: 50% !important;
+  margin-top: 5% !important;
+  width:140px !important;
+  border-radius:2px;
 }
 
-.goodboy{
-  width:130px !important;
-  margin-left: 10px !important;
-  margin-top: 100px !important;
-  border-radius:7px;
-  position:absolute;
+.ceramic_jpg6{
+  width:140px !important;
+  margin-left: 53% !important;
+  margin-top: 15% !important;
+  border-radius:2px;
+  position:fixed;
   
 }
 
-.bestfriend{
-  width:80px !important;
-  margin-left: 55% !important;
-  margin-top: 100px !important;
-  border-radius:4px;
-  position:absolute;
+.me_jpg7{
+  width:140px !important;
+  margin-left: 38% !important;
+  margin-top: 1% !important;
+  border-radius:2px;
+  position:fixed;
 }
+
+.jpg41{
+  width:140px !important;
+  margin-left: 41% !important;
+  margin-top: 180px !important;
+  border-radius:2px;
+  position:fixed;
+}
+
+.matcha_jpg2{
+  width:140px !important;
+  margin-left: 26% !important;
+  margin-top: 4% !important;
+  border-radius:2px;
+  position:fixed;
+}
+
+.hike_mov{
+  width:140px !important;
+  margin-left: 65% !important;
+  margin-top: 12% !important;
+  border-radius:2px;
+  position:fixed;
+  
+}
+
 
 .mbot{
   width:80px !important;
@@ -571,48 +613,70 @@ width: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-.mememe{
-  margin-top:40px;
-  position:absolute;
-  margin-left: 25% !important;
-  margin-top: 150px !important;
-  width:100px !important;
-  border-radius:5px;
-}
-
-.cows{
-  margin-top:20px;
-  position:absolute;
-  margin-left: 48% !important;
-  margin-top: 2% !important;
-  width:80px !important;
-  border-radius:5px;
-}
-
-.matcha{
-  margin-top:20px;
-  position:absolute;
-  margin-left:0% !important;
-  margin-top: 3% !important;
-  width:50px !important;
-  border-radius:4px;
-}
-
-.goodboy{
+.books_jpg5{
+  position:fixed;
+  margin-left: 5% !important;
+  margin-top: 80% !important;
   width:130px !important;
-  margin-left: 10px !important;
-  margin-top: 100px !important;
-  border-radius:7px;
-  position:absolute;
+  border-radius:2px;
+}
+
+.calcifer_jpg1{
+  margin-top:1% !important;
+  position:fixed;
+  margin-left: 62% !important;
+  width:130px !important;
+  border-radius:2px;
+}
+
+.cam_jpg3{
+  position:fixed;
+  margin-left: 15% !important;
+  margin-top: 50% !important;
+  width:130px !important;
+  border-radius:2px;
+}
+
+.ceramic_jpg6{
+  width:130px !important;
+  margin-left: 53% !important;
+  margin-top: 40% !important;
+  border-radius:2px;
+  position:fixed;
   
 }
 
-.bestfriend{
-  width:80px !important;
-  margin-left: 55% !important;
-  margin-top: 100px !important;
-  border-radius:4px;
-  position:absolute;
+.me_jpg7{
+  width:130px !important;
+  margin-left: 10% !important;
+  margin-top: 1% !important;
+  border-radius:2px;
+  position:fixed;
+}
+
+.jpg41{
+  width:130px !important;
+  margin-left: 35% !important;
+  margin-top: 340px !important;
+  border-radius:2px;
+  position:fixed;
+}
+
+.matcha_jpg2{
+  width:130px !important;
+  margin-left: 30% !important;
+  margin-top: 10% !important;
+  border-radius:2px;
+  position:fixed;
+}
+
+.hike_mov{
+  width:130px !important;
+  margin-left: 60% !important;
+  margin-top: 80% !important;
+  border-radius:2px;
+  position:fixed;
+  
 }
 
 
@@ -648,7 +712,7 @@ width: 100%;
 
 @media screen and (min-width: 1500px) and (max-width: 6400px){
   .about-title {
-    font-size: 1.2rem;
+    font-size: 1rem;  
   }
   .about-details {
     font-size: 20px;
@@ -688,57 +752,71 @@ width: 100%;
   width: 300px;
 }
 
-.sky{
-  width:270px !important;
-  margin-left: 2% !important;
-  margin-top: 4% !important;
-  border-radius:5px;
-  position:absolute;
+.books_jpg5{
+  position:fixed;
+  margin-left: 28% !important;
+  margin-top: 15% !important;
+  width:200px !important;
+  border-radius:2px;
 }
 
-.mememe{
-  margin-top:20px;
-  position:absolute;
-  margin-left: 25% !important;
+.calcifer_jpg1{
+  margin-top:3% !important;
+  position:fixed;
+  margin-left: 62% !important;
+  width:200px !important;
+  border-radius:2px;
+}
+
+.cam_jpg3{
+  position:fixed;
+  margin-left: 50% !important;
   margin-top: 5% !important;
-  width:450px !important;
-  border-radius:5px;
+  width:200px !important;
+  border-radius:2px;
 }
 
-.cows{
-  margin-top:20px;
-  position:absolute;
-  margin-left: 48% !important;
+.ceramic_jpg6{
+  width:200px !important;
+  margin-left: 53% !important;
+  margin-top: 15% !important;
+  border-radius:2px;
+  position:fixed;
+  
+}
+
+.me_jpg7{
+  width:200px !important;
+  margin-left: 38% !important;
   margin-top: 2% !important;
-  width:330px !important;
-  border-radius:5px;
+  border-radius:2px;
+  position:fixed;
 }
 
-.matcha{
-  margin-top:20px;
-  position:absolute;
-  margin-left:6% !important;
-  margin-top: 3% !important;
-  width:300px !important;
-  border-radius:4px;
+.jpg41{
+  width:200px !important;
+  margin-left: 41% !important;
+  margin-top: 250px !important;
+  border-radius:2px;
+  position:fixed;
 }
 
-.goodboy{
-  width:380px !important;
-  margin-left: 3% !important;
-  margin-top: 25% !important;
-  border-radius:7px;
-  position:absolute;
+.matcha_jpg2{
+  width:200px !important;
+  margin-left: 26% !important;
+  margin-top: 4% !important;
+  border-radius:2px;
+  position:fixed;
 }
 
-.bestfriend{
-  width:280px !important;
-  margin-left: 55% !important;
-  margin-top: 18% !important;
-  border-radius:4px;
-  position:absolute;
+.hike_mov{
+  width:200px !important;
+  margin-left: 65% !important;
+  margin-top: 12% !important;
+  border-radius:2px;
+  position:fixed;
+  
 }
-
 
 
 

@@ -4,14 +4,16 @@ import "../styles/Global.css";
 import "../styles/Home.css";
 import Draggable from 'react-draggable'
 import NightModeContext from '../NightModeContext';
-import sky from '../assets/HomeImages/sky.jpeg'
-import mememe from '../assets/HomeImages/mememe.png'
-import cows from '../assets/HomeImages/cows.png'
-import matcha from '../assets/HomeImages/matcha.png'
-import bestfriend from '../assets/HomeImages/bestfriend.png'
-import goodboy from '../assets/HomeImages/goodboy.png'
 import wrkshp from '../assets/HomeImages/wrkshp.png'
 import wrkshp2 from '../assets/HomeImages/wrkshp2.png'
+import books_jpg5 from '../assets/HomeImages/books_jpg5.png'
+import calcifer_jpg1 from '../assets/HomeImages/calcifer_jpg1.png'
+import cam_jpg3 from '../assets/HomeImages/cam_jpg3.png'
+import ceramic_jpg6 from '../assets/HomeImages/ceramic_jpg6.png'
+import me_jpg7 from '../assets/HomeImages/me_jpg7.png'
+import matcha_jpg2 from '../assets/HomeImages/matcha_jpg2.png'
+import hike_mov from '../assets/HomeImages/hike.mp4'
+import jpg41 from '../assets/HomeImages/jpg41.png'
 import mbot from '../assets/HomeImages/mbot.png'
 
 export default function Home() {
@@ -269,18 +271,7 @@ export default function Home() {
           <div className="home-details-container">
             <div className="gradient-overlay"></div> {/* Add this line for the gradient overlay */}
               <div className="project-information-home">
-                <p className="about-title">
-                    Hi, Wynn here.
-                    I’m an artist and a final year Computer Systems Engineering student at the University of Auckland.
-                    I love to make things that bring people joy. <br></br><br></br> I'm currently the Vice President of
-                    <span
-
-                              onMouseEnter={handleHover}
-                              onMouseLeave={handleMouseLeave}
-                              style={{ textDecoration:"underline", cursor:"pointer"}}> Robogals Auckland
-                    </span>, 
-                      and work part time as a Teaching Assistant for a stage 3 Machine Learning/AI paper at UoA.  <br></br><br></br> Outside of work, I enjoy hanging out with my dog Calcifer, going on long walks, and drinking matcha.
-                  </p>  
+             
             <div className='home-image-container'>
               <div className={`prop-container-robo ${showImage ? 'fade-in-robo' : 'fade-out-robo'}`}>
                 <img className="mbot" draggable="false" src={mbot} alt="mbot" />
@@ -289,28 +280,53 @@ export default function Home() {
               </div>
 
               <div className={`prop-container-drag ${showImage ? 'fade-out' : 'fade-in'}`}>
+
+                <Draggable>
+                  <img className='calcifer_jpg1'  src={calcifer_jpg1} draggable="false" id="draggable-image"></img>
+                </Draggable>
+                <Draggable>
+                  <img className='jpg41'  src={jpg41} draggable="false" id="draggable-image"></img>
+                </Draggable>
+
+                <Draggable>
+                  <img className='cam_jpg3' src={cam_jpg3} draggable="false" id="draggable-image"></img>
+                </Draggable>
+
+                <Draggable>
+                  <img className='ceramic_jpg6'  src={ceramic_jpg6} draggable="false" id="draggable-image"></img>
+                </Draggable>
+                <Draggable>
+                  <img className='matcha_jpg2'  src={matcha_jpg2} draggable="false" id="draggable-image"></img>
+                </Draggable>
+                <Draggable>
+                  <video loop autoPlay muted playsInline className='hike_mov'src={hike_mov} width="100%"></video>
+                </Draggable>
+                <Draggable>
+                  <img className='me_jpg7'  src={me_jpg7} draggable="false" id="draggable-image"></img>
+                </Draggable>
                 <Draggable> 
-                  <img className='mememe'  src={mememe} draggable="false" id="draggable-image"></img>
+                  <img className='books_jpg5'  src={books_jpg5} draggable="false" id="draggable-image"></img>
                 </Draggable>
 
-                <Draggable>
-                  <img className='cows'  src={cows} draggable="false" id="draggable-image"></img>
-                </Draggable>
-                <Draggable>
-                  <img className='bestfriend' src={bestfriend} draggable="false" id="draggable-image"></img>
-                </Draggable>
-                <Draggable>
-                  <img className='matcha'  src={matcha} draggable="false" id="draggable-image"></img>
-                </Draggable>
-                <Draggable>
-                  <img className='goodboy'  src={goodboy} draggable="false" id="draggable-image"></img>
-                </Draggable>
               </div>
+            </div>
 
+            <div className='about-title-box'>
+              <p className="about-title"> 
+                        Hi, Wynn here.
+                        I’m an artist and a final year Computer Systems Engineering student at the University of Auckland.
+                        I love to make things that bring people joy. <br></br><br></br> I'm currently the Vice President of Robogals Auckland                            and work part time as a Teaching Assistant for a stage 3 Machine Learning/AI paper at UoA.  <br></br><br></br> Outside of work, I enjoy hanging out with my dog Calcifer, going on long walks, and drinking matcha.
+              </p>  
             </div>
             </div>
         </div>
         </div>
+                        {/* <span
+
+                                  onMouseEnter={handleHover}
+                                  onMouseLeave={handleMouseLeave}
+                                  style={{ textDecoration:"underline", cursor:"pointer"}}> Robogals Auckland
+                        </span>,  */}
 
       </div>
     );
