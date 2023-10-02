@@ -634,6 +634,7 @@ width: 100%;
 
 .cam_jpg3{
   position:fixed;
+  display:none;
   margin-left: 15% !important;
   margin-top: 50% !important;
   width:110px !important;
@@ -666,7 +667,7 @@ width: 100%;
 }
 
 .matcha_jpg2{
-  width:130px !important;
+  width:110px !important;
   margin-left: 30% !important;
   margin-top: 15% !important;
   border-radius:2px;
@@ -785,6 +786,7 @@ width: 100%;
   margin-left: 53% !important;
   margin-top: 15% !important;
   border-radius:2px;
+  display:none;
   position:fixed;
   
 }
