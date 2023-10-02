@@ -634,9 +634,8 @@ width: 100%;
 
 .cam_jpg3{
   position:fixed;
-  display:none;
   margin-left: 15% !important;
-  margin-top: 50% !important;
+  margin-top: 45% !important;
   width:110px !important;
   border-radius:2px;
 }
@@ -644,7 +643,7 @@ width: 100%;
 .ceramic_jpg6{
   width:110px !important;
   margin-left: 53% !important;
-  margin-top: 40% !important;
+  margin-top: 35% !important;
   border-radius:2px;
   position:fixed;
   
@@ -779,7 +778,6 @@ width: 100%;
   margin-top: 5% !important;
   width:200px !important;
   border-radius:2px;
-  visibility: hidden;
 }
 
 .ceramic_jpg6{
@@ -787,7 +785,6 @@ width: 100%;
   margin-left: 53% !important;
   margin-top: 15% !important;
   border-radius:2px;
-  visibility: hidden;
   position:fixed;
   
 }
