@@ -42,6 +42,8 @@
 
 .home-image-container img,
 .home-image-container video {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
   -webkit-transform:translate3d(0,0,0);
   z-index: 99999 !important; 
   position:absolute;
