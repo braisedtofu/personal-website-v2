@@ -18,16 +18,17 @@
     justify-content: space-between;
     align-items: center;
     height: 100dvh;
-    z-index: 0;
     overflow:hidden;
     width: 100%; /* Occupy the full width of the viewport */
   }
   
   .top-buttons {
     display: flex;
-    width: 100%;
+    width: 100%;  
+    -webkit-transform: translate3d(0,0,0);
+    background-color: transparent;
     justify-content: left;
-  }
+    }
   
     
   .about,
