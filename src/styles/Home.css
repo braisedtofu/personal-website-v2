@@ -619,13 +619,13 @@ width: 100%;
 .books_jpg5{
   position:fixed;
   margin-left: 5% !important;
-  margin-top: 80% !important;
+  margin-top: 60% !important;
   width:110px !important;
   border-radius:2px;
 }
 
 .calcifer_jpg1{
-  margin-top:1% !important;
+  margin-top:10% !important;
   position:fixed;
   margin-left: 62% !important;
   width:110px !important;
@@ -641,7 +641,7 @@ width: 100%;
 }
 
 .ceramic_jpg6{
-  width:10px !important;
+  width:110px !important;
   margin-left: 53% !important;
   margin-top: 40% !important;
   border-radius:2px;
@@ -650,17 +650,17 @@ width: 100%;
 }
 
 .me_jpg7{
-  width:130px !important;
+  width:110px !important;
   margin-left: 10% !important;
-  margin-top: 1% !important;
+  margin-top: 8% !important;
   border-radius:2px;
   position:fixed;
 }
 
 .jpg41{
-  width:130px !important;
+  width:110px !important;
   margin-left: 35% !important;
-  margin-top: 340px !important;
+  margin-top: 65% !important;
   border-radius:2px;
   position:fixed;
 }
@@ -668,15 +668,15 @@ width: 100%;
 .matcha_jpg2{
   width:130px !important;
   margin-left: 30% !important;
-  margin-top: 10% !important;
+  margin-top: 15% !important;
   border-radius:2px;
   position:fixed;
 }
 
 .hike_mov{
-  width:130px !important;
+  width:110px !important;
   margin-left: 60% !important;
-  margin-top: 80% !important;
+  margin-top: 58% !important;
   border-radius:2px;
   position:fixed;
   
