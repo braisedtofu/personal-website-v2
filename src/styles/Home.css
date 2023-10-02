@@ -779,6 +779,7 @@ width: 100%;
   margin-top: 5% !important;
   width:200px !important;
   border-radius:2px;
+  visibility: hidden;
 }
 
 .ceramic_jpg6{
@@ -786,7 +787,7 @@ width: 100%;
   margin-left: 53% !important;
   margin-top: 15% !important;
   border-radius:2px;
-  display:none;
+  visibility: hidden;
   position:fixed;
   
 }
