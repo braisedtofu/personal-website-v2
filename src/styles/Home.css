@@ -603,12 +603,45 @@
     font-size: 15px;
     max-width: 90vw;
     margin-top:10%;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     width: 90vw;
     margin-left:5%; 
   }
 .site-from-scratch{
 left: 21px;
+}
+
+.book{
+  width: 30vw !important;
+  margin-left: 50% !important;
+  transform: translate(-50%) !important;
+  border-radius:7px;
+  position:fixed;
+}
+
+.maki{
+  width: 30vw !important;
+  margin-left: 50% !important;
+  margin-top:0% !important;
+  transform: translate(-50%) !important;
+  border-radius:5px;
+  position:fixed;
+}
+.fireforce{
+  width:22vw !important;
+  margin-left: 39% !important;
+  margin-top: 100px !important;
+  border-radius:5px;
+  position:fixed;
+  visibility: hidden;
+}
+.frierenn{
+  width: 17vw !important;
+  margin-left: 4% !important;
+  margin-top: 18px !important;
+  border-radius:5px;
+  position:fixed;
+  visibility: hidden;
 }
 
 .home-details-inner {
@@ -688,7 +721,7 @@ width: 100%;
 }
 
 .me_jpg7{
-  width: 200px !important;
+  width: 50vw !important;
   margin-top: 0% !important;
   margin-left: 50% !important;
   transform: translate(-50%) !important;
