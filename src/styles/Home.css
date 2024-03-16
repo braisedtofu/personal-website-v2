@@ -197,6 +197,9 @@
   margin-top: 18px !important;
   border-radius:5px;
   position:fixed;
+  -webkit-transform:translate3d(0,0,0) !important;
+  z-index: 9999 !important;
+
 }
 
 .book{
@@ -204,6 +207,8 @@
   margin-left: 20% !important;
   margin-top: 10px !important;
   border-radius:7px;
+  z-index: 9999 !important;
+  -webkit-transform:translate3d(0,0,0) !important;
   position:fixed;
 }
 
@@ -640,6 +645,7 @@ left: 21px;
   margin-left: 4% !important;
   margin-top: 18px !important;
   border-radius:5px;
+  z-index: 9999 !important;
   position:fixed;
   visibility: hidden;
 }
