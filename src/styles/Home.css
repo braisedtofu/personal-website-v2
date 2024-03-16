@@ -536,7 +536,7 @@
 }
 
 .me_jpg7{
-  width:140px !important;
+  width:80px !important;
   margin-left: 38% !important;
   margin-top: 1% !important;
   border-radius:2px;
@@ -688,7 +688,8 @@ width: 100%;
 }
 
 .me_jpg7{
-  width: 300px !important;
+  width: 200px !important;
+  margin-top: 0% !important;
   margin-left: 50% !important;
   transform: translate(-50%) !important;
   display: block;
