@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'Times Now Light';
-  src: url('../fonts/TimesNow-Light.ttf');
+  src: url('../fonts/Untitled-Sans-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Times Now Bold';
-  src: url('../fonts/TimesNow-Bold.ttf');
+  src: url('../fonts/Untitled-Sans-Regular.ttf');
 }
 
 
 @font-face {
   font-family: 'Times Now ExtraLight';
-  src: url('../fonts/TimesNow-ExtraLight.ttf');
+  src: url('../fonts/Untitled-Sans-Regular.ttf');
 }
 
 
@@ -43,6 +43,7 @@
     max-width: 100%; /* Set a maximum width for the image */
     flex-shrink: 0;
     display: flex;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
     object-fit: cover;

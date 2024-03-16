@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Times Now Light';
-    src: url('../fonts/TimesNow-Light.ttf');
+    src: url('../fonts/Untitled-Sans-Regular.ttf');
   }
 
 @font-face {
     font-family: 'Times Now ExtraLight';
-    src: url('../fonts/TimesNow-ExtraLight.ttf');
+    src: url('../fonts/Untitled-Sans-Regular.ttf');
   }
   
 .project-details-container {
@@ -107,7 +107,8 @@
   
   .image-container img,
   .image-container video {
-    width: 600px;
+    width: 500px;
+    border-radius: 5px;
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -156,7 +157,7 @@
   .project-description{
     font-family: 'Times Now Light';
     font-size:0.8em;
-    text-align:justify;
+    text-align:left;
   }
 
 

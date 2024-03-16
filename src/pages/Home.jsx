@@ -15,6 +15,11 @@ import matcha_jpg2 from '../assets/HomeImages/matcha_jpg2.png'
 import hike_mov from '../assets/HomeImages/hike.mp4'
 import jpg41 from '../assets/HomeImages/jpg41.png'
 import mbot from '../assets/HomeImages/mbot.png'
+import maki from '../assets/HomeImages/maki.png'
+import fireforce from '../assets/HomeImages/fireforce.png'
+import frierenn from '../assets/HomeImages/frierenn.png'
+import book from '../assets/HomeImages/userfriendly.png'
+import kon from '../assets/HomeImages/kon.png'
 
 export default function Home() {
 
@@ -28,6 +33,26 @@ export default function Home() {
 
     const [isPageLoaded, setIsPageLoaded] = useState(false);
 
+    const [showbookImage, setbookShowImage] = useState(false);
+
+    const bookhandleHover = () => {
+      setbookShowImage(true);
+    };
+  
+    const bookhandleMouseLeave = () => {
+      setbookShowImage(false);
+    };
+
+    const [showanimeImage, setanimeShowImage] = useState(false);
+
+    const animehandleHover = () => {
+      setanimeShowImage(true);
+    };
+  
+    const animehandleMouseLeave = () => {
+      setanimeShowImage(false);
+    };
+
     const [showImage, setShowImage] = useState(false);
 
     const handleHover = () => {
@@ -37,6 +62,8 @@ export default function Home() {
     const handleMouseLeave = () => {
       setShowImage(false);
     };
+
+
   
     useEffect(() => {
       setTimeout(() => {
@@ -270,63 +297,85 @@ export default function Home() {
         <div className={`home-details-inner fade ${isPageLoaded ? 'fade-enter' : ''}`}>
           <div className="home-details-container">
             <div className="gradient-overlay"></div> {/* Add this line for the gradient overlay */}
-              <div className="project-information-home">
+              <div className="home-container">
              
-            <div className='home-image-container'>
-              <div className={`prop-container-robo ${showImage ? 'fade-in-robo' : 'fade-out-robo'}`}>
-                <img className="mbot" draggable="false" src={mbot} alt="mbot" />
-                <img className="wrkshp" draggable="false" src={wrkshp} alt="wrkshp" />
-                <img className="wrkshp2"  draggable="false" src={wrkshp2} alt="wrkshp2" />
+                <div className='about-title-box'>
+                  <p className="about-title"> 
+                            Hi, I'm Wynn! I’m an artist and engineer based in Auckland, New Zealand.
+                            I love to make things that bring people joy. I'm currently working as a 
+                            Digital Consultant at Beca under the Digital Products and Services team.
+                            <br></br><br></br>I'm fascinated by how the <span onMouseEnter={() => { bookhandleHover(); handleHover(); }} 
+  onMouseLeave={() => { bookhandleMouseLeave(); handleMouseLeave(); }}  style={{ textDecoration:"underline", cursor:"pointer"}}>
+                            hidden rules of design can change the way we live, work, and play
+                            </span>,
+                            and how we can build technology to make life easier for those who need it. In my spare time, 
+                            I love cafe hopping, working on my creative projects, and <span   onMouseEnter={() => { animehandleHover(); handleHover(); }} 
+  onMouseLeave={() => { animehandleMouseLeave(); handleMouseLeave(); }} 
+ style={{ textDecoration:"underline", cursor:"pointer"}}>
+                            watching anime.
+                            </span>
+                  </p>  
+                </div>
+                <div className='home-image-container'>
+
+                  <div className={`prop-container-drag ${showImage ? 'fade-out' : 'fade-in'}`}>
+
+                    <Draggable>
+                      <img className='calcifer_jpg1'  src={calcifer_jpg1} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+                    {/* <Draggable>
+                      <img className='jpg41'  src={jpg41} draggable="false" id="draggable-image"></img>
+                    </Draggable> */}
+
+                    <Draggable>
+                      <img className='cam_jpg3' src={cam_jpg3} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+
+                    <Draggable>
+                      <img className='ceramic_jpg6'  src={ceramic_jpg6} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+                    <Draggable>
+                      <img className='matcha_jpg2'  src={matcha_jpg2} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+                    {/* <Draggable>
+                      <video loop autoPlay muted playsInline className='hike_mov'src={hike_mov} width="100%"></video>
+                    </Draggable> */}
+                    <Draggable>
+                      <img className='me_jpg7'  src={me_jpg7} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+                    <Draggable> 
+                      <img className='books_jpg5'  src={books_jpg5} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+
+                  </div>
+
+                  <div className={`prop-container-drag ${showanimeImage ? 'fade-in' : 'fade-out'}`}>
+
+                    <Draggable>
+                      <img className='fireforce'  src={fireforce} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+                    <Draggable>
+                      <img className='frierenn'  src={frierenn} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+                    <Draggable>
+                      <img className='maki'  src={maki} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+
+
+                  </div>
+
+                  <div className={`prop-container-drag ${showbookImage ? 'fade-in' : 'fade-out'}`}>
+
+                    <Draggable>
+                      <img className='book'  src={book} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+                  </div>
+
               </div>
 
-              <div className={`prop-container-drag ${showImage ? 'fade-out' : 'fade-in'}`}>
-
-                <Draggable>
-                  <img className='calcifer_jpg1'  src={calcifer_jpg1} draggable="false" id="draggable-image"></img>
-                </Draggable>
-                <Draggable>
-                  <img className='jpg41'  src={jpg41} draggable="false" id="draggable-image"></img>
-                </Draggable>
-
-                <Draggable>
-                  <img className='cam_jpg3' src={cam_jpg3} draggable="false" id="draggable-image"></img>
-                </Draggable>
-
-                <Draggable>
-                  <img className='ceramic_jpg6'  src={ceramic_jpg6} draggable="false" id="draggable-image"></img>
-                </Draggable>
-                <Draggable>
-                  <img className='matcha_jpg2'  src={matcha_jpg2} draggable="false" id="draggable-image"></img>
-                </Draggable>
-                <Draggable>
-                  <video loop autoPlay muted playsInline className='hike_mov'src={hike_mov} width="100%"></video>
-                </Draggable>
-                <Draggable>
-                  <img className='me_jpg7'  src={me_jpg7} draggable="false" id="draggable-image"></img>
-                </Draggable>
-                <Draggable> 
-                  <img className='books_jpg5'  src={books_jpg5} draggable="false" id="draggable-image"></img>
-                </Draggable>
-
-              </div>
-            </div>
-
-            <div className='about-title-box'>
-              <p className="about-title"> 
-                        Hi, Wynn here.
-                        I’m an artist and a final year Computer Systems Engineering student at the University of Auckland.
-                        I love to make things that bring people joy. <br></br><br></br> I'm currently the Vice President of Robogals Auckland                            and work part time as a Machine Learning Teaching Assistant at UoA.  <br></br><br></br> Outside of work, I enjoy hanging out with my dog Calcifer, going on long walks, and drinking matcha.
-              </p>  
-            </div>
             </div>
         </div>
-        </div>
-                        {/* <span
-
-                                  onMouseEnter={handleHover}
-                                  onMouseLeave={handleMouseLeave}
-                                  style={{ textDecoration:"underline", cursor:"pointer"}}> Robogals Auckland
-                        </span>,  */}
+          </div>
 
       </div>
     );

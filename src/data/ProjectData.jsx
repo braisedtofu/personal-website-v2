@@ -102,7 +102,7 @@ const ProjectData = [
         description: (
           <>
             <p>
-            Do you think you’ve caught them all? Well, YOU HAVEN’T! There are still so many tunes to catch out there. PikaTune is a Pokémon-themed playlist generator. The website aims to introduce new songs to people looking to discover new music. Users can register as Pokémon trainers and select a starter Pokémon to join them in their exciting music discovery journey. Once the user completes their sign-up, they will be directed to PikaTune village. PikaTune village has four accessible buildings; Pokémart, Pokémon Gym, Pokémon Centre and Social Tower.
+            Do you think you’ve caught them all? Well, YOU HAVEN’T! There are still so many tunes to catch out there. PikaTune is a Pokémon-themed playlist generator featuring quiz type pokemon battles and a level up system. 
             </p>
             <p>
             POKÉMART: Visit Pokémart to generate your own playlist. You will be prompted to select a Pokemon type you are vibing with. Add up to five artists/songs you enjoy to customise your playlist further. Once the playlist is generated, you can swap and delete songs you dislike, name your playlist and then save it to your account. To view and download your playlist to your own Spotify, email 750@wexfordbedroom.com to get your Spotify account added to permissions!

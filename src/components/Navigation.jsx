@@ -3,7 +3,7 @@ import "../styles/Navigation.css";
 import NightModeContext from '../NightModeContext';
 import { useNavigate, useLocation} from 'react-router-dom';
 import "../styles/Global.css";
-import resume from "../assets/WynnMo_CV.pdf";
+import resume from "../assets/WynnMoCV.pdf";
 
 export default function Navigation() {
 
@@ -96,6 +96,7 @@ export default function Navigation() {
         <div className="navigation-container" style={{ '--main-color': color, '--box-shadow': boxShadow}}>
             {/* Top Buttons */}
             <div className="top-buttons">
+              
                 <button className={`projects ${location.pathname === '/' ? 'unclicked' : ''}`}  onClick={handleHomeClick} >about</button>
                 <button className={`projects ${location.pathname.startsWith('/projects') ? 'unclicked' : ''}`}  onClick={handleProjectsClick} >projects</button>
                 <button onClick={handleResumeClick} className="resume">resume</button>
