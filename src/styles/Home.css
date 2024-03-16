@@ -620,7 +620,7 @@ left: 21px;
 }
 
 .maki{
-  width: 30vw !important;
+  width: 35vw !important;
   margin-left: 50% !important;
   margin-top:0% !important;
   transform: translate(-50%) !important;
@@ -628,7 +628,7 @@ left: 21px;
   position:fixed;
 }
 .fireforce{
-  width:22vw !important;
+  width:28vw !important;
   margin-left: 39% !important;
   margin-top: 100px !important;
   border-radius:5px;
