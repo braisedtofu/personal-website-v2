@@ -109,7 +109,7 @@
 
 .books_jpg5{
   position:fixed;
-  margin-left: 12% !important;
+  margin-left: 50% !important;
   margin-top: 18% !important;
   width:200px !important;
   border-radius:2px;
@@ -123,6 +123,7 @@
   margin-left: 33% !important;
   width: 22vw !important;
   border-radius:7px;
+  visibility: hidden;
 }
 
 .cam_jpg3{
@@ -149,6 +150,7 @@
   margin-top: 5% !important;
   border-radius:7px;
   position:fixed;
+  visibility: hidden;
 }
 
 .jpg41{
@@ -178,23 +180,23 @@
 }
 
 .maki{
-  width:22vw !important;
-  margin-left: 15% !important;
-  margin-top: 150px !important;
-  border-radius:5px;
-  position:fixed;
-}
-.fireforce{
-  width:22vw !important;
-  margin-left: 39% !important;
+  width:15vw !important;
+  margin-left: 60% !important;
   margin-top: 100px !important;
   border-radius:5px;
   position:fixed;
 }
+.fireforce{
+  width:15vw !important;
+  margin-left: 42.5% !important;
+  margin-top: 30px !important;
+  border-radius:5px;
+  position:fixed;
+}
 .frierenn{
-  width: 17vw !important;
-  margin-left: 4% !important;
-  margin-top: 18px !important;
+  width: 15vw !important;
+  margin-left: 25% !important;
+  margin-top: 120px !important;
   border-radius:5px;
   position:fixed;
   -webkit-transform:translate3d(0,0,0) !important;
@@ -203,8 +205,9 @@
 }
 
 .book{
-  width:25vw !important;
-  margin-left: 20% !important;
+  width:18vw !important;
+  margin-left: 40% !important;
+  transform: translate(-50%);
   margin-top: 10px !important;
   border-radius:7px;
   z-index: 9999 !important;
@@ -221,9 +224,9 @@
   text-align:left;
   position: relative;
   font-family: 'Times Now Light';
-  font-size: 1.8vw;
-  width: 30vw;
-  margin-bottom:20%;
+  font-size: 1.4vw;
+  width: 92vw;
+  margin:2.5%;
 }
 
 .about-title-box {
@@ -466,7 +469,7 @@
 
 .home-container {
   display: flex;  
-  flex-direction: row;
+  flex-direction: column;
   margin-top: auto;
   align-items: flex-start; 
   margin-bottom: 0px;

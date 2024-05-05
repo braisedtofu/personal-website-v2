@@ -304,7 +304,7 @@ export default function Home() {
                             Hi, I'm Wynn! I’m an artist and engineer based in Auckland, New Zealand.
                             I love to make things that bring people joy. I'm currently working as a 
                             Digital Consultant at Beca under the Digital Products and Services team.
-                            <br></br><br></br>I'm fascinated by how the <span onMouseEnter={() => { bookhandleHover(); handleHover(); }} 
+                            I'm fascinated by how the <span onMouseEnter={() => { bookhandleHover(); handleHover(); }} 
   onMouseLeave={() => { bookhandleMouseLeave(); handleMouseLeave(); }}  style={{ textDecoration:"underline", cursor:"pointer"}}>
                             hidden rules of design can change the way we live, work, and play
                             </span>,
