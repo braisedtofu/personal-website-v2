@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'Times Now Light';
+  font-family: 'Times Now Light', sans-serif;
   src: url('../fonts/Untitled-Sans-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Times Now Bold';
+  font-family: 'Times Now Bold', sans-serif;
   src: url('../fonts/Untitled-Sans-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Times Now ExtraLight';
+  font-family: 'Times Now ExtraLight', sans-serif;
   src: url('../fonts/Untitled-Sans-Regular.ttf');
 }
 
