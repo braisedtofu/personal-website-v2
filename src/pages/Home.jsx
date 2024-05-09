@@ -4,22 +4,23 @@ import "../styles/Global.css";
 import "../styles/Home.css";
 import Draggable from 'react-draggable'
 import NightModeContext from '../NightModeContext';
-import wrkshp from '../assets/HomeImages/wrkshp.png'
-import wrkshp2 from '../assets/HomeImages/wrkshp2.png'
-import books_jpg5 from '../assets/HomeImages/books_jpg5.png'
-import calcifer_jpg1 from '../assets/HomeImages/calcifer_jpg1.png'
-import cam_jpg3 from '../assets/HomeImages/cam_jpg3.png'
-import ceramic_jpg6 from '../assets/HomeImages/ceramic_jpg6.png'
-import me_jpg7 from '../assets/HomeImages/me_jpg7.png'
-import matcha_jpg2 from '../assets/HomeImages/matcha_jpg2.png'
-import hike_mov from '../assets/HomeImages/hike.mp4'
-import jpg41 from '../assets/HomeImages/jpg41.png'
-import mbot from '../assets/HomeImages/mbot.png'
-import maki from '../assets/HomeImages/maki.png'
-import fireforce from '../assets/HomeImages/fireforce.png'
-import frierenn from '../assets/HomeImages/frierenn.png'
-import book from '../assets/HomeImages/userfriendly.png'
-import kon from '../assets/HomeImages/kon.png'
+import wrkshp from '../assets/HomeImages/wrkshp.png';
+import wrkshp2 from '../assets/HomeImages/wrkshp2.png';
+import books_jpg5 from '../assets/HomeImages/books_jpg5.png';
+import calcifer_jpg1 from '../assets/HomeImages/calcifer_jpg1.png';
+import cam_jpg3 from '../assets/HomeImages/cam_jpg3.png';
+import ceramic_jpg6 from '../assets/HomeImages/ceramic_jpg6.png';
+import me_jpg7 from '../assets/HomeImages/me_jpg7.png';
+import matcha_jpg2 from '../assets/HomeImages/matcha_jpg2.png';
+import hike_mov from '../assets/HomeImages/hike.mp4';
+import jpg41 from '../assets/HomeImages/jpg41.png';
+import mbot from '../assets/HomeImages/mbot.png';
+import maki from '../assets/HomeImages/maki.png';
+import fireforce from '../assets/HomeImages/fireforce.png';
+import frierenn from '../assets/HomeImages/frierenn.png';
+import book from '../assets/HomeImages/userfriendly.png';
+import kon from '../assets/HomeImages/kon.png';
+import selfie from '../assets/HomeImages/selfie.png';
 
 export default function Home() {
 
@@ -35,9 +36,20 @@ export default function Home() {
 
     const [showbookImage, setbookShowImage] = useState(false);
 
+    const [showSelfie, setSelfieShowImage] = useState(false);
+
     const bookhandleHover = () => {
       setbookShowImage(true);
     };
+
+    const selfiehandleHover = () => {
+      setSelfieShowImage(true);
+    };
+
+    const selfiehandleMouseLeave = () => {
+      setSelfieShowImage(false);
+    };
+
   
     const bookhandleMouseLeave = () => {
       setbookShowImage(false);
@@ -301,7 +313,8 @@ export default function Home() {
              
                 <div className='about-title-box'>
                   <p className="about-title"> 
-                            Hi, I'm Wynn! I’m an artist and engineer based in Auckland, New Zealand.
+                            Hi, I'm  <span onMouseEnter={() => { selfiehandleHover(); handleHover(); }} 
+  onMouseLeave={() => { selfiehandleMouseLeave(); handleMouseLeave(); }}  style={{ textDecoration:"underline", cursor:"pointer"}}>Wynn!</span> I’m an artist and engineer based in Auckland, New Zealand.
                             I love to make things that bring people joy. I'm currently working as a 
                             Digital Consultant at Beca under the Digital Products and Services team.
                             I'm fascinated by how the <span onMouseEnter={() => { bookhandleHover(); handleHover(); }} 
@@ -370,6 +383,14 @@ export default function Home() {
                       <img className='book'  src={book} draggable="false" id="draggable-image"></img>
                     </Draggable>
                   </div>
+
+                  <div className={`prop-container-drag ${showSelfie ? 'fade-in' : 'fade-out'}`}>
+
+                    <Draggable>
+                      <img className='selfie'  src={selfie} draggable="false" id="draggable-image"></img>
+                    </Draggable>
+                  </div>
+
 
               </div>
 

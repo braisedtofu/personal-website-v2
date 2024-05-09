@@ -215,6 +215,18 @@
   position:fixed;
 }
 
+.selfie{
+  width:18vw !important;
+  margin-left: 40% !important;
+  transform: translate(-50%);
+  margin-top: 10px !important;
+  border-radius:7px;
+  z-index: 9999 !important;
+  -webkit-transform:translate3d(0,0,0) !important;
+  position:fixed;
+}
+
+
 
 .about-title {
   justify-content: left;
@@ -626,6 +638,15 @@ left: 21px;
   border-radius:7px;
   position:fixed;
 }
+
+.selfie{
+  width: 30vw !important;
+  margin-left: 50% !important;
+  transform: translate(-50%) !important;
+  border-radius:7px;
+  position:fixed;
+}
+
 
 .maki{
   width: 35vw !important;
