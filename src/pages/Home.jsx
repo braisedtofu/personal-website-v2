@@ -9,7 +9,7 @@ import smiski2 from '../assets/HomeImages/smiski2.png';
 import smiski3 from '../assets/HomeImages/smiski3.png';
 import smiski4 from '../assets/HomeImages/smiski4.png';
 import ardemo from '../assets/HomeImages/ARdemo.png';
-import argraphic from '../assets/HomeImages/ARgraphic.png';
+import argraphic from '../assets/HomeImages/argraphic.png';
 import arreality from '../assets/HomeImages/arreality.png';
 import araddtail from '../assets/HomeImages/araddtail.gif';
 import arremovetail from '../assets/HomeImages/arremovetail.gif';
