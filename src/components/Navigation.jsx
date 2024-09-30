@@ -3,7 +3,6 @@ import "../styles/Navigation.css";
 import NightModeContext from '../NightModeContext';
 import { useNavigate, useLocation} from 'react-router-dom';
 import "../styles/Global.css";
-import resume from "../assets/WynnMoCV.pdf";
 
 export default function Navigation() {
 
@@ -23,7 +22,7 @@ export default function Navigation() {
       ];
       
       const dayColors = [
-        'rgb(9, 72, 168)',
+        'rgba(16, 75, 166, 1)',
         'rgb(22, 95, 44)',
         'rgb(123, 47, 13)',
         'rgb(127, 14, 127)',
@@ -96,21 +95,23 @@ export default function Navigation() {
         <div className="navigation-container" style={{ '--main-color': color, '--box-shadow': boxShadow}}>
             {/* Top Buttons */}
             <div className="top-buttons">
-              
+                <button className={`wynnmo ${location.pathname === '/' ? 'unclicked' : ''}`}  onClick={handleHomeClick} >wynn mo</button>
                 <button className={`projects ${location.pathname === '/' ? 'unclicked' : ''}`}  onClick={handleHomeClick} >about</button>
-                <button className={`projects ${location.pathname.startsWith('/projects') ? 'unclicked' : ''}`}  onClick={handleProjectsClick} >projects</button>
-                <button onClick={handleResumeClick} className="resume">resume</button>
-                <button onClick={handleEmojiClick} className="emoji">{emoji}</button>
+                <button className={`projects ${location.pathname.startsWith('/projects') ? 'unclicked' : ''}`}  onClick={handleProjectsClick} >creations</button>
+                <button onClick={handleColorChange} className="projects">colour</button>
+                <button className="projects" onClick={toggleNightMode}>
+                    {isNightMode ? 'night' + '\u00A0' + '\u00A0' : 'day'}
+                </button>
             </div>
             {/* Bottom Buttons */}
-            <div className="bottom-buttons">
+            {/* <div className="bottom-buttons">
                 <button onClick={handleGithubClick} className="github">github</button>
                 <button onClick={handleLinkedinClick} className="linkedin">linkedin</button>
                 <button onClick={handleColorChange} className="github">color</button>
                 <button className="github" onClick={toggleNightMode}>
                     {isNightMode ? 'day' + '\u00A0' + '\u00A0' : 'night'}
                 </button>
-            </div>
+            </div> */}
       </div>
       );
 }

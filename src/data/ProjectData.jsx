@@ -80,44 +80,30 @@ const ProjectData = [
     {
         ProjectId: "pikatune",
         images: [
-          village,
-          pikatune1,
-          pikatune2,
-          building1,
-          building2,
-          building3,
-          building4,
-          generate1,
-          generate2,
-          playlist,
-          battle1,
-          battle2,
-          battle3,
-          friends,
-          friends2,
+          { src: village, caption: "village and main navigation menu"},
+          { src: pikatune1, caption: "account creation starter pokemon selection"},
+          { src: pikatune2, caption: "account creation starter trainer selection"},
+          { src: building1, caption: "pokémart for playlist generation", summary: "POKÉMART: Visit Pokémart to generate your own playlist. You will be prompted to select a Pokemon type you are vibing with. Add up to five artists/songs you enjoy to customise your playlist further. Once the playlist is generated, you can swap and delete songs you dislike, name your playlist and then save it to your account. To view and download your playlist to your own Spotify, email 750@wexfordbedroom.com to get your Spotify account added to permissions!" },
+          { src: building2, caption: "pokémart for playlist management", summary: "POKÉCENTER: Visit the Pokémon Centre to view and edit your generated playlists." },
+          { src: building3, caption: "social tower for adding and managing friends", summary:"SOCIAL TOWER: Visit the Social Tower to view other trainers and add them to your friends list to track their levels!"},
+          { src: building4, caption: "pokémon gym to battle champion cynthia", summary: "POKÉMON GYM: Once you have generated at least one playlist, you can visit the gym to level up your Pokémon. Cynthia, the gym leader, will ask you five randomised questions to test how well you know your generated playlists. Level up before your friends for ultimate bragging rights." },
+          { src: generate1, caption: "selecting type for playlist generation"},
+          { src: generate2, caption: "selecting songs to base the playlist on"},
+          { src: playlist, caption: "overview of your generated playlist"},
+          { src: battle1, caption: "engaging in a pokémon battle"},
+          { src: battle2, caption: "answering album related questions"},
+          { src: battle3, caption: "quizzing with album covers"},
+          { src: friends, caption: "trainer cards of other players"},
+          { src: friends2, caption: "trainer card details"}
         ],
-        title: "Pikatune",
+              title: "Pikatune",
         technologies: "Technologies: Mongo DB, Express, React, Node, Spotify API",
         collab: "In collaboration with Alan Lin, Danika Chhour, Saakshi Hedge, and May Sribunwongsa",
         description: (
           <>
             <p>
             Do you think you’ve caught them all? Well, YOU HAVEN’T! There are still so many tunes to catch out there. PikaTune is a Pokémon-themed playlist generator featuring quiz type pokemon battles and a level up system. 
-            </p>
-            <p>
-            POKÉMART: Visit Pokémart to generate your own playlist. You will be prompted to select a Pokemon type you are vibing with. Add up to five artists/songs you enjoy to customise your playlist further. Once the playlist is generated, you can swap and delete songs you dislike, name your playlist and then save it to your account. To view and download your playlist to your own Spotify, email 750@wexfordbedroom.com to get your Spotify account added to permissions!
-            </p>
-            <p>
-            POKÉCENTER: Visit the Pokémon Centre to view and edit your generated playlists.
-            </p>
-            <p>
-            SOCIAL TOWER: Visit the Social Tower to view other trainers and add them to your friends list to track their levels!
-            </p>
-            <p>
-            POKÉMON GYM: Once you have generated at least one playlist, you can visit the gym to level up your Pokémon. Cynthia, the gym leader, will ask you five randomised questions to test how well you know your generated playlists. Level up before your friends for ultimate bragging rights.
-            </p>
-            <p>
-            I built this game in React, and worked on front-end engineering, game design, and UI design. This collaboration was such so fun!
+            This game was built using a MERN stack, and I worked on front-end engineering and UX/UI design (heavily inspired by exisitng Pokémon games). This collaboration was such so fun!
             </p>
           </>
         )
@@ -126,15 +112,15 @@ const ProjectData = [
       {
         ProjectId: "bodypawsitive",
         images: [
-          dog1,
-          dog2,
-          dog3,
-          dog4,
-          dog5,
-          dog6,
-          dog7,
-          dog8,
-          dog11,
+          { src: dog1, caption: "landing page for logging in", summary: "" },
+          { src: dog2, caption: "dashboard of pet with analytic information", summary: "" },
+          { src: dog3, caption: "profile of volunteer with dogs under their care", summary: "" },
+          { src: dog4, caption: "weighting system", summary: "" },
+          { src: dog5, caption: "list of dogs in database", summary: "" },
+          { src: dog6, caption: "list of active users", summary: "" },
+          { src: dog7, caption: "profile of a vet that manages volunteers", summary: "" },
+          { src: dog8, caption: "messaging system", summary: "" },
+          { src: dog11, caption: "software and hardware architecture / technology stack", summary: "" },
         ],
         title: "Body Pawsitive",
         technologies: "Technologies: Mongo DB, Express, React, Node, Raspberry Pico W, C/C++",
@@ -157,10 +143,10 @@ const ProjectData = [
       {
         ProjectId: "soundsihear",
         images: [
-          sounds1,
-          sounds2,
-          sounds3,
-          sounds4
+          { src: sounds1, caption: "floating lyric when hovered", summary: "Hovering over a lyric will display it largely in the center of the screen. These lyrics can be clicked to open a link to the full lyrics of the song." },
+          { src: sounds2, caption: "", summary: "" },
+          { src: sounds3, caption: "", summary: "" },
+          { src: sounds4, caption: "", summary: "" },
         ],
         title: "sounds i hear",
         technologies: "Technologies: Mongo DB, Express, React, Node",
@@ -180,10 +166,10 @@ const ProjectData = [
       {
         ProjectId: "handwriting-prediction",
         images: [
-          predict4,
-          predict3,
-          predict2,
-          predict1,
+          { src: predict4, caption: "using the canvas to predict a handrawn '7'", summary: "" },
+          { src: predict3, caption: "viewing the existing dataset that the model was trained on", summary: "" },
+          { src: predict2, caption: "parameter tuning before training the model", summary: "" },
+          { src: predict1, caption: "launch screen", summary: "" },
         ],
         title: "Handwritten Alphabet and Number Recognition",
         technologies: "Technologies: Python, Pytorch/Torchvision",
@@ -203,10 +189,10 @@ const ProjectData = [
       ProjectId: "sleep-is-a-crime",
       video: trebuchetvid,
       images: [
-        trebuchet2,
-        trebuchet5,
-        trebuchet8,
-        trebuchet9,
+        { src: trebuchet2, caption: "raspberry pi connected to servo monitor, 8 bit display, and speaker", summary: "" },
+        { src: trebuchet5, caption: "weapon (containing marshmellow as ammo)", summary: "" },
+        { src: trebuchet8, caption: "celebrating a victorious launch", summary: "" },
+        { src: trebuchet9, caption: "very happy about it", summary: "" },
       ],
       title: "Sleep Is A Crime",
       technologies: "Technologies: Raspberry Pi Pico, Servo Motor, Woodwork (literally)",
@@ -228,12 +214,12 @@ const ProjectData = [
   {
     ProjectId: "line-following-robot",
     images: [
-      robot4,
-      robot6,
-      robot3,
-      robot2,
-      robot1,
-      robot7,
+      { src: robot4, caption: "robot in action under the projected ceiling light maze", summary: "" },
+      { src: robot6, caption: "close up of robot with lights on", summary: "" },
+      { src: robot3, caption: "a very simple pbc with sensors", summary: "" },
+      { src: robot2, caption: "the robot's microcontroller that the pbc is attached to", summary: "" },
+      { src: robot1, caption: "may is proud of our creation!", summary: "" },
+      { src: robot7, caption: "early protoyping stages before soldering the pcb", summary: "" },
     ],
     title: "Line Following Robot",
     technologies: "Technologies: PSoC Microcontroller, PCB Design, Altium, C Language",
@@ -257,9 +243,9 @@ const ProjectData = [
 {
   ProjectId: "circle-me-circle-you",
   images: [
-    circle5,
-    circle6,
-    circle4,
+    { src: circle5, caption: "experimenting with circle radius", summary: "" },
+    { src: circle6, caption: "experimenting with colors", summary: "" },
+    { src: circle4, caption: "final color and circle combination", summary: "" },
   ],
   title: "Circle Me, Circle You",
   technologies: "Technologies: React, Vite, React-P5, P5.js",
@@ -277,14 +263,12 @@ const ProjectData = [
   ProjectId: "flappy-box",
   video:
     flappyvid,
-  images: [
-    box3,
-    flappy4,
-    flappy3,
-    flappy2,
-
-
-  ],
+    images: [
+      { src: box3, caption: "demo of game being played", summary: "" },
+      { src: flappy4, caption: "score tracking", summary: "" },
+      { src: flappy3, caption: "DE0 board", summary: "" },
+      { src: flappy2, caption: "schema of logic", summary: "" },
+    ],
   title: "Flappy Box",
   collab: "In collaboration with May Sribunwongsa and Jordan Green",
   technologies: "Technologies: Quartus, DE0 Board (FPGA Board), VHDL",
@@ -302,148 +286,143 @@ const ProjectData = [
 },
 
 {
-  ProjectId: "pokedex",
-  images: [
-    pokedex1,
-    pokemon1,
-    pokemon2,
-    pokemon3,
-    pokemon4,
-    pokemon5,
-  ],
-  title: "Pokedex",
-  technologies: "Technologies: Mongo DB, Express, React, Node",
-  description: (
-    <>
-      <p>
-      This application enables users to view their own Pokémon collection. Users have the ability to select and manage their favourite Pokémon by adding or removing them from the favourites list. Additionally, users can access a list of their own favourite Pokémon as well as view favourites from other users. The project was developed as part of a 24-hour test for the SOFTENG 750 course, which required implementing API calls, the favouriting feature, and applying CSS styling to enhance the visual appeal.
-      </p>
-      <p>
-      The website design drew inspiration from the iconic Pokedex concept, evoking nostalgia from Nintendo DS games such as Pokemon Black and White, HeartGold, Diamond/Pearl, and others. The chosen color palette reflected the distinct and contrasting colors associated with these Pokedexes, incorporating shades of yellow, green, red, and darker grey tones to maintain the Pokedex theme. The background design featured a grid pattern, reminiscent of the Unova Pokedexes. While the high-quality Pokémon images from the database contributed to a modern look, certain retro elements were preserved. This included the utilization of a sleek font and CSS animations, such as the spinning Pokeball on the login screen and sliding borders beneath each title. Throughout the design process, emphasis was placed on preserving the essence of the classic Pokemon aesthetic, thus retaining the bold and contrasting color scheme.
-      </p>
+    ProjectId: "pokedex",
+    images: [
+      { src: pokedex1, caption: "logic/sign up screen", summary: "" },
+      { src: pokemon1, caption: "landing page", summary: "" },
+      { src: pokemon2, caption: "viewing a pokemon (politoad)", summary: "" },
+      { src: pokemon3, caption: "viewing a favourited pokemon", summary: "" },
+      { src: pokemon4, caption: "viewing a pokemon (espeon)", summary: "" },
+      { src: pokemon5, caption: "favourites list of other accounts' favourites", summary: "" },
+    ],
+    title: "Pokedex",
+    technologies: "Technologies: Mongo DB, Express, React, Node",
+    description: (
+      <>
+        <p>
+          This application enables users to view their own Pokémon collection. Users have the ability to select and manage their favourite Pokémon by adding or removing them from the favourites list. Additionally, users can access a list of their own favourite Pokémon as well as view favourites from other users. The project was developed as part of a 24-hour test for the SOFTENG 750 course, which required implementing API calls, the favouriting feature, and applying CSS styling to enhance the visual appeal.
+        </p>
+        <p>
+          The website design drew inspiration from the iconic Pokedex concept, evoking nostalgia from Nintendo DS games such as Pokemon Black and White, HeartGold, Diamond/Pearl, and others. The chosen color palette reflected the distinct and contrasting colors associated with these Pokedexes, incorporating shades of yellow, green, red, and darker grey tones to maintain the Pokedex theme. The background design featured a grid pattern, reminiscent of the Unova Pokedexes. While the high-quality Pokémon images from the database contributed to a modern look, certain retro elements were preserved. This included the utilization of a sleek font and CSS animations, such as the spinning Pokeball on the login screen and sliding borders beneath each title. Throughout the design process, emphasis was placed on preserving the essence of the classic Pokemon aesthetic, thus retaining the bold and contrasting color scheme.
+        </p>
+      </>
+    ),
+  },
 
-    </>
-  )
-},
+  {
+    ProjectId: "designboard",
+    images: [
+      { src: board1, caption: "app design", summary: "" },
+      { src: board5, caption: "full 3 panel board", summary: "" },
+      { src: board2, caption: "graphics of analytics", summary: "" },
+      { src: board3, caption: "magazine design", summary: "" },
+      { src: board4, caption: "website design", summary: "" },
+    ],
+    title: "Scholarship Design Board",
+    technologies: "Technologies: Adobe Illustrator",
+    description: (
+      <>
+        <p>
+          Produced a three-panel art design board with graphics advertising a conceptual futuristic tech company. The board is themed around futuristic and scientific advancements, contrasted with dystopian-like and immoral tech company practices. Designed typography, web mock ups, app mock up designs, and posters using Adobe Illustrator.
+        </p>
+        <p>
+          Board awarded a $500 Scholarship for the NZQA Art Design Course.
+        </p>
+      </>
+    ),
+  },
 
-{
-  ProjectId: "designboard",
-  images: [
-    board1,
-    board5,
-    board2,
-    board3,
-    board4,
-  ],
-  title: "Scholarship Design Board",
-  technologies: "Technologies: Adobe Illustrator",
-  description: (
-    <>
-      <p>
-      Produced a three-panel art design board with graphics advertising a conceptual futuristic tech company. The board is themed around futuristic and scientific advancements, contrasted with dystopian-like and immoral tech company practices. Designed typography, web mock ups, app mock up designs, and posters using adobe illustrator.
-      </p>
-      <p>
-      Board awarded a $500 Scholarship for the NZQA Art Design Course.
-      </p>
+  {
+    ProjectId: "objectdetection",
+    video: objectvid,
+    images: [
+      { src: ml1, caption: "multiple object detection", summary: "" },
+      { src: ml2, caption: "snorlax", summary: "" },
+    ],
+    title: "Object Detection",
+    technologies: "Technologies: CocoSSD, p5.js",
+    description: (
+      <>
+        <p>
+          Following The Coding Train's tutorial, this is a recreation of object detection using coco ssd/a pretrained model using the browser web editor p5.js. This exercise helped to further understanding in machine learning and different ways in which it can be applied. There are a total of 25 objects which could be identified with this model, and multiple objects can be found at the same time.
+        </p>
+      </>
+    ),
+  },
 
-    </>
-  )
-},
+  {
+    ProjectId: "bootleg-spotify",
+    images: [
+      { src: app1, caption: "landing page", summary: "" },
+      { src: app2, caption: "artist list", summary: "" },
+      { src: app3, caption: "selected artist and their album (frank)", summary: "" },
+      { src: app4, caption: "selected artist and their album (ariana)", summary: "" },
+    ],
+    title: "Bootleg Spotify",
+    collab: "In collaboration with Clinton Philathong",
+    technologies: "Technologies: Android Studio, Java, Figma, Git Control",
+    description: (
+      <>
+        <p>
+          Developed a shopping app to simulate the act of purchasing items by designing the app using Figma, then coding the frontend and backend aspects of the app with Java on Android Studio. Applied concepts such as proper UI design, User Input, varying view groups (i.e Recyclerview), and working with databases. Project done in collaboration with a colleague using git version control features such as push, pull, commits, merge conflicts, and branching. Users will be able to select a genre of their liking on their main page, which will take them to a list of artists. Selecting an artist will bring users to their "artist" page which selects their most popular album along with its tracklist and description of the artist.
+        </p>
+      </>
+    ),
+  },
 
-{
-  ProjectId: "objectdetection",
-  video:
-    objectvid,
-  images: [
-    ml1,
-    ml2,
-  ],
-  title: "Object Detection",
-  technologies: "Technologies: CocoSSD, p5.js",
-  description: (
-    <>
-      <p>
-      Following The Coding Train's tutorial, this is a recreation of object detection using coco ssd/a pretrained model using the browser web editor p5.js. This exercise helped to further understanding in machine learning and different ways in which it can be applied. There are a total of 25 objects which could be identified with this model, and multiple objects can be found at the same time.
-      </p>
-    </>
-  )
-},
+  {
+    ProjectId: "mowynndotcom",
+    images: [
+      { src: page1, caption: "landing page", summary: "" },
+      { src: page2, caption: "projects list", summary: "" },
+      { src: page3, caption: "project information", summary: "" },
+    ],
+    title: "mowynn.com",
+    technologies: "Technologies: Html, css",
+    description: (
+      <>
+        <p>
+          My first ever personal website! I needed a repository to store all my personal projects, so I created this one with a simple white/blue 8-bit theme. I drew and animated the stars and friendly ghost too.
+        </p>
+        <p>
+          The website is outdated, but I still keep it up as a reminder of how far I've come in my coding journey! You can still visit it at <a href="https://mowynn.com" target="_blank">mowynn.com</a>
+        </p>
+      </>
+    ),
+  },
 
-{
-  ProjectId: "bootleg-spotify",
-  images: [
-    app1,
-    app2,
-    app3,
-    app4,
-  ],
-  title: "Bootleg Spotify",
-  collab: "In collaboration with Clinton Philathong",
-  technologies: "Technologies: Android Studio, Java, Figma, Git Control",
-  description: (
-    <>
-      <p>
-      Developed a shopping app to simulate the act of purchasing items by designing the app using Figma, then coding the frontend and backend aspects of the app with Java on Android Studio. Applied concepts such as proper UI design, User Input, varying view groups (i.e Recyclerview), and working with databases. Project done in collaboration with colleague using git version control features such as push, pull, commits, merge conflicts, and branching. Users will be able to to select a genre of their liking in their main page, which will take them to a list of artists. Selecting an artist will bring users to their "artist" page which selects their most popular album along with its tracklist and description of the artist.
-      </p>
-    </>
-  )
-},
+  {
+    ProjectId: "julia-fractals",
+    video: juliavid,
+    title: "Julia Fractals",
+    technologies: "Technologies: Matlab",
+    description: (
+      <>
+        <p>
+          Created functions on Matlab using the Julia set to produce mathematically calculated fractals. These fractals are then able to be produced in different colours of choice along with frame rate, and then converted to a gif.
+        </p>
+        <p>
+          This was my first ever exposure to creative coding. It really started things off for me!
+        </p>
+      </>
+    ),
+  },
 
-{
-  ProjectId: "mowynndotcom",
-  images: [
-    page1,
-    page2,
-    page3,
-  ],
-  title: "mowynn.com",
-  technologies: "Technologies: Html, css",
-  description: (
-    <>
-      <p>
-        My first ever personal website! I needed a repository to store all my personal projects, so I created this one with a simple white/blue 8-bit theme. I drew and animated the stars and friendly ghost too.
-      </p>  
-      <p>
-        The website is outdated, but I still keep it up as a reminder of how far I've come in my coding journey! You can still visit it at <a href="https://mowynn.com" target="_blank">mowynn.com</a>
-      </p>
+  {
+    ProjectId: "ripples",
+    video: ripplesvid,
+    title: "Ripples",
+    technologies: "Technologies: p5.js",
+    description: (
+      <>
+        <p>
+          An exploration into creative coding using p5.js, each circle has noise added to its circumference which reacts differently to the movement of the user's cursor. The position of the mouse is taken into account when calculating the noise, which creates a ripple effect.
+        </p>
+      </>
+    ),
+  },
 
-    </>
-  )
-},
+  // Add more project objects as needed
+];
 
-{
-  ProjectId: "julia-fractals",
-  video: juliavid,
-  title: "Julia Fractals",
-  technologies: "Technologies: Matlab",
-  description: (
-    <>
-      <p>
-      Created functions on Matlab using the Julia set to produce mathematically calculated fractals. These fractals are then able to be produced in different colours of choice along with frame rate, and then converted to a gif.
-      </p>
-      <p>
-      This was my first ever exposure to creative coding. It really started things off for me!
-      </p>
-
-    </>
-  )
-},
-{
-  ProjectId: "ripples",
-  video: ripplesvid,
-  title: "Ripples",
-  technologies: "Technologies: p5.js",
-  description: (
-    <>
-      <p>
-        An exploration into creative coding using p5.js, each circle has noise added to its circumference which reacts differently to the movement of the users's cursor. The position of the mouse is taken into account when calculating the noise, which creates a ripple effect. 
-      </p>
-    </>
-  )
-},
-
-    // Add more project objects as needed
-  ];
-  
-  export default ProjectData;
-  
+export default ProjectData;

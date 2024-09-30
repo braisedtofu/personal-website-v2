@@ -10,48 +10,69 @@
   
   
   .navigation-container {
-    position: fixed; /* Position the container relative to the viewport */
     top: 0; /* Align the container to the top */
     left: 0; /* Align the container to the left */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100dvh;
-    overflow:hidden;
-    width: 100%; /* Occupy the full width of the viewport */
+    justify-content: space-between !important;
+    z-index: 9999999;
+    position:sticky;
+    border-radius: 1rem;
+  /* Frosted glass background */
+    background: rgba(0,0,0,0.08)!important;
+    backdrop-filter: saturate(140%) blur(5px);
+    text-align: left;
+    margin: 0.2rem;
   }
+
   
-  .top-buttons {
-    display: flex;
-    width: 100%;  
-    -webkit-transform: translate3d(0,0,0);
-    background-color: transparent;
-    justify-content: left;
+  @media only screen and (max-width: 768px) {
+    .navigation-container {
+        padding: 0.75rem !important;
+        padding-top: 0.05rem !important;
+        padding-bottom: 0.05rem !important;
+        height: auto;
+        justify-content: space-between;
     }
-  
+    .button{
+      padding:0rem !important;
+    }
+}
     
+  .top-buttons{
+    background-color: transparent !important;
+  }
+
   .about,
   .projects,
   .resume,
   .email{
     border: none;
-    border-color: transparent;
-    background-color: transparent;
     color: black;
-    font-size:14px;
+    font-size:0.7rem;
     outline:none; 
     font-family: 'Times Now Light';
     cursor: pointer; 
     opacity: 0.5;
   }
+
+  .wynnmo{
+    border: none;
+    border-color: transparent;
+    color: black;
+    font-size:1rem;
+    outline:none; 
+    font-family: 'Times Now Light';
+    cursor: pointer; 
+    opacity: 0.5;
+  }
+
   .linkedin,
   .github{
     border: none;
     border-color: transparent;
     background-color: transparent;
     color: black;
-    font-size:14px;
+    font-size:1vw;
     outline:none; 
     font-family: 'Times Now Light';
     cursor: pointer; 
@@ -63,15 +84,22 @@
     opacity: 0.5;
   }
   
-.emoji{
-  border-color: transparent;
-  background-color: transparent;
-  font-size:12px;
-  margin-left: auto;
-  margin-right: 5px;
-  color: var(--main-color);
-}
-
+  .emoji {
+    border-color: transparent;
+    background-color: transparent;
+    font-size: 12px;
+    position: relative;
+    color: var(--main-color);
+    
+    /* Set fixed width and height */
+    width: 8rem; /* Adjust as needed */
+    height: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
 .emoji:hover{
   opacity: 0.5;
 }
@@ -84,31 +112,7 @@
 }
 
 
-
-  .top-buttons {
-    border: none;
-    border-color: transparent;
-    background-color: transparent;
-    outline:none;
-    width: 100vw;
-    padding-top: 0px;
-    margin:0; 
-    align-self:center;
-    
-  }
   
-  .bottom-buttons {
-    border: none;
-    border-color: transparent;
-    background-color: transparent;
-    outline:none;
-    display: flex;
-    width:100vw;
-    justify-content: space-between;
-    margin:0; 
-    opacity: 1 !important;
-    align-self:center;
-  }
   
   .projects{
     opacity: 0.3;
@@ -122,7 +126,7 @@
     color: var(--main-color);
     opacity: 1 !important;
   }
-
+/* 
   @media screen and (min-width:300px) and (max-width: 956px) {
 
     .about,
@@ -135,4 +139,4 @@
       padding: 1.2em !important;
     }
   
-  }
+  } */

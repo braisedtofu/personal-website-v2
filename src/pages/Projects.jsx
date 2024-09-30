@@ -27,6 +27,15 @@ export default function Projects() {
   const { backgroundColor } = useContext(NightModeContext);
   const { boxShadow } = useContext(NightModeContext);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
+  const { emoji, changeEmojis } = useContext(NightModeContext);
+
+  const handleEmojiClick = () => {
+    const nextEmojiIndex = (currentEmojiIndex + 1) % emojis.length; 
+    setCurrentEmojiIndex(nextEmojiIndex);
+    const nextEmoji = emojis[nextEmojiIndex];
+    changeEmojis(nextEmoji);
+  };
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,6 +44,22 @@ export default function Projects() {
     return () => {
     };
   }, []);
+
+  const emojis = [
+    '(◕‿◕)',
+    '٩(◕‿◕｡)۶',
+    '(⇀‸↼‶)',
+    '(・`ω´・)',
+    '(｡•́︿•̀｡)',
+    '(・_・;)',
+    '(⊃｡•́‿•̀｡)⊃',
+    '(>ᴗ•)',
+    'U・ᴥ・U',
+    '／(･ × ･)＼'
+  ];
+
+const [currentColorIndex, setCurrentColorIndex] = useState(0);
+const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
 
   const dataList = [
     { image: village, name: 'pikatune', caption: 'Pikatune', subcaption: 'Mongo DB, Express, React, Node, Spotify API', summary: 'A Pokémon-themed playlist generator game. Have gym battles, add friends, customise your playlist, and level up!'},
@@ -61,7 +86,9 @@ export default function Projects() {
 
         <div className="grid-inner">
                 <div className={`grid-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
-                        <ProjectList data={dataList} />
+                  <ProjectList data={dataList} />
+                  {/* <button onClick={handleEmojiClick} className="filterButton">{emoji}</button> */}
+
                 </div>
         </div>
     </div>

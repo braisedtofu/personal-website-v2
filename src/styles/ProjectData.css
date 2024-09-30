@@ -9,15 +9,15 @@
   }
   
 .project-details-container {
-    width: 100vw;
     flex-direction: row;
     display: flex;
-    position: relative;
-    overflow-y: scroll;
+    overflow-y:scroll;
+    height:100vh;
   }
 
   .gradient-overlay {
     position: fixed;
+    z-index: 9999;
     top: 0;
     left: 0;
     z-index: 2;
@@ -37,28 +37,29 @@
   
   .project-details-inner {
     top: 6dvh;
-    left: 50%;
-    transform: translate(-50%);
-    width: 100vw;
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
-    position: fixed;
     opacity: 0;
+    margin: 0 auto;
     transition: opacity 2s ease-in-out;
     bottom: 6vh; /* Add bottom: 0 to position it at the bottom of the page */
   }
   
   .project-details-inner::after {
     content: '';
-    position: absolute;
     bottom: -1px; /* Set bottom: 0 to keep it at the bottom of the container */
     left: 0;
     right: 0;
-    width: 100vw;
-    height: 5%; /* Adjust the height of the gradient as needed */
     background: linear-gradient(to top, var(--background-color), transparent);
   }
+
   
+  .project-details-inner.fade-enter-active {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+
   .project-details-inner.fade-enter {
     opacity: 1;
   }
@@ -67,51 +68,42 @@
   .project-information {
     display: flex;
     flex-direction: column;
-    margin-top: auto;
     align-items: flex-start; /* Align items to the left */
-    margin-bottom: 0px;
-    position: sticky;
-    top: 0; /* Adjust the top position as needed */
+    position: relative;
     z-index: 99999; /* Adjust the z-index as needed */
-    width: 50vw;
-    height: 88vh;
-    margin-left:35px; 
-    max-width: 50%; /* Set the maximum width to 50% of the viewport width */
+    padding-top:4%;
+    overflow-y:hidden;
+    width:50vw; 
+    margin: 0 auto;
   }
 
 
-  .project-images {
+  .project-image{
     display: flex;
-    pointer-events: auto; /* Enable pointer events */
+    max-width: 100%;
+    width: 100%;
+    pointer-events: auto; /* Enable poin  ter events */
     flex-direction: column;
     align-items: center;
-    margin-top: auto;
     margin-bottom: 0px;
     position: relative;
-    height: 88vh;
-    padding-bottom: 20px;
-    width:50vw;
-    margin-bottom: 20px; /* Add a desired margin at the bottom */
+    overflow:hidden;    
   }
   
   
   .image-container {
-    width: 50vw;
     margin-top:0px;
-    padding: 39px;
-    padding-top: 5%;
-    flex-direction: column;
-    overflow-x:hidden;
-    display: inline-table;
+    width: 50vw;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom:5%;
   }
   
   .image-container img,
   .image-container video {
-    width: 500px;
-    border-radius: 5px;
+    max-width: 100%;
+    border-radius: 10px;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
     box-shadow: 0 0 10px 2px var(--box-shadow);
   }
 
@@ -135,7 +127,7 @@
 
   .project-title{
     font-family: 'Times Now Light';
-    font-size: 4rem;
+    font-size: 2rem;
     top:0; 
     margin-top:0; 
     margin-bottom: 0px;
@@ -146,12 +138,14 @@
     margin-top:5px; 
     font-size:0.8em;
     margin-bottom: 0px;
+    opacity: 60%;
   }
   .project-collab{
     font-family: 'Times Now ExtraLight';
     margin-top:5px; 
     font-size:0.8em;
     margin-bottom: 0px;
+    opacity: 60%;
   }
 
   .project-description{
@@ -168,7 +162,8 @@
   color: black;
   font-size: 15px;
   margin-bottom:0; 
-  padding-left:0; 
+  padding-left:0 !important; 
+  padding-right: 0 !important;
   z-index: 99999;
   outline:none; 
   padding-bottom:5px; 
@@ -176,14 +171,44 @@
   cursor: pointer; 
   }
   
-  
-  @media screen and (min-width: 756px) and (max-width: 1000px) {
-    .image-container img,
-    .image-container video{
-      width: 300px;
-    }
-
+  .project-videos{
+    max-width: 100%;
+    padding-top: 4vh;
   }
+
+  .project-body {
+    justify-content: left;
+    user-select: none;
+    background-color: transparent;
+    align-items: left;
+    text-align:left;
+    font-family: 'Times Now Light';
+    font-size: 0.8rem;
+    margin-top:0;
+    padding-top:2vh;
+    padding-bottom: 2vh;
+    }
+  
+  .project-caption {
+    justify-content: left;
+    user-select: none;
+    background-color: transparent;
+    align-items: left;
+    text-align:left;
+    position: relative;
+    font-family: 'Times Now Light';
+    font-size: 0.8rem;
+    margin-top:2vh;
+    opacity: 60%;
+    padding-top:0vh;
+  }
+  
+  .grid-item {
+    padding-top:4vh;
+    max-width: 100%;
+  }
+  
+
 
   @media screen and (max-width: 756px) {
     .project-details-container {
@@ -193,133 +218,37 @@
     .project-information {
       position: relative; 
       width:100vw;
-      margin-left:22px; 
       max-width: 90%;
       height: fit-content;
       top: 0px;
       margin-top: 0px;
     }
     .image-container {
+      position: relative; 
+      max-width: 90%;
       width: 100vw;
-      padding-top: 20px;
-      padding-left:0px;
+      height: fit-content;
       padding-right:0px;
       padding-bottom:0px;
-
     }
 
-    .image-container img,
-    .image-container video{
-      width: 340px;
-    }
-
-  }
-
-  
-  @media screen and (min-width: 1439px) {
     .image-container {
-      height: 220vh;
+      position: relative; 
+      width: 100vw;
+      height: fit-content;
+      padding-right:0px;
+      padding-bottom:0px;
     }
-  }
-  
-  @media screen and (min-width: 1539px) {
-    .project-title {
-      font-size: 4em;
-    }
-  
-    .project-description {
-      font-size: 1em;
-    }
-  
-    .project-technologies,
-    .project-collab {
-      font-size: 1em;
-    }
-  
+
     .image-container img,
     .image-container video {
-      width: 500px;
+      border-radius: 10px;
+      display: block;
+      box-shadow: 0 0 10px 2px var(--box-shadow);
+    }  
+    .grid-item {
+      max-width: 100%;
     }
+    
+  
   }
-  
-  @media screen and (min-width: 2339px) {
-    .project-technologies,
-    .project-collab {
-      font-size: 2em;
-    }
-  
-    .project-title {
-      font-size: 8em;
-    }
-  
-    .project-description {
-      font-size: 1em;
-    }
-  
-    .image-container img,
-    .image-container video {
-      width: 700px;
-    }
-  }
-  
-  @media screen and (min-width: 1900px) {
-    .project-technologies,
-    .project-collab {
-      font-size: 2em;
-    }
-  
-    .project-title {
-      font-size: 5em;
-    }
-  
-    .project-description {
-      font-size: 1em;
-    }
-  
-    .image-container img,
-    .image-container video {
-      width: 800px;
-      margin-bottom:80px;
-    }
-  }
-  
-  @media screen and (min-width: 2900px) {
-    .project-technologies,
-    .project-collab {
-      font-size: 2em;
-    }
-  
-    .project-title {
-      font-size: 8em;
-    }
-  
-    .project-description {
-      font-size: 1.5em;
-    }
-  
-    .image-container img,
-    .image-container video {
-      width: 1200px;
-    }
-  }
-  
-  @media screen and (min-width: 5000px) {
-    .project-technologies,
-    .project-collab {
-      font-size: 2.5em;
-    }
-  
-    .project-title {
-      font-size: 16em;
-    }
-  
-    .project-description {
-      font-size: 3em;
-    }
-  
-    .image-container img,
-    .image-container video {
-      width: 1800px;
-    }
-  }
-  

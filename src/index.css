@@ -4,12 +4,16 @@ button {
   border: transparent;
   font-size: 1em;
   font-weight: 500;
-  padding-top:0.9em;
-  padding-bottom:0.8em;
-  padding-left: 2.4em;
-  padding-right: 2.4em;
+  padding: 1.5rem;
   font-family: inherit;
-  background-color: transparent;
+  background-color: transparent !important;
   cursor: pointer;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
+@media only screen and (max-width: 768px) {
+  button{
+    padding:0.5rem !important;
+  }
+}
