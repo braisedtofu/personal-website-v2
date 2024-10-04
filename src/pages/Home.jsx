@@ -13,6 +13,7 @@ import argraphic from '../assets/HomeImages/argraphic.png';
 import arreality from '../assets/HomeImages/arreality.png';
 import araddtail from '../assets/HomeImages/araddtail.gif';
 import arremovetail from '../assets/HomeImages/arremovetail.gif';
+import arPoster from '../assets/HomeImages/arPoster.png';
 
 export default function Home() {
 
