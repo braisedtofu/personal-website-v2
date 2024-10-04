@@ -121,10 +121,10 @@
   text-align:left;
   position: relative;
   font-family: 'Times Now Light';
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-top:5%; 
-  opacity: 70%;
-  margin-bottom:2vh;
+  opacity: 60%;
+  margin-bottom: 0;
 }
 
 .about-subtitle {
@@ -135,7 +135,7 @@
   text-align:left;
   position: relative;
   font-family: 'Times Now Light';
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-top:0;
   padding-top:0;
   margin-bottom:0;
@@ -431,8 +431,8 @@
   flex-direction: column;
   transition: opacity 2s ease-in-out;
   background: transparent;
-  padding-left: 27vw;
-  padding-right: 27vw;
+  padding-left: 28vw;
+  padding-right: 28vw;
   flex: 1; 
 }
 
@@ -503,6 +503,10 @@
   .home-details-container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .argraphic {
+    width: 60vw;
   }
   
 }

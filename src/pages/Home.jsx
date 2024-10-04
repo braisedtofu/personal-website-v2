@@ -11,9 +11,8 @@ import smiski4 from '../assets/HomeImages/smiski4.png';
 import ardemo from '../assets/HomeImages/ARdemo.png';
 import argraphic from '../assets/HomeImages/argraphic.png';
 import arreality from '../assets/HomeImages/arreality.png';
-import araddtail from '../assets/HomeImages/araddtail.gif';
-import arremovetail from '../assets/HomeImages/arremovetail.gif';
-import arPoster from '../assets/HomeImages/arPoster.png';
+import araddtail from '../assets/HomeImages/araddtail.mp4';
+import arremovetail from '../assets/HomeImages/arremovetail.mp4';
 
 export default function Home() {
 
@@ -100,22 +99,25 @@ export default function Home() {
                         connect with me
                       </p>
                       <p className="about-buttons"> 
-                        <button onClick={handleArenaClick} className="github">are.na <span role="img" aria-label="arrow"> ↗</span></button>
-                        <button onClick={handleInstagramClick} className="github">instagram <span role="img" aria-label="arrow"> ↗</span></button>
-                        <button onClick={handleGithubClick} className="github">github <span role="img" aria-label="arrow"> ↗</span></button>
-                        <button onClick={handleLinkedinClick} className="github">linkedin <span role="img" aria-label="arrow"> ↗</span></button>
+                        <button onClick={handleArenaClick} className="github">are.na <span className="arrow">&#x2197;&#xFE0E;</span></button>
+                        <button onClick={handleInstagramClick} className="github">instagram <span className="arrow">&#x2197;&#xFE0E;</span></button>
+                        <button onClick={handleGithubClick} className="github">github <span className="arrow">&#x2197;&#xFE0E;</span></button>
+                        <button onClick={handleLinkedinClick} className="github">linkedin <span className="arrow">&#x2197;&#xFE0E;</span></button>
                       </p>
 
                       <p className="about-title-large"> 
                       recent projects
                       </p>
+                      <p className="about-caption"> 
+                      some projects i have recently completed, or am currently working on
+                      </p>
+                      <img className='argraphic'  src={argraphic} draggable="false" id="draggable-image"></img>
                       <p className="about-subtitle"> 
                       tangible AR for data structure learning
                       </p>
                       <p className="about-caption"> 
                       in collaboration with danika chhour
                       </p>
-                      <img className='argraphic'  src={argraphic} draggable="false" id="draggable-image"></img>
                       <p className="about-body"> 
                       Data structures are fundamental concepts in computer science courses, serving as the building blocks for understanding more complex topics. However, students often find learning these concepts challenging. As a result, there is a growing demand for tools that can better support students in mastering data structures. By providing an engaging and interactive learning experience, this augmented reality (AR) tool aims to reinforce students' mental models and facilitate their comprehension of data structure concepts. This tool leverages mobile AR to enhance students’ understanding of data structures. It allows users to interact with real-world representations of data structures while viewing virtual, abstract information overlaid on top. 
 
@@ -130,14 +132,19 @@ export default function Home() {
                       <p className="about-caption"> 
                       using the tool through the interfacing camera of an ipad
                       </p>
-                      <img className="about-video" src={arremovetail}></img>
+                      <video className="about-video" playsinline autoPlay muted loop>
+                          <source src={arremovetail} type="video/mp4" />
+                        </video>
                         <p className="about-caption"> 
                         live demo of deleting from a linked list tail
                         </p>
-                        <img className="about-video" src={araddtail}></img>
+                        <video className="about-video" playsinline autoPlay muted loop>
+                          <source src={araddtail} type="video/mp4" />
+                        </video>
                         <p className="about-caption"> 
                         live demo of adding to a linked list tail
                         </p>
+
                       <button onClick={handleEmojiClick} className="emoji">{emoji}</button>
             </div>
           </div>
