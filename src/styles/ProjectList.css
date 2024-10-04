@@ -27,6 +27,7 @@
   box-sizing: border-box; /* Include padding in width calculations */
   background-color: transparent;
   padding: 1.15rem;   
+  padding-bottom: 2vh;
 }
 
 
@@ -137,18 +138,7 @@
     counter-reset: boxes;
     flex: 1 100%;
 }
-  
-  .grid-container::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    width:100vw;
-    height: 3%; /* Adjust the height of the gradient as needed */
-    background: linear-gradient(to top, var(--background-color), transparent);
-  }
-  
+    
   .grid-container.fade-enter {
     opacity: 1;
   }

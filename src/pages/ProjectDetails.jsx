@@ -75,7 +75,7 @@ const ProjectDetails = () => {
           {/* Video if available */}
           {project.video && (
             <div className = "project-videos">
-            <video controls autoPlay muted>
+            <video playsInline autoPlay muted loop>
               <source src={project.video} type="video/mp4" />
             </video>
             </div>
