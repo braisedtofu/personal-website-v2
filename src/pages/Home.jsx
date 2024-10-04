@@ -30,6 +30,15 @@ export default function Home() {
       window.open("https://www.linkedin.com/in/wynn-mo-205009220/", "_blank");
     };
 
+    const handleArenaClick = () => {
+      window.open("https://www.are.na/wynn-mo/blocks", "_blank");
+    };
+
+    const handleInstagramClick = () => {
+      window.open("https://www.instagram.com/paper__lamps/", "_blank");
+    };
+
+
     const handleEmojiClick = () => {
       const nextEmojiIndex = (currentEmojiIndex + 1) % emojis.length; 
       setCurrentEmojiIndex(nextEmojiIndex);
@@ -87,6 +96,16 @@ export default function Home() {
                       I'm currently working as a Digital Consultant at <span className="textglow">Beca</span> within the Digital Products and Services team. 
                       In my spare time, I enjoy cafe hopping, collecting Smiskis, and working on creative projects.                        
                       </p>
+                      <p className="about-caption"> 
+                        connect with me
+                      </p>
+                      <p className="about-buttons"> 
+                        <button onClick={handleArenaClick} className="github">are.na ↗</button>
+                        <button onClick={handleInstagramClick} className="github">instagram ↗</button>
+                        <button onClick={handleGithubClick} className="github">github ↗</button>
+                        <button onClick={handleLinkedinClick} className="github">linkedin ↗</button>
+                      </p>
+
                       <p className="about-title-large"> 
                       recent projects
                       </p>

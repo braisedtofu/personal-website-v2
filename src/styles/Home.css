@@ -122,7 +122,7 @@
   position: relative;
   font-family: 'Times Now Light';
   font-size: 1.3rem;
-  margin-top:10%; 
+  margin-top:5%; 
   opacity: 70%;
   margin-bottom:2vh;
 }
@@ -175,6 +175,17 @@
   position:relative;
   align-items: center;
   border-radius: 12px;
+}
+
+.about-buttons{
+  justify-content: left;
+  align-items: left;
+  text-align:left;
+  display:flex;
+  flex-direction: column;
+  width: 40vw;
+  margin-top: 0;
+  left: 0;
 }
 
 .argraphic {
@@ -419,8 +430,8 @@
   flex-direction: column;
   transition: opacity 2s ease-in-out;
   background: transparent;
-  padding-left: 25vw;
-  padding-right: 25vw;
+  padding-left: 27vw;
+  padding-right: 27vw;
   flex: 1; 
 }
 
