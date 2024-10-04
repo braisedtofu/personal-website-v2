@@ -1,183 +1,127 @@
-@font-face {
-  font-family: 'Times Now Light';
-  src: url('../fonts/Untitled-Sans-Regular.ttf');
+/* Initialize the counter */
+.list-container {
+  counter-reset: rowNumber;
 }
 
-@font-face {
-  font-family: 'Times Now Bold';
-  src: url('../fonts/Untitled-Sans-Regular.ttf');
-}
-
-
-@font-face {
-  font-family: 'Times Now ExtraLight';
-  src: url('../fonts/Untitled-Sans-Regular.ttf');
-}
-
-
-.grid-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); /* Each item is at least 11rem wide */
-  justify-content: start; /* Align items to the start to avoid gaps */
-  grid-gap: 1.5rem; /* Space between items */
-  overflow-x: hidden;
-  width: 100%; /* Use full width of the parent */
-  overflow-y: hidden;
-  height: auto;
-  box-sizing: border-box; /* Include padding in width calculations */
-  background-color: transparent;
-  padding: 1.15rem;   
-  padding-bottom: 2vh;
-}
-
-
-  
-  .grid-list-item img {
-    width:100%;
-    height: 100%;
-    flex-shrink: 0;
-    display: flex;
-    border-radius: 5px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    object-fit: cover;
-    margin-top:0;
-    cursor: pointer;
-    box-shadow: 0 0 10px 4px var(--box-shadow);
-    transition: opacity 0.2s ease; /* Add transition property */
-  }
-  
-  .grid-list-item {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Times Now Light';
-    font-size: 10px;
-    position: relative;
-    cursor: pointer;
-    width:13rem;
-    height: 8rem;
-    padding-right: 0.7rem;
-    margin-bottom:5rem;
-    background: transparent;
-    background-color: transparent;
-  }
-
-  .grid-list-item:hover .summary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 40%;
-    left: 45%;
-    transform: translate(-45%, -40%);
-    color: var(--main-color);
-    font-size: 0.6rem;
-    background-color: transparent;
-    cursor: pointer;
-    width: 10rem; 
-    height: 5vh;
-    text-align: center;
-  }
-  
-  .summary {
-    display: none;
-  }
-    
-  .grid-list-item:hover img {
-    opacity: 0.08;
-  }
-  
-  .caption {
-    margin-top: 15px;
-    font-size: 1.3em;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-    user-select: none;
-    position:relative;
-    font-family: 'Times Now Bold'
-  }
-
-  .caption::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin-top: 3px; 
-    margin-bottom:6px;
-    background-color: var(--main-color);
-    /* animation: lineAnimation 3s cubic-bezier(0.4, 0, 0.2, 1) forwards; */
-  }
-  
-
-  .grid-image-number{
-    display:flex;
-    flex-direction: row; 
-    background-color:transparent;
-    margin-top: 3vh;
-    justify-content: center;
-  }
-
-  .grid-container {
-    align-items: left;
-    text-align: center;
-    margin-bottom: 0px;
-    opacity: 0;
-    width:100%;
-    overflow-y:scroll;
-    overflow-x:hidden;
-    transition: opacity 1s ease-in-out;
-  }
-
-  .grid-inner {
-    overflow-y: hidden;
-    overflow-x: hidden;
-    position:relative;
-    display:flex;
-    flex-wrap:wrap;
-    counter-reset: boxes;
-    flex: 1 100%;
-}
-    
-  .grid-container.fade-enter {
-    opacity: 1;
-  }
-  
-.sub-caption{
-  font-family: 'Times Now Light';
-  font-size: 1em;
-  justify-content: left;
-  align-items: left;
-  text-align: left;
-  user-select: none;
-  opacity: 60%;
-}
-
-.project-navigation{
-  display:flex;
+/* Container for the list */
+.list-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  justify-content:space-between;
+  padding: 1.2rem;
+  box-sizing: border-box;
 }
 
+/* Each row contains the title, tech info, and caption */
+.list-row {
+  display: flex; /* Use flex for row layout */
+  flex-direction: row; /* Default row layout */
+  justify-content: space-between; /* Spread out content across the row */
+  padding: 0.08rem 0; /* Add space between rows */
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  position: relative; /* Important for hover */
+  opacity: 0.5; /* Default opacity set to 50% */
+  padding-bottom: 2rem;
+}
+
+/* Hover effect for rows */
+.list-row:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+
+/* Number each row */
+.list-row::before {
+  width: 2vw;
+  content: counter(rowNumber) "  "; /* Format the row number without brackets */
+  counter-increment: rowNumber; /* Increment row number */
+  font-family: 'Times Now Light'; /* Same font as the title */
+  font-size: 1rem; /* Same font size as the title */
+  margin-right: 0.5rem; /* Space between the number and title */
+  font-weight: normal; /* Normal weight for the row number */
+  opacity: 1; /* Set opacity of the number to 100% */
+  flex: 0 0 auto; /* Prevent flex item from growing */
+}
+
+/* Title on the left */
+.list-title {
+  font-family: 'Times Now Light'; /* Unified font */
+  font-size: 1rem; /* Uniform font size */
+  flex: 1; /* Allow title to take remaining space */
+  text-align: left;
+  opacity: 1; /* Full opacity for title */
+}
+
+/* Technologies displayed under the title */
+.list-tech {
+  font-family: 'Times Now Light'; /* Unified font */
+  font-size: 1rem; /* Uniform font size */
+  opacity: 0.5; /* 50% opacity for technologies */
+  flex: 1; /* Allow tech info to take remaining space */
+  text-align: right; /* Align tech info to the left */
+}
+
+/* Caption aligned to the right */
+.list-caption {
+  font-family: 'Times Now Light'; /* Same font */
+  font-size: 1rem; /* Same font size */
+  text-align: right; /* Align caption to the right */
+  opacity: 0.5; /* 50% opacity for caption */
+  flex: 0 0 auto; /* Prevent flex item from growing */
+}
+
+/* Mobile responsiveness */
 @media screen and (max-width: 756px) {
-
-  .grid-list-item {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Times Now Light';
-    font-size: 10px;
-    position: relative;
-    cursor: pointer;
-    width:20rem;
-    height: 10rem;
-    padding-right: 0.7rem;
-    margin-bottom:2rem;
-    background: transparent;
-    background-color: transparent;
+  .list-row {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: flex-start; /* Align items to the start */
+    opacity: 1; /* Full opacity for mobile */
+    padding-bottom: 4vh;
   }
 
-  .grid-list{
-    padding-bottom: 5vh;
+  .list-row::before {
+    content: ""; /* Remove numbering in mobile view */
   }
 
+  .list-title {
+    margin-bottom: 0.2rem; /* Space between title and technologies */
+    text-decoration: none; /* Remove underline on mobile */
+  }
+
+  .list-tech {
+    text-align: left;
+    opacity: 0.5; /* Set tech info opacity to 50% */
+    width: 100%; /* Ensure it takes full width */
+  }
+
+  .list-caption {
+    text-align: left; /* Align caption to the left on mobile */
+    margin-top: 0.2rem; /* Space above the caption */
+  }
+
+  .image-modal {
+    width: 80%; /* Adjust modal size for mobile */
+  }
+}
+
+/* Image Modal */
+.image-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%; /* Adjust width for smaller image */
+  height: auto;
+  display: block; /* Set to block when hovered */
+  z-index: 1000; /* Ensure it appears above everything */
+  pointer-events: none; /* Prevent interaction */
+}
+
+.image-modal img {
+  width: 100%; /* Adjust width for smaller size */
+  max-height: 80vh; /* Set a maximum height for the images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }

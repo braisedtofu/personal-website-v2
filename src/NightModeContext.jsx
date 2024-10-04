@@ -9,6 +9,10 @@ export function NightModeProvider({ children }) {
   const [backgroundColor, changeBackgroundColor] = useState('#FFFFF3'); // Initial color, replace with your desired initial color
   const [boxShadow, changeBoxShadow] = useState('rgba(0, 0, 0, 0.3)'); // Initial color, replace with your desired initial color
   const [emoji, changeEmojis] = useState('(◕‿◕)');
+  const [isGridView, setIsGridView] = useState(true); // Initialize isGridView state
+  const toggleView = () => {
+    setIsGridView((prev) => !prev); // Toggle view state
+};
 
   const toggleNightMode = () => {
     setIsNightMode(!isNightMode);
@@ -30,7 +34,8 @@ export function NightModeProvider({ children }) {
   };
 
   return (
-    <NightModeContext.Provider value={{ isNightMode, toggleNightMode, color, changeColor, backgroundColor, changeBackgroundColor, boxShadow, changeBoxShadow, emoji, changeEmojis }}>
+    <NightModeContext.Provider value={{ isNightMode, toggleNightMode, color, changeColor, backgroundColor, changeBackgroundColor, boxShadow, changeBoxShadow, emoji, changeEmojis, isGridView,
+      toggleView }}>
       {children}
     </NightModeContext.Provider>
   );

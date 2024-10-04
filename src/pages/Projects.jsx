@@ -1,9 +1,10 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Navigation from '../components/Navigation';
 import '../styles/Global.css';
 import '../styles/Home.css';
 import NightModeContext from '../NightModeContext';
 import ProjectList from '../components/ProjectList';
+import ProjectGrid from '../components/ProjectGrid'; // Assuming you'll create this
 import village from '../assets/pikatune/village.png';
 import predict4 from '../assets/AlphabetPrediction/predict4.png';
 import ml1 from '../assets/objectdetection/ml1.jpeg';
@@ -20,52 +21,23 @@ import bootleg1 from '../assets/bootlegspotify/app1.png';
 import ripple1 from '../assets/ripples/ripple1.png';
 import soundsihear from '../assets/soundsihear/soundsihear2.png';
 
-
 export default function Projects() {
-  const { isNightMode } = useContext(NightModeContext);
-  const { color } = useContext(NightModeContext);
-  const { backgroundColor } = useContext(NightModeContext);
-  const { boxShadow } = useContext(NightModeContext);
+  const { isNightMode, color, backgroundColor, boxShadow, emoji, changeEmojis, isGridView, toggleView } = useContext(NightModeContext);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
-  const { emoji, changeEmojis } = useContext(NightModeContext);
-
-  const handleEmojiClick = () => {
-    const nextEmojiIndex = (currentEmojiIndex + 1) % emojis.length; 
-    setCurrentEmojiIndex(nextEmojiIndex);
-    const nextEmoji = emojis[nextEmojiIndex];
-    changeEmojis(nextEmoji);
-  };
 
 
   useEffect(() => {
     setTimeout(() => {
       setIsPageLoaded(true);
     }, 250);
-    return () => {
-    };
   }, []);
 
-  const emojis = [
-    '(◕‿◕)',
-    '٩(◕‿◕｡)۶',
-    '(⇀‸↼‶)',
-    '(・`ω´・)',
-    '(｡•́︿•̀｡)',
-    '(・_・;)',
-    '(⊃｡•́‿•̀｡)⊃',
-    '(>ᴗ•)',
-    'U・ᴥ・U',
-    '／(･ × ･)＼'
-  ];
-
-const [currentColorIndex, setCurrentColorIndex] = useState(0);
-const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
 
   const dataList = [
     { image: village, name: 'pikatune', caption: 'Pikatune', subcaption: 'Mongo DB, Express, React, Node, Spotify API', summary: 'A Pokémon-themed playlist generator game. Have gym battles, add friends, customise your playlist, and level up!'},
     { image: soundsihear, name: 'soundsihear', caption: 'sounds i hear', subcaption: 'Mongo DB, Express, React, Node', summary: 'A lyric bank that shows all my favourite song lines.'},
     { image: dogtitle, name: 'bodypawsitive', caption: 'Body Pawsitive', subcaption: 'Mongo DB, Express, React, Node, Raspberry Pico W, C/C++', summary: 'A smart scale system designed from scratch to weigh and log the weights of our furry friends, all managed through a web application.'},
-    { image: trebuchet1,name: 'sleep-is-a-crime', caption: 'Sleep Is A Crime', subcaption: 'Raspberry Pi Pico, Servo Motor, Woodwork', summary: 'A trebuchet that is so terrible it launches marshmellows at you and sings Rick Astley!'},
+    { image: trebuchet1, name: 'sleep-is-a-crime', caption: 'Sleep Is A Crime', subcaption: 'Raspberry Pi Pico, Servo Motor, Woodwork', summary: 'A trebuchet that is so terrible it launches marshmellows at you and sings Rick Astley!'},
     { image: line1, name: 'line-following-robot', caption: 'Line Following Robot', subcaption: 'PSoC Microcontroller, PCB Design, Altium, C Language', summary: 'A robot with sensors that can navigate a maze by following black lines, and find the shortest path.'},
     { image: predict4, name: 'handwriting-prediction', caption: 'Handwriting Prediction', subcaption: 'Python, Pytorch, Torchvision', summary: 'A GUI program that allows users to download datasets, view dataset images, upload models to train, and predict handwritten letters/digits'},
     { image: circle1, name: 'circle-me-circle-you', caption: 'Circle Me, Circle You', subcaption: 'React, Vite, React-P5, P5.js', summary: 'An exploration into creative coding, this website transforms webcam input into a live video composed solely of circles.'},
@@ -82,15 +54,13 @@ const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
       
   return (
     <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor, '--box-shadow': boxShadow}}>
-        <Navigation />
+      <Navigation />
 
-        <div className="grid-inner">
-                <div className={`grid-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
-                  <ProjectList data={dataList} />
-                  {/* <button onClick={handleEmojiClick} className="filterButton">{emoji}</button> */}
-
-                </div>
+      <div className="grid-inner">
+        <div className={`grid-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
+          {isGridView ? <ProjectGrid data={dataList} /> : <ProjectList data={dataList} />}
         </div>
+      </div>
     </div>
   );
 }
