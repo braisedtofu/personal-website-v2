@@ -132,13 +132,13 @@ export default function Home() {
                       <p className="about-caption"> 
                       using the tool through the interfacing camera of an ipad
                       </p>
-                      <video className="about-video" playsinline autoPlay muted loop>
+                      <video className="about-video" playsinline autoplay muted loop>
                           <source src={arremovetail} type="video/mp4" />
                         </video>
                         <p className="about-caption"> 
                         live demo of deleting from a linked list tail
                         </p>
-                        <video className="about-video" playsinline autoPlay muted loop>
+                        <video className="about-video" playsinline autoplay muted loop>
                           <source src={araddtail} type="video/mp4" />
                         </video>
                         <p className="about-caption"> 
