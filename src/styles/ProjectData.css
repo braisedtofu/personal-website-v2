@@ -12,7 +12,7 @@
     flex-direction: row;
     display: flex;
     overflow-y:scroll;
-    height:100vh;
+    height:100dvh;
   }
 
   .gradient-overlay {

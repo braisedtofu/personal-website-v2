@@ -10,7 +10,7 @@
 
 .app-container{
   position:absolute;
-  height: 100vh; 
+  height: 100dvh; 
   width: 100vw;
   overflow-x: hidden;
   background-color: var(--background-color);
