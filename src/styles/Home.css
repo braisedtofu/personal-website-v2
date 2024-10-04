@@ -19,7 +19,6 @@
   position: absolute; 
   width: 100vw;
   background-color: var(--background-color);
-  overflow-x:hidden;
 }
 
 
