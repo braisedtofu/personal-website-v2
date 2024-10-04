@@ -473,8 +473,7 @@
 }
 
 .arrow {
-  font-size: 0.8rem;
-  vertical-align: middle;
+  font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, arial, sans-serif !important;
 }
 
 @keyframes text-shadow-fade-in {

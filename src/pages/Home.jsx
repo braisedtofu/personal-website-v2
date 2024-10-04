@@ -99,10 +99,10 @@ export default function Home() {
                         connect with me
                       </p>
                       <p className="about-buttons"> 
-                        <button onClick={handleArenaClick} className="github">are.na <span className="arrow">&#x2197;&#xFE0E;</span></button>
-                        <button onClick={handleInstagramClick} className="github">instagram <span className="arrow">&#x2197;&#xFE0E;</span></button>
-                        <button onClick={handleGithubClick} className="github">github <span className="arrow">&#x2197;&#xFE0E;</span></button>
-                        <button onClick={handleLinkedinClick} className="github">linkedin <span className="arrow">&#x2197;&#xFE0E;</span></button>
+                        <button onClick={handleArenaClick} className="github">are.na&nbsp;<span className="arrow"> &#x2197;&#xFE0E;</span></button>
+                        <button onClick={handleInstagramClick} className="github">instagram&nbsp;<span className="arrow"> &#x2197;&#xFE0E;</span></button>
+                        <button onClick={handleGithubClick} className="github">github&nbsp;<span className="arrow"> &#x2197;&#xFE0E;</span></button>
+                        <button onClick={handleLinkedinClick} className="github">linkedin&nbsp;<span className="arrow"> &#x2197;&#xFE0E;</span></button>
                       </p>
 
                       <p className="about-title-large"> 
