@@ -100,10 +100,10 @@ export default function Home() {
                         connect with me
                       </p>
                       <p className="about-buttons"> 
-                        <button onClick={handleArenaClick} className="github">are.na ↗</button>
-                        <button onClick={handleInstagramClick} className="github">instagram ↗</button>
-                        <button onClick={handleGithubClick} className="github">github ↗</button>
-                        <button onClick={handleLinkedinClick} className="github">linkedin ↗</button>
+                        <button onClick={handleArenaClick} className="github">are.na <span role="img" aria-label="arrow"> ↗</span></button>
+                        <button onClick={handleInstagramClick} className="github">instagram <span role="img" aria-label="arrow"> ↗</span></button>
+                        <button onClick={handleGithubClick} className="github">github <span role="img" aria-label="arrow"> ↗</span></button>
+                        <button onClick={handleLinkedinClick} className="github">linkedin <span role="img" aria-label="arrow"> ↗</span></button>
                       </p>
 
                       <p className="about-title-large"> 
