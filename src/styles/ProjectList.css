@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height:100dvh;
   padding: 1.2rem;
   box-sizing: border-box;
 }
@@ -22,12 +23,12 @@
   transition: opacity 0.2s ease;
   position: relative; /* Important for hover */
   opacity: 0.5; /* Default opacity set to 50% */
-  padding-bottom: 2rem;
+
 }
 
 /* Hover effect for rows */
 .list-row:hover {
-  opacity: 1; /* Full opacity on hover */
+  opacity: 1 !important; /* Full opacity on hover */
 }
 
 /* Number each row */
@@ -118,10 +119,10 @@
 }
 
 .image-modal img {
-  width: 100%; /* Adjust width for smaller size */
-  max-height: 80vh; /* Set a maximum height for the images */
+  width: auto; /* Adjust width for smaller size */
+  max-height: 50vh; /* Set a maximum height for the images */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 10px;
+  border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }

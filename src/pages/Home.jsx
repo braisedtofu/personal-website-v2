@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext} from "react";
+import {ScrollRestoration } from 'react-router-dom';
 import Navigation from "../components/Navigation";
 import "../styles/Global.css";
 import "../styles/Home.css";
@@ -15,6 +16,7 @@ import araddtail from '../assets/HomeImages/araddtail.mp4';
 import arremovetail from '../assets/HomeImages/arremovetail.mp4';
 
 export default function Home() {
+
 
     const { isNightMode } = useContext(NightModeContext);
     const { color } = useContext(NightModeContext);
@@ -67,8 +69,7 @@ export default function Home() {
       return () => {
       };
     }, []);
-    
-  
+      
           
           return (
         <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor, '--box-shadow': boxShadow }}> 
@@ -148,7 +149,7 @@ export default function Home() {
                       <button onClick={handleEmojiClick} className="emoji">{emoji}</button>
             </div>
           </div>
-
+          <ScrollRestoration/>
       </div>
     );
 }

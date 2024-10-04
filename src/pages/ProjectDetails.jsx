@@ -7,6 +7,8 @@ import Navigation from '../components/Navigation';
 import '../styles/ProjectData.css';
 
 const ProjectDetails = () => {
+
+  
   const { ProjectId } = useParams(); // Get current project ID from URL params
   const { isNightMode, color, backgroundColor, boxShadow } = React.useContext(NightModeContext);
   const navigate = useNavigate();
@@ -23,6 +25,7 @@ const ProjectDetails = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsPageLoaded(true);
+      window.scrollTo(0, 0);  // Manually restore scroll position after the page is loaded
     }, 50);
   }, []);
 

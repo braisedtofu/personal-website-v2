@@ -22,6 +22,8 @@ import ripple1 from '../assets/ripples/ripple1.png';
 import soundsihear from '../assets/soundsihear/soundsihear2.png';
 
 export default function Projects() {
+  
+  
   const { isNightMode, color, backgroundColor, boxShadow, emoji, changeEmojis, isGridView, toggleView } = useContext(NightModeContext);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
@@ -29,6 +31,7 @@ export default function Projects() {
   useEffect(() => {
     setTimeout(() => {
       setIsPageLoaded(true);
+      window.scrollTo(0, 0);  // Manually restore scroll position after the page is loaded
     }, 250);
   }, []);
 

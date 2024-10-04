@@ -19,6 +19,7 @@
     border-radius: 1rem;
   /* Frosted glass background */
     background: rgba(0,0,0,0.08)!important;
+    -webkit-backdrop-filter: saturate(140%) blur(5px);
     backdrop-filter: saturate(140%) blur(5px);
     text-align: left;
     margin: 0.2rem;

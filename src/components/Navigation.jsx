@@ -91,7 +91,7 @@ export default function Navigation() {
             <div className="top-buttons">
                 <button className={`wynnmo ${location.pathname === '/' ? 'unclicked' : ''}`} onClick={handleHomeClick}>wynn mo</button>
                 <button className={`projects ${location.pathname === '/' ? 'unclicked' : ''}`} onClick={handleHomeClick}>about</button>
-                <button className={`projects ${location.pathname.startsWith('/projects') ? 'unclicked' : ''}`} onClick={handleProjectsClick}>creations</button>
+                <button className={`projects ${location.pathname.startsWith('/projects') ? 'unclicked' : ''}`} onClick={handleProjectsClick}>projects</button>
                 <button onClick={handleColorChange} className="projects">colour</button>
                 <button className="projects" onClick={toggleNightMode}>
                     {isNightMode ? 'night' + '\u00A0' + '\u00A0' : 'day'}
