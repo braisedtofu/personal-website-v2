@@ -490,14 +490,13 @@
   .smiski2,
   .smiski3,
   .smiski4{
-    height:10vh; /* Maintain aspect ratio by adjusting height automatically */
+    height:17vh; /* Maintain aspect ratio by adjusting height automatically */
     z-index: 99999999 !important;
     background: transparent !important;
   }
   .smiski-images{
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 4vh;
-    padding-bottom: 3vh;
   }
   
   .home-details-container {
