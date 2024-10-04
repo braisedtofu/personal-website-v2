@@ -473,6 +473,7 @@
 }
 
 .arrow {
+
   font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, arial, sans-serif !important;
 }
 
@@ -490,13 +491,14 @@
   .smiski2,
   .smiski3,
   .smiski4{
-    height:17vh; /* Maintain aspect ratio by adjusting height automatically */
+    height:10vh; /* Maintain aspect ratio by adjusting height automatically */
     z-index: 99999999 !important;
     background: transparent !important;
   }
   .smiski-images{
     justify-content: center;
     padding-top: 4vh;
+    padding-bottom: 0;
   }
   
   .home-details-container {

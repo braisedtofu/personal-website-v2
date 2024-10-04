@@ -77,10 +77,10 @@ export default function Home() {
           <div className={`home-details-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
                   <div className="smiski-images" >
                     <Draggable>
-                      <img className='smiski1'  src={smiski1} draggable="false" id="draggable-image"></img>
+                      <img className='smiski2'  src={smiski2} draggable="false" id="draggable-image"></img>
                     </Draggable>
                     <Draggable>
-                      <img className='smiski2'  src={smiski2} draggable="false" id="draggable-image"></img>
+                      <img className='smiski1'  src={smiski1} draggable="false" id="draggable-image"></img>
                     </Draggable>
                     <Draggable>
                       <img className='smiski3'  src={smiski3} draggable="false" id="draggable-image"></img>
