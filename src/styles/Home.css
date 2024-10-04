@@ -472,8 +472,10 @@
   flex-wrap: wrap;
 }
 
-.textglow{
- } 
+.arrow {
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
 
 @keyframes text-shadow-fade-in {
   from {
