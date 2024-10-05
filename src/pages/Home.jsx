@@ -5,10 +5,6 @@ import "../styles/Global.css";
 import "../styles/Home.css";
 import Draggable from 'react-draggable'
 import NightModeContext from '../NightModeContext';
-import smiski1 from '../assets/HomeImages/smiski1.png';
-import smiski2 from '../assets/HomeImages/smiski2.png';
-import smiski3 from '../assets/HomeImages/smiski3.png';
-import smiski4 from '../assets/HomeImages/smiski4.png';
 import ardemo from '../assets/HomeImages/ARdemo.png';
 import argraphic from '../assets/HomeImages/argraphic.png';
 import arreality from '../assets/HomeImages/arreality.png';
@@ -20,6 +16,7 @@ export default function Home() {
 
     const { isNightMode } = useContext(NightModeContext);
     const { color } = useContext(NightModeContext);
+    const { image1, image2, image3, image4} = useContext(NightModeContext);
     const { backgroundColor, boxShadow } = useContext(NightModeContext);
     const [isPageLoaded, setIsPageLoaded] = useState(false);
     const { emoji, changeEmojis } = useContext(NightModeContext);
@@ -45,6 +42,7 @@ export default function Home() {
       setCurrentEmojiIndex(nextEmojiIndex);
       const nextEmoji = emojis[nextEmojiIndex];
       changeEmojis(nextEmoji);
+      // window.scrollTo(0, 0);  // Manually restore scroll position after the page is loaded
     };
 
     const emojis = [
@@ -78,16 +76,16 @@ export default function Home() {
           <div className={`home-details-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
                   <div className="smiski-images" >
                     <Draggable>
-                      <img className='smiski2'  src={smiski2} draggable="false" id="draggable-image"></img>
+                      <img className='smiski2'  src={image1} draggable="false" id="draggable-image"></img>
                     </Draggable>
                     <Draggable>
-                      <img className='smiski1'  src={smiski1} draggable="false" id="draggable-image"></img>
+                      <img className='smiski1'  src={image2} draggable="false" id="draggable-image"></img>
                     </Draggable>
                     <Draggable>
-                      <img className='smiski3'  src={smiski3} draggable="false" id="draggable-image"></img>
+                      <img className='smiski3'  src={image3} draggable="false" id="draggable-image"></img>
                     </Draggable>
                     <Draggable>
-                      <img className='smiski4'  src={smiski4} draggable="false" id="draggable-image"></img>
+                      <img className='smiski4'  src={image4} draggable="false" id="draggable-image"></img>
                     </Draggable>
                   </div>  
                       <p className="about-title"> 

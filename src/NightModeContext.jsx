@@ -1,11 +1,24 @@
 // NightModeContext.js
 import React, { createContext, useState } from 'react';
+import Smiski1DayBlue from './assets/HomeImages/Smiski1DayBlue.png';
+import Smiski2DayBlue from './assets/HomeImages/Smiski2DayBlue.png';
+import Smiski3DayBlue from './assets/HomeImages/Smiski3DayBlue.png';
+import Smiski4DayBlue from './assets/HomeImages/Smiski4DayBlue.png';
+
+import Smiski1NightGray from './assets/HomeImages/Smiski1NightGray.png';
+import Smiski2NightGray from './assets/HomeImages/Smiski2NightGray.png';
+import Smiski3NightGray from './assets/HomeImages/Smiski3NightGray.png';
+import Smiski4NightGray from './assets/HomeImages/Smiski4NightGray.png';
 
 const NightModeContext = createContext();
 
 export function NightModeProvider({ children }) {
   const [isNightMode, setIsNightMode] = useState(false);
   const [color, setColor] = useState('#104BA6'); // Initial color, replace with your desired initial color
+  const [image1, setImage1] = useState(Smiski1DayBlue);
+  const [image2, setImage2] = useState(Smiski2DayBlue);
+  const [image3, setImage3] = useState(Smiski3DayBlue);
+  const [image4, setImage4] = useState(Smiski4DayBlue);
   const [backgroundColor, changeBackgroundColor] = useState('#FFFFF3'); // Initial color, replace with your desired initial color
   const [boxShadow, changeBoxShadow] = useState('rgba(0, 0, 0, 0.3)'); // Initial color, replace with your desired initial color
   const [emoji, changeEmojis] = useState('(◕‿◕)');
@@ -20,12 +33,20 @@ export function NightModeProvider({ children }) {
     if (isNightMode) {
     setColor('#104BA6'); // Reset the color to the initial color when toggling night mode
     changeBackgroundColor('#FFFFF3'); // Reset the color to the initial color when toggling night mode
-    changeBoxShadow('rgba(0, 0, 0, 0.3)')
+    changeBoxShadow('rgba(0, 0, 0, 0.3)');
+    setImage1(Smiski1DayBlue);
+    setImage2(Smiski2DayBlue);
+    setImage3(Smiski3DayBlue);
+    setImage4(Smiski4DayBlue);
     }
     else {
     setColor('#FFFFF3');    
     changeBackgroundColor('#424242');
-    changeBoxShadow('rgba(255, 255, 255, 0.3)')
+    changeBoxShadow('rgba(255, 255, 255, 0.3)');
+    setImage1(Smiski1NightGray);
+    setImage2(Smiski2NightGray);
+    setImage3(Smiski3NightGray);
+    setImage4(Smiski4NightGray);
     }
   };
 
@@ -33,9 +54,27 @@ export function NightModeProvider({ children }) {
     setColor(newColor);
   };
 
+  const changeImage1 = (newImage1) => {
+    setImage1(newImage1);
+  };
+
+  const changeImage2 = (newImage2) => {
+    setImage2(newImage2);
+  };
+
+  const changeImage3 = (newImage3) => {
+    setImage3(newImage3);
+  };
+
+  const changeImage4 = (newImage4) => {
+    setImage4(newImage4);
+  };
+
+
+
   return (
     <NightModeContext.Provider value={{ isNightMode, toggleNightMode, color, changeColor, backgroundColor, changeBackgroundColor, boxShadow, changeBoxShadow, emoji, changeEmojis, isGridView,
-      toggleView }}>
+      toggleView, image1, changeImage1, image2, changeImage2, image3, changeImage3, image4, changeImage4}}>
       {children}
     </NightModeContext.Provider>
   );

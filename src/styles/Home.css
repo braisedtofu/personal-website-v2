@@ -90,13 +90,6 @@
 }
 
 
-.night-mode .smiski1,
-.night-mode .smiski2,
-.night-mode .smiski3,
-.night-mode .smiski4 {
-  filter: brightness(0) invert(1); /* Apply filter in night mode */
-}
-
 
 
 .about-title {
