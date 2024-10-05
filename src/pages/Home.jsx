@@ -60,14 +60,27 @@ export default function Home() {
 
   const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
 
+    // Preload function
+    const preloadAssets = () => {
+        const assets = [
+            image1, image2, image3, image4, 
+            ardemo, argraphic, arreality, 
+            araddtail, arremovetail
+        ];
+
+        assets.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    };
+
     useEffect(() => {
-      setTimeout(() => {
-        setIsPageLoaded(true);
-      }, 50);
-      return () => {
-      };
+        preloadAssets(); // Preload images and videos on mount
+        setTimeout(() => {
+            setIsPageLoaded(true);
+        }, 50);
+        return () => {};
     }, []);
-      
           
           return (
         <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor, '--box-shadow': boxShadow }}> 

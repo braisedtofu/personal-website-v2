@@ -5,6 +5,7 @@ import NightModeContext from '../NightModeContext';
 import '../styles/Global.css';
 import Navigation from '../components/Navigation';
 import '../styles/ProjectData.css';
+import '../styles/Home.css';
 
 const ProjectDetails = () => {
 

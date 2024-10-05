@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import "../styles/Navigation.css";
 import NightModeContext from '../NightModeContext';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -91,6 +91,30 @@ export default function Navigation() {
         navigate('/'); // Navigate to the home page
     };
 
+      const preloadAssets = () => {
+        const images = [
+          // Day images
+          Smiski1DayBlack, Smiski1DayBlue, Smiski1DayBrown, Smiski1DayGreen,
+          Smiski2DayBlack, Smiski2DayBlue, Smiski2DayBrown, Smiski2DayGreen,
+          Smiski3DayBlack, Smiski3DayBlue, Smiski3DayBrown, Smiski3DayGreen,
+          Smiski4DayBlack, Smiski4DayBlue, Smiski4DayBrown, Smiski4DayGreen,
+          // Night images
+          Smiski1NightCyan, Smiski1NightGreen, Smiski1NightGray, Smiski1NightYellow,
+          Smiski2NightCyan, Smiski2NightGreen, Smiski2NightGray, Smiski2NightYellow,
+          Smiski3NightCyan, Smiski3NightGreen, Smiski3NightGray, Smiski3NightYellow,
+          Smiski4NightCyan, Smiski4NightGreen, Smiski4NightGray, Smiski4NightYellow
+      ];
+
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    };
+
+    useEffect(() => {
+        preloadAssets(); // Call preload function
+        console.log("preloaded images")
+    }, []);
 
     return (
         <div className="navigation-container" style={{ '--main-color': color, '--box-shadow': boxShadow }}>

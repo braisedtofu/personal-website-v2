@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/ProjectGrid.css';
+
 import { useNavigate } from 'react-router-dom';
 
 const ProjectGrid = ({ data }) => {
