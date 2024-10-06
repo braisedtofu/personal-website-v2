@@ -83,7 +83,7 @@
 .smiski2,
 .smiski3,
 .smiski4{
-  height: 20vh;
+  height: 15vh;
   z-index: 9999 !important;
   cursor: pointer; 
   background: transparent !important;
