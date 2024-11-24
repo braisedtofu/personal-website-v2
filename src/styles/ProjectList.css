@@ -110,18 +110,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%; /* Adjust width for smaller image */
   height: auto;
-  display: block; /* Set to block when hovered */
+  display: flex; /* Set to block when hovered */
   z-index: 1000; /* Ensure it appears above everything */
   pointer-events: none; /* Prevent interaction */
+  background: transparent !important;
+  color:transparent;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: transparent;
 }
 
 .image-modal img {
-  width: auto; /* Adjust width for smaller size */
-  max-height: 50vh; /* Set a maximum height for the images */
   height: auto; /* Maintain aspect ratio */
   border-radius: 12px;
-  object-fit: cover;
+  width: 70%;
+  object-fit:contain;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background: transparent;
+  color:transparent;
+  background-color: transparent;
 }

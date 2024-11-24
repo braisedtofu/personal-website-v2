@@ -17,16 +17,15 @@
 
 .grid-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); /* Each item is at least 11rem wide */
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* Each item is at least 11rem wide */
   justify-content: start; /* Align items to the start to avoid gaps */
-  grid-gap: 1.5rem; /* Space between items */
   overflow-x: hidden;
   width: 100%; /* Use full width of the parent */
   overflow-y: hidden;
   height: auto;
+  padding: 1rem;
   box-sizing: border-box; /* Include padding in width calculations */
   background-color: transparent;
-  padding: 1.15rem;   
   padding-bottom: 2vh;
 }
 
@@ -54,9 +53,8 @@
     font-size: 10px;
     position: relative;
     cursor: pointer;
-    width:13rem;
-    height: 8rem;
-    padding-right: 0.7rem;
+    width:22rem;
+    height: 13rem;
     margin-bottom:5rem;
     background: transparent;
     background-color: transparent;
@@ -187,8 +185,7 @@
     cursor: pointer;
     width:20rem;
     height: 10rem;
-    padding-right: 0.7rem;
-    margin-bottom:2rem;
+    margin-bottom:5rem;
     background: transparent;
     background-color: transparent;
   }
