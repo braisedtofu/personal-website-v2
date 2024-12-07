@@ -10,19 +10,19 @@
   
   
   .navigation-container {
-    top: 0.6vh; /* Align the container to the top */
+    top: 0vh; /* Align the container to the top */
     left: 0; /* Align the container to the left */
     display: flex;
     justify-content: space-between !important;
     z-index: 9999999;
     position:sticky;
-    border-radius: 1rem;
   /* Frosted glass background */
-    background: rgba(0,0,0,0.08)!important;
+    background: var(--background-color)!important;
     -webkit-backdrop-filter: saturate(140%) blur(5px);
     backdrop-filter: saturate(140%) blur(5px);
     text-align: left;
     margin: 0.2rem;
+    margin-top: 0; 
   }
 
   
@@ -73,7 +73,7 @@
     outline:none; 
     font-family: 'Times Now Light';
     cursor: pointer; 
-    width: 16.7vw;
+    width: 19.7vw;
     justify-content: flex-start;
     opacity: 0.5;
     text-align: left;

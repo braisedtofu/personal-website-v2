@@ -25,7 +25,23 @@ export default function Home() {
     const { backgroundColor, boxShadow } = useContext(NightModeContext);
     const [isPageLoaded, setIsPageLoaded] = useState(false);
     const { emoji, changeEmojis } = useContext(NightModeContext);
+    const [currentSmiski, setCurrentSmiski] = useState(image1);
+    const [currentSmiskiIndex, setCurrentSmiskiIndex] = useState(0);
 
+    const smiskiImages = [image1, image2, image3, image4];
+    
+    useEffect(() => {
+      setCurrentSmiski(smiskiImages[currentSmiskiIndex]);
+    }, [image1, image2, image3, image4, currentSmiskiIndex]);
+    
+
+    const handleSmiskiClick = () => {
+      const nextIndex = (currentSmiskiIndex + 1) % smiskiImages.length;
+      setCurrentSmiskiIndex(nextIndex);
+      setCurrentSmiski(smiskiImages[nextIndex]);
+    };
+      
+  
     const handleGithubClick = () => {
       window.open("https://github.com/braisedtofu", "_blank");
     };
@@ -76,7 +92,7 @@ export default function Home() {
 
       Promise.all(images.map(img => new Promise(resolve => img.onload = resolve)))
           .then(() => {
-              setImagesLoaded(true);
+              setIsPageLoaded(true);
               ScrollTrigger.refresh();  // Refresh ScrollTrigger after images are loaded
           });
   };
@@ -132,11 +148,14 @@ export default function Home() {
           return (
         <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor, '--box-shadow': boxShadow }}> 
         <Navigation />
-        <div className={`home-details-inner`}>
+        <div className={`home-details-inner fade ${isPageLoaded ? 'fade-enter' : ''}`}>
         <div className="smiski-images" >
-          <img className='smiski2'  src={image1} ></img>
+          <img className='smiski2'   src={currentSmiski}
+            alt="Smiski"
+            onClick={handleSmiskiClick}
+            style={{ cursor: "pointer" }} ></img>
         </div>    
-          <div className={`home-details-container fade ${isPageLoaded ? 'fade-enter' : ''}`}>
+          <div className={`home-details-container`}>
 
                       <p  className="about-title"> 
                       Hi, I'm Wynn! I’m an artist and engineer based in Auckland, New Zealand. 
