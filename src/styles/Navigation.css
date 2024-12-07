@@ -10,7 +10,7 @@
   
   
   .navigation-container {
-    top: 0; /* Align the container to the top */
+    top: 0.6vh; /* Align the container to the top */
     left: 0; /* Align the container to the left */
     display: flex;
     justify-content: space-between !important;
@@ -60,6 +60,11 @@
     opacity: 0.5;
   }
 
+  .about{
+    padding-left: 0vw !important;
+  }
+  
+
   .wynnmo{
     border: none;
     border-color: transparent;
@@ -68,7 +73,11 @@
     outline:none; 
     font-family: 'Times Now Light';
     cursor: pointer; 
+    width: 16.7vw;
+    justify-content: flex-start;
     opacity: 0.5;
+    text-align: left;
+    padding-right: 0vw;
   }
 
   .linkedin,

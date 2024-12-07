@@ -83,14 +83,30 @@
 .smiski2,
 .smiski3,
 .smiski4{
-  height: 15vh;
   z-index: 9999 !important;
-  cursor: pointer; 
+  align-items: flex-start;
   background: transparent !important;
   filter: none;
+  width: 15vw;
+  height: auto;
 }
 
 
+.background-text-highlight {
+  display: inline-block; /* Ensures the background only spans the length of the text */
+  justify-content: left;
+  user-select: none;
+  background-color: var(--main-color) !important; /* Background color */
+  border-radius: 20px; /* Rounded corners */
+  text-align: left;
+  position: relative;
+  font-family: 'Times Now Light';
+  font-size: 0.9rem;
+  margin-top: 0;
+  padding: 0.5vh 10px; /* Adjusted padding to avoid excess space */
+  color: var(--background-color) !important; /* Text color */
+  width:fit-content;
+}
 
 
 .about-title {
@@ -103,6 +119,7 @@
   bottom: 0px; 
   font-family: 'Times Now Light';
   font-size: 1.2rem;
+
 }
 
 
@@ -166,10 +183,13 @@
 
 .ardemo{
   max-width: 100%;
+  height: auto; /* Ensures the height scales proportionally */
   position:relative;
-  align-items: center;
+  margin: 0 auto; 
+  padding-bottom:0; 
   border-radius: 12px;
 }
+
 
 .about-buttons{
   justify-content: left;
@@ -424,9 +444,10 @@
   flex-direction: column;
   transition: opacity 2s ease-in-out;
   background: transparent;
-  padding-left: 28vw;
-  padding-right: 28vw;
+  /* padding-left: 0vw; */
+  padding-right: 10vw; 
   flex: 1; 
+  top: 8vh;
 }
 
 
@@ -434,7 +455,7 @@
   position: relative;
   display: flex;
   z-index: 0;
-  margin: 0 auto;
+  top: 2vh;
 }
 
 .home-details-container::after {
@@ -459,12 +480,15 @@
 }
 
 .smiski-images{
-  display:flex;
-  justify-content: space-between;
-  padding-top: 25vh;
-  padding-bottom: 3vh;
-  flex-wrap: wrap;
+  width: 17vw;
+  display: flex;
+  top: 8vh;
+  height: max-content;
+  position: sticky;
+  background: transparent !important;
+  z-index: 999999;
 }
+
 
 .arrow {
 
@@ -485,20 +509,38 @@
   .smiski2,
   .smiski3,
   .smiski4{
-    height:10vh; /* Maintain aspect ratio by adjusting height automatically */
     z-index: 99999999 !important;
     background: transparent !important;
+    width:60vw;
   }
   .smiski-images{
     justify-content: center;
-    padding-top: 4vh;
     padding-bottom: 0;
+    width:fit-content;
+    position:relative;
+    top:1vh;
+    justify-content: center;
+    margin:0 auto;
+    margin-left:16vw;
   }
+
+  /* width: 17vw;
+  display: flex;
+  top: 8vh;
+  height: max-content;
+  position: sticky;
+  background: transparent !important;
+  z-index: 999999; */
+
   
   .home-details-container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  .home-details-inner {
+    flex-direction: column;
+  }
+
 
   .argraphic {
     width: 60vw;
