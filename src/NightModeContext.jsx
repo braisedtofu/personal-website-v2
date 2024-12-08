@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import Smiski1DayBlue from './assets/HomeImages/Smiski1DayBlue.png';
+import Smiski1DayBlue from './assets/HomeImages/Smiski1DayBlue.webp';
 import Smiski2DayBlue from './assets/HomeImages/Smiski2DayBlue.png';
 import Smiski3DayBlue from './assets/HomeImages/Smiski3DayBlue.png';
 import Smiski4DayBlue from './assets/HomeImages/Smiski4DayBlue.png';

@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import "../styles/Global.css";
 
 import Smiski1DayBlack from '../assets/HomeImages/Smiski1DayBlack.png';
-import Smiski1DayBlue from '../assets/HomeImages/Smiski1DayBlue.png';
+import Smiski1DayBlue from '../assets/HomeImages/Smiski1DayBlue.webp';
 import Smiski1DayBrown from '../assets/HomeImages/Smiski1DayBrown.png';
 import Smiski1DayGreen from '../assets/HomeImages/Smiski1DayGreen.png';
 import Smiski1NightCyan from '../assets/HomeImages/Smiski1NightCyan.png';
