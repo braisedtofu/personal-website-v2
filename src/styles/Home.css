@@ -477,7 +477,7 @@
 .smiski-images{
   width: 20vw;
   display: flex;
-  top: 8vh;
+  top: 10vh;
   height: max-content;
   position: sticky;
   background: transparent !important;

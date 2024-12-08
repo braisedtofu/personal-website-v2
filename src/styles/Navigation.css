@@ -22,7 +22,7 @@
     backdrop-filter: saturate(140%) blur(5px);
     text-align: left;
     margin: 0.2rem;
-    margin-top: 0; 
+    margin-top:0;
   }
 
   
@@ -58,6 +58,7 @@
     font-family: 'Times Now Light';
     cursor: pointer; 
     opacity: 0.5;
+    margin-top: 2vh;
   }
 
   .about{
