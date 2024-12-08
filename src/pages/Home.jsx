@@ -4,10 +4,9 @@ import Navigation from "../components/Navigation";
 import "../styles/Global.css";
 import "../styles/Home.css";
 import NightModeContext from '../NightModeContext';
-import ardemo from '../assets/HomeImages/ARdemo.png';
-import argraphic from '../assets/HomeImages/argraphic.png';
-import arreality from '../assets/HomeImages/arreality.png';
-import arremovetail from '../assets/HomeImages/arremovetail.mp4';
+import ardemo from '../assets/HomeImages/ARdemo.webp';
+import arreality from '../assets/HomeImages/arreality.webp';
+import arremovetail from '../assets/HomeImages/arremovetail.webp';
 import battle1 from '../assets/pikatune/battle1.png';
 import battle3 from '../assets/pikatune/battle3.png';
 import building3 from '../assets/pikatune/building3.png';
@@ -179,9 +178,10 @@ export default function Home() {
                       <div ref={realityRef}  className="image-array-columns">
                         <img className='ardemo'  src={ardemo} draggable="false" id="draggable-image"></img>
                         <img  className='arreality'  src={arreality} draggable="false" id="draggable-image"></img>
-                        <video className="about-video" playsInline autoPlay muted loop>
-                            <source src={arremovetail} type="video/mp4" />
-                          </video>
+                        <img  className='arreality'  src={arremovetail} draggable="false" id="draggable-image"></img>
+                        {/* <video className="about-video" playsInline autoPlay muted loop>
+                            <source src={arremovetail} type="video/webp" />
+                          </video> */}
                         </div>
                         <p className="about-subtitle"> 
                       Tangible AR for data structure learning
