@@ -3,13 +3,25 @@ import {ScrollRestoration } from 'react-router-dom';
 import Navigation from "../components/Navigation";
 import "../styles/Global.css";
 import "../styles/Home.css";
-import Draggable from 'react-draggable'
 import NightModeContext from '../NightModeContext';
 import ardemo from '../assets/HomeImages/ARdemo.png';
 import argraphic from '../assets/HomeImages/argraphic.png';
 import arreality from '../assets/HomeImages/arreality.png';
-import araddtail from '../assets/HomeImages/araddtail.mp4';
 import arremovetail from '../assets/HomeImages/arremovetail.mp4';
+import battle1 from '../assets/pikatune/battle1.png';
+import battle3 from '../assets/pikatune/battle3.png';
+import building3 from '../assets/pikatune/building3.png';
+import building4 from '../assets/pikatune/building4.png';
+import pikatune1 from '../assets/pikatune/pikatune1.png';
+import pikatune2 from '../assets/pikatune/pikatune2.png';
+import village from '../assets/pikatune/village.png';
+import playlist from '../assets/pikatune/playlist.png';
+import generate1 from '../assets/pikatune/generate1.png';
+import generate2 from '../assets/pikatune/generate2.png';
+import { useNavigate, useLocation } from 'react-router-dom';
+
+
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -27,9 +39,20 @@ export default function Home() {
     const { emoji, changeEmojis } = useContext(NightModeContext);
     const [currentSmiski, setCurrentSmiski] = useState(image1);
     const [currentSmiskiIndex, setCurrentSmiskiIndex] = useState(0);
+    const navigate = useNavigate();
 
     const smiskiImages = [image1, image2, image3, image4];
-    
+
+    const handleTangibleArClick = () => {
+      navigate('/projects/artangible'); // Navigate to the projects page
+  };
+  
+
+  const handlePikatuneClick = () => {
+    navigate('/projects/pikatune'); // Navigate to the projects page
+};
+
+
     useEffect(() => {
       setCurrentSmiski(smiskiImages[currentSmiskiIndex]);
     }, [image1, image2, image3, image4, currentSmiskiIndex]);
@@ -81,35 +104,9 @@ export default function Home() {
 
   const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
 
-    // Preload function
-    const preloadAssets = () => {
-      const assets = [image1, image2, image3, image4, ardemo, argraphic, arreality];
-      const images = assets.map(src => {
-          const img = new Image();
-          img.src = src;
-          return img;
-      });
 
-      Promise.all(images.map(img => new Promise(resolve => img.onload = resolve)))
-          .then(() => {
-              setIsPageLoaded(true);
-              ScrollTrigger.refresh();  // Refresh ScrollTrigger after images are loaded
-          });
-  };
-
-    useEffect(() => {
-        preloadAssets(); // Preload images and videos on mount
-        setTimeout(() => {
-            setIsPageLoaded(true);
-        }, 50);
-        return () => {};
-    }, []);
-
-    const graphicRef = useRef(null);
     const demoRef = useRef(null);
     const realityRef = useRef(null);
-    const removeTailRef = useRef(null);
-    const addTailRef = useRef(null);
   
     useEffect(() => {
       const fadeUpAnimation = (target) => {
@@ -123,18 +120,15 @@ export default function Home() {
             scrollTrigger: {
               scroller: '.container',
               trigger: target,
-              start: "top 80%",
+              start: "top 98%"
             },
           }
         );
       };
     
     // Apply animation to each element
-    fadeUpAnimation(graphicRef.current);
     fadeUpAnimation(demoRef.current);
     fadeUpAnimation(realityRef.current);
-    fadeUpAnimation(removeTailRef.current);
-    fadeUpAnimation(addTailRef.current);
     
       const handleResize = () => ScrollTrigger.refresh();
       window.addEventListener("resize", handleResize);
@@ -144,6 +138,13 @@ export default function Home() {
       };
     }, []);
     
+    useEffect(() => {
+      setTimeout(() => {
+        setIsPageLoaded(true);
+        window.scrollTo(0, 0);  // Manually restore scroll position after the page is loaded
+      }, 50);
+    }, []);
+  
           
           return (
         <div className={`container ${isNightMode ? 'night-mode' : 'day-mode'}`} style={{ '--main-color': color, '--background-color': backgroundColor, '--box-shadow': boxShadow }}> 
@@ -160,55 +161,63 @@ export default function Home() {
                       <p  className="about-title"> 
                       Hi, I'm Wynn! I’m an artist and engineer based in Auckland, New Zealand. 
                       I love to solve challenging human-centered problems and creating things that bring people joy.
-                      I'm currently working as a Digital Consultant at <span className="textglow">Beca</span> within the Digital Products and Services team. 
                       In my spare time, I enjoy cafe hopping, collecting Smiskis, and working on creative projects.                        
                       </p>
-                      <p    className="background-text-highlight"> 
-                        connect with me
-                      </p>
-                      <p className="about-buttons"> 
-                        <button onClick={handleArenaClick} className="github">are.na&nbsp;<span className="arrow"> &#x2197;&#xFE0E;</span></button>
-                        <button onClick={handleInstagramClick} className="github">instagram&nbsp;<span className="arrow"> &#x2197;&#xFE0E;</span></button>
-                        <button onClick={handleGithubClick} className="github">github&nbsp;<span className="arrow"> &#x2197;&#xFE0E;</span></button>
-                        <button onClick={handleLinkedinClick} className="github">linkedin&nbsp;<span className="arrow"> &#x2197;&#xFE0E;</span></button>
+                      <p    className="about-caption"> 
+                        Connect with me
                       </p>
 
-                      <p className="background-text-highlight"> 
-                      recent projects
-                      </p>
-                      <img ref={graphicRef} className='argraphic'  src={argraphic} draggable="false" id="draggable-image"></img>
-                      <p className="about-subtitle"> 
-                      tangible AR for data structure learning
-                      </p>
+                        <p onClick={handleArenaClick} className="background-text-highlight">are.na</p>
+                        <p onClick={handleInstagramClick} className="background-text-highlight">instagram</p>
+                        <p onClick={handleGithubClick} className="background-text-highlight">github</p>
+                        <p onClick={handleLinkedinClick} className="background-text-highlight">linkedin</p>
+
                       <p className="about-caption"> 
+                      Recent projects
+                      </p>
+                      {/* <img ref={graphicRef} className='argraphic'  src={argraphic} draggable="false" id="draggable-image"></img> */}
+                      <div ref={realityRef}  className="image-array-columns">
+                        <img className='ardemo'  src={ardemo} draggable="false" id="draggable-image"></img>
+                        <img  className='arreality'  src={arreality} draggable="false" id="draggable-image"></img>
+                        <video className="about-video" playsInline autoPlay muted loop>
+                            <source src={arremovetail} type="video/mp4" />
+                          </video>
+                        </div>
+                        <p className="about-subtitle"> 
+                      Tangible AR for data structure learning
+                      </p>
+                      <p className="about-body"> 
+                      We get it - data structures is hard to understand, especially when reading off a textbook. That's why we created an augmented reality (AR) tool. This tool aims to reinforce students' mental models and facilitate their comprehension of data structure concepts by leveraging mobile AR. It allows users to interact with real-world representations of data structures while viewing virtual, abstract information overlaid on top. 
+                      </p>
+                      <p    className="background-text-highlight" onClick={handleTangibleArClick}> 
+                        See more
+                      </p>
+
+                      <div ref={demoRef} className="image-array-columns">
+                        <img  className='ardemo'  src={pikatune1} draggable="false" id="draggable-image"></img>
+                        <img  className='ardemo'  src={pikatune2} draggable="false" id="draggable-image"></img>
+                        <img  className='ardemo'  src={village} draggable="false" id="draggable-image"></img>
+                        <img  className='ardemo'  src={playlist} draggable="false" id="draggable-image"></img>
+                        <img  className='ardemo'  src={building3} draggable="false" id="draggable-image"></img>
+                        <img  className='ardemo'  src={building4} draggable="false" id="draggable-image"></img>
+                        <img  className='ardemo'  src={battle1} draggable="false" id="draggable-image"></img>
+                        <img  className='ardemo'  src={battle3} draggable="false" id="draggable-image"></img>
+                        <img  className='ardemo'  src={generate1} draggable="false" id="draggable-image"></img>
+                        <img  className='ardemo'  src={generate2} draggable="false" id="draggable-image"></img>
+                        </div>
+                        <p className="about-subtitle"> 
+                      Pikatune
+                      </p>
+                      {/* <p className="about-caption"> 
                       in collaboration with danika chhour
-                      </p>
+                      </p> */}
                       <p className="about-body"> 
-                      Data structures are fundamental concepts in computer science courses, serving as the building blocks for understanding more complex topics. However, students often find learning these concepts challenging. As a result, there is a growing demand for tools that can better support students in mastering data structures. By providing an engaging and interactive learning experience, this augmented reality (AR) tool aims to reinforce students' mental models and facilitate their comprehension of data structure concepts. This tool leverages mobile AR to enhance students’ understanding of data structures. It allows users to interact with real-world representations of data structures while viewing virtual, abstract information overlaid on top. 
-
+                      Do you think you’ve caught them all? Well, YOU HAVEN’T! There are still so many tunes to catch out there. Pikatune is a Pokémon-themed playlist generator featuring quiz type pokemon battles and a level up system. 
+                      This game was built using a MERN stack, and I worked on front-end engineering and UX/UI design (heavily inspired by exisitng Pokémon games).
                       </p>
-                      <img  ref={demoRef}className='ardemo'  src={ardemo} draggable="false" id="draggable-image"></img>
-                      <p className="about-caption"> 
-                      traversing a linked list by tapping through the blocks in the correct order
+                      <p    className="background-text-highlight" onClick={handlePikatuneClick}> 
+                        See more
                       </p>
-                      <p className="about-body"> 
-                      This tool is developed using Unity Engine with C# and the AR Foundation Framework for mobile AR capabilities. It integrates the OpenCV library for hand and finger tracking, allowing users to interact with real-world objects and enabling the game to develop scenarios based on real-life interactions with the blocks. The game is deployed on iOS devices through XCode, utilizing an iPad Pro mounted on a stand. When users tap colored blocks, the game responds in real time, creating a smooth and interactive AR experience.</p>
-                      <img ref={realityRef}  className='arreality'  src={arreality} draggable="false" id="draggable-image"></img>
-                      <p className="about-caption"> 
-                      using the tool through the interfacing camera of an ipad
-                      </p>
-                      <video  ref={removeTailRef}  className="about-video" playsInline autoPlay muted loop>
-                          <source src={arremovetail} type="video/mp4" />
-                        </video>
-                        <p className="about-caption"> 
-                        live demo of deleting from a linked list tail
-                        </p>
-                        <video  ref={addTailRef}  className="about-video" playsInline autoPlay muted loop>
-                          <source src={araddtail} type="video/mp4" />
-                        </video>
-                        <p className="about-caption"> 
-                        live demo of adding to a linked list tail
-                        </p>
 
                       <button onClick={handleEmojiClick} className="emoji">{emoji}</button>
             </div>

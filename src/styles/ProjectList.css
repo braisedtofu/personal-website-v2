@@ -10,6 +10,7 @@
   width: 100%;
   padding: 1.2rem;
   box-sizing: border-box;
+  padding: 0;
 }
 
 /* Each row contains the title, tech info, and caption */
@@ -33,6 +34,7 @@
 /* Number each row */
 .list-row::before {
   width: 2vw;
+  text-align: left;
   content: counter(rowNumber) "  "; /* Format the row number without brackets */
   counter-increment: rowNumber; /* Increment row number */
   font-family: 'Times Now Light'; /* Same font as the title */
@@ -41,6 +43,8 @@
   font-weight: normal; /* Normal weight for the row number */
   opacity: 1; /* Set opacity of the number to 100% */
   flex: 0 0 auto; /* Prevent flex item from growing */
+  padding-left:0;
+  margin-left: 0;
 }
 
 /* Title on the left */
@@ -124,10 +128,9 @@
 
 .image-modal img {
   height: auto; /* Maintain aspect ratio */
-  border-radius: 12px;
+  border-radius: 5px;
   width: 70%;
   object-fit:contain;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   background: transparent;
   color:transparent;
   background-color: transparent;

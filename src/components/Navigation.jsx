@@ -120,17 +120,17 @@ export default function Navigation() {
         <div className="navigation-container" style={{ '--main-color': color, '--box-shadow': boxShadow }}>
             {/* Top Buttons */}
             <div className="top-buttons">
-                <button className={`wynnmo ${location.pathname === '/' ? 'unclicked' : ''}`} onClick={handleHomeClick}>wynn mo</button>
-                <button className={`about ${location.pathname === '/' ? 'unclicked' : ''}`} onClick={handleHomeClick}>about</button>
-                <button className={`projects ${location.pathname.startsWith('/projects') ? 'unclicked' : ''}`} onClick={handleProjectsClick}>projects</button>
-                <button onClick={handleColorChange} className="projects">colour</button>
+                <button className={`wynnmo ${location.pathname === '/' ? 'unclicked' : ''}`} onClick={handleHomeClick}>Wynn Mo</button>
+                <button className={`about ${location.pathname === '/' ? 'unclicked' : ''}`} onClick={handleHomeClick}>About</button>
+                <button className={`projects ${location.pathname.startsWith('/projects') ? 'unclicked' : ''}`} onClick={handleProjectsClick}>Projects</button>
+                <button onClick={handleColorChange} className="projects">Colour</button>
                 <button className="projects" onClick={toggleNightMode}>
-                    {isNightMode ? 'night' + '\u00A0' + '\u00A0' : 'day'}
+                    {isNightMode ? 'Night' + '\u00A0' + '\u00A0' : 'Day'}
                 </button>
                 {/* Conditionally render grid/list view toggle button */}
                 {location.pathname.startsWith('/projects') && (
                     <button className="projects" onClick={toggleView}>
-                        {isGridView ? 'grid' : 'list'}
+                        {isGridView ? 'Grid' : 'List'}
                     </button>
                 )}
             </div>

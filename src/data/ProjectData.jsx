@@ -9,7 +9,6 @@ import building4 from '../assets/pikatune/building4.png';
 import friends from '../assets/pikatune/friends.png';
 import friends2 from '../assets/pikatune/friends2.png';
 import generate1 from '../assets/pikatune/generate1.png';
-import generate2 from '../assets/pikatune/generate2.png';
 import pikatune1 from '../assets/pikatune/pikatune1.png';
 import pikatune2 from '../assets/pikatune/pikatune2.png';
 import playlist from '../assets/pikatune/playlist.png';
@@ -66,35 +65,64 @@ import page1 from '../assets/wynnmodotcom/page1.png';
 import page2 from '../assets/wynnmodotcom/page2.png';
 import page3 from '../assets/wynnmodotcom/page3.png';
 import juliavid from '../assets/juliafractals/juliavid.mp4';
-import julia1 from '../assets/juliafractals/julia1.png';
 import ripplesvid from '../assets/ripples/ripplesvid.mp4';
-import ripple1 from '../assets/ripples/ripple1.png';
 import trebuchetvid from '../assets/terribletrebuchet/trebuchetvid.mp4';
 import sounds1 from '../assets/soundsihear/soundsihear1.png';
 import sounds2 from '../assets/soundsihear/soundsihear2.png';
 import sounds3 from '../assets/soundsihear/soundsihear3.png';
 import sounds4 from '../assets/soundsihear/soundsihear4.png';
+import argraphic from '../assets/HomeImages/argraphic.png';
+import ARdemo from '../assets/HomeImages/ARdemo.png';
+import arreality from '../assets/HomeImages/arreality.png';
+import arremovetail from '../assets/HomeImages/arremovetail.mp4';
+import arPoster from '../assets/HomeImages/arPoster.png';
+
+
+
 
 
 const ProjectData = [
+
+  {
+    ProjectId: "artangible",
+    video: arremovetail,
+    images: [
+      { src: argraphic},
+      { src: arreality, caption: "Using the tool through the interfacing camera of an ipad"},
+      { src: ARdemo},
+      { src: arPoster, caption: "Presentation poster for project"}
+    ],
+
+          title: "Tangible AR for data structure learning",
+    technologies: "Technologies: Unity, C#, AR Foundation, OpenCV, XCode",
+    collab: "In collaboration with Danika Chhour",
+    description: (
+      <>
+        <p>
+        We get it - data structures is hard to understand, especially when reading off a textbook. That's why we created an augmented reality (AR) tool. This tool aims to reinforce students' mental models and facilitate their comprehension of data structure concepts by leveraging mobile AR. It allows users to interact with real-world representations of data structures while viewing virtual, abstract information overlaid on top. 
+        This tool is developed using Unity Engine with C# and the AR Foundation Framework for mobile AR capabilities. It integrates the OpenCV library for hand and finger tracking, allowing users to interact with real-world objects and enabling the game to develop scenarios based on real-life interactions with the blocks. The game is deployed on iOS devices through XCode, utilizing an iPad Pro mounted on a stand. When users tap colored blocks, the game responds in real time, creating a smooth and interactive AR experience.</p>
+      </>
+    )
+  },
+
+
     {
         ProjectId: "pikatune",
         images: [
-          { src: village, caption: "village and main navigation menu"},
-          { src: pikatune1, caption: "account creation starter pokemon selection"},
-          { src: pikatune2, caption: "account creation starter trainer selection"},
-          { src: building1, caption: "pokémart for playlist generation", summary: "POKÉMART: Visit Pokémart to generate your own playlist. You will be prompted to select a Pokemon type you are vibing with. Add up to five artists/songs you enjoy to customise your playlist further. Once the playlist is generated, you can swap and delete songs you dislike, name your playlist and then save it to your account. To view and download your playlist to your own Spotify, email 750@wexfordbedroom.com to get your Spotify account added to permissions!" },
-          { src: building2, caption: "pokémart for playlist management", summary: "POKÉCENTER: Visit the Pokémon Centre to view and edit your generated playlists." },
-          { src: building3, caption: "social tower for adding and managing friends", summary:"SOCIAL TOWER: Visit the Social Tower to view other trainers and add them to your friends list to track their levels!"},
-          { src: building4, caption: "pokémon gym to battle champion cynthia", summary: "POKÉMON GYM: Once you have generated at least one playlist, you can visit the gym to level up your Pokémon. Cynthia, the gym leader, will ask you five randomised questions to test how well you know your generated playlists. Level up before your friends for ultimate bragging rights." },
-          { src: generate1, caption: "selecting type for playlist generation"},
-          { src: generate2, caption: "selecting songs to base the playlist on"},
-          { src: playlist, caption: "overview of your generated playlist"},
-          { src: battle1, caption: "engaging in a pokémon battle"},
-          { src: battle2, caption: "answering album related questions"},
-          { src: battle3, caption: "quizzing with album covers"},
-          { src: friends, caption: "trainer cards of other players"},
-          { src: friends2, caption: "trainer card details"}
+          { src: village, caption: "Village and main navigation menu"},
+          { src: pikatune1, caption: "Account creation starter pokemon selection"},
+          { src: pikatune2, caption: "Account creation starter trainer selection"},
+          { src: building1, caption: "Pokémart for playlist generation", summary: "POKÉMART: Visit Pokémart to generate your own playlist. You will be prompted to select a Pokemon type you are vibing with. Add up to five artists/songs you enjoy to customise your playlist further. Once the playlist is generated, you can swap and delete songs you dislike, name your playlist and then save it to your account. To view and download your playlist to your own Spotify, email 750@wexfordbedroom.com to get your Spotify account added to permissions!" },
+          { src: building2, caption: "Pokémart for playlist management", summary: "POKÉCENTER: Visit the Pokémon Centre to view and edit your generated playlists." },
+          { src: building3, caption: "Social tower for adding and managing friends", summary:"SOCIAL TOWER: Visit the Social Tower to view other trainers and add them to your friends list to track their levels!"},
+          { src: building4, caption: "Pokémon gym to battle champion cynthia", summary: "POKÉMON GYM: Once you have generated at least one playlist, you can visit the gym to level up your Pokémon. Cynthia, the gym leader, will ask you five randomised questions to test how well you know your generated playlists. Level up before your friends for ultimate bragging rights." },
+          { src: generate1, caption: "Selecting songs to base the playlist on"},
+          { src: playlist, caption: "Overview of your generated playlist"},
+          { src: battle1, caption: "Engaging in a pokémon battle"},
+          { src: battle2, caption: "Answering album related questions"},
+          { src: battle3, caption: "Quizzing with album covers"},
+          { src: friends, caption: "Trainer cards of other players"},
+          { src: friends2, caption: "Trainer card details"}
         ],
               title: "Pikatune",
         technologies: "Technologies: Mongo DB, Express, React, Node, Spotify API",
@@ -112,15 +140,15 @@ const ProjectData = [
       {
         ProjectId: "bodypawsitive",
         images: [
-          { src: dog1, caption: "landing page for logging in", summary: "" },
-          { src: dog2, caption: "dashboard of pet with analytic information", summary: "" },
-          { src: dog3, caption: "profile of volunteer with dogs under their care", summary: "" },
-          { src: dog4, caption: "weighting system", summary: "" },
-          { src: dog5, caption: "list of dogs in database", summary: "" },
-          { src: dog6, caption: "list of active users", summary: "" },
-          { src: dog7, caption: "profile of a vet that manages volunteers", summary: "" },
-          { src: dog8, caption: "messaging system", summary: "" },
-          { src: dog11, caption: "software and hardware architecture / technology stack", summary: "" },
+          { src: dog1, caption: "Landing page for logging in", summary: "" },
+          { src: dog2, caption: "Dashboard of pet with analytic information", summary: "" },
+          { src: dog3, caption: "Profile of volunteer with dogs under their care", summary: "" },
+          { src: dog4, caption: "Weighting system", summary: "" },
+          { src: dog5, caption: "List of dogs in database", summary: "" },
+          { src: dog6, caption: "List of active users", summary: "" },
+          { src: dog7, caption: "Profile of a vet that manages volunteers", summary: "" },
+          { src: dog8, caption: "Messaging system", summary: "" },
+          { src: dog11, caption: "Software and hardware architecture / technology stack", summary: "" },
         ],
         title: "Body Pawsitive",
         technologies: "Technologies: Mongo DB, Express, React, Node, Raspberry Pico W, C/C++",
@@ -143,7 +171,7 @@ const ProjectData = [
       {
         ProjectId: "soundsihear",
         images: [
-          { src: sounds1, caption: "floating lyric when hovered", summary: "Hovering over a lyric will display it largely in the center of the screen. These lyrics can be clicked to open a link to the full lyrics of the song." },
+          { src: sounds1, caption: "Floating lyric when hovered", summary: "Hovering over a lyric will display it largely in the center of the screen. These lyrics can be clicked to open a link to the full lyrics of the song." },
           { src: sounds2, caption: "", summary: "" },
           { src: sounds3, caption: "", summary: "" },
           { src: sounds4, caption: "", summary: "" },
@@ -166,10 +194,10 @@ const ProjectData = [
       {
         ProjectId: "handwriting-prediction",
         images: [
-          { src: predict4, caption: "using the canvas to predict a handrawn '7'", summary: "" },
-          { src: predict3, caption: "viewing the existing dataset that the model was trained on", summary: "" },
-          { src: predict2, caption: "parameter tuning before training the model", summary: "" },
-          { src: predict1, caption: "launch screen", summary: "" },
+          { src: predict4, caption: "Using the canvas to predict a handrawn '7'", summary: "" },
+          { src: predict3, caption: "Viewing the existing dataset that the model was trained on", summary: "" },
+          { src: predict2, caption: "Parameter tuning before training the model", summary: "" },
+          { src: predict1, caption: "Launch screen", summary: "" },
         ],
         title: "Handwritten Alphabet and Number Recognition",
         technologies: "Technologies: Python, Pytorch/Torchvision",
@@ -189,10 +217,10 @@ const ProjectData = [
       ProjectId: "sleep-is-a-crime",
       video: trebuchetvid,
       images: [
-        { src: trebuchet2, caption: "raspberry pi connected to servo monitor, 8 bit display, and speaker", summary: "" },
-        { src: trebuchet5, caption: "weapon (containing marshmellow as ammo)", summary: "" },
-        { src: trebuchet8, caption: "celebrating a victorious launch", summary: "" },
-        { src: trebuchet9, caption: "very happy about it", summary: "" },
+        { src: trebuchet2, caption: "Raspberry pi connected to servo monitor, 8 bit display, and speaker", summary: "" },
+        { src: trebuchet5, caption: "Weapon (containing marshmellow as ammo)", summary: "" },
+        { src: trebuchet8, caption: "Celebrating a victorious launch", summary: "" },
+        { src: trebuchet9, caption: "Very happy about it", summary: "" },
       ],
       title: "Sleep Is A Crime",
       technologies: "Technologies: Raspberry Pi Pico, Servo Motor, Woodwork (literally)",
@@ -214,12 +242,12 @@ const ProjectData = [
   {
     ProjectId: "line-following-robot",
     images: [
-      { src: robot4, caption: "robot in action under the projected ceiling light maze", summary: "" },
-      { src: robot6, caption: "close up of robot with lights on", summary: "" },
-      { src: robot3, caption: "a very simple pbc with sensors", summary: "" },
-      { src: robot2, caption: "the robot's microcontroller that the pbc is attached to", summary: "" },
-      { src: robot1, caption: "may is proud of our creation!", summary: "" },
-      { src: robot7, caption: "early protoyping stages before soldering the pcb", summary: "" },
+      { src: robot4, caption: "Robot in action under the projected ceiling light maze", summary: "" },
+      { src: robot6, caption: "Close up of robot with lights on", summary: "" },
+      { src: robot3, caption: "A very simple pbc with sensors", summary: "" },
+      { src: robot2, caption: "The robot's microcontroller that the pbc is attached to", summary: "" },
+      { src: robot1, caption: "May is proud of our creation!", summary: "" },
+      { src: robot7, caption: "Early protoyping stages before soldering the pcb", summary: "" },
     ],
     title: "Line Following Robot",
     technologies: "Technologies: PSoC Microcontroller, PCB Design, Altium, C Language",
@@ -243,9 +271,9 @@ const ProjectData = [
 {
   ProjectId: "circle-me-circle-you",
   images: [
-    { src: circle5, caption: "experimenting with circle radius", summary: "" },
-    { src: circle6, caption: "experimenting with colors", summary: "" },
-    { src: circle4, caption: "final color and circle combination", summary: "" },
+    { src: circle5, caption: "Experimenting with circle radius", summary: "" },
+    { src: circle6, caption: "Experimenting with colors", summary: "" },
+    { src: circle4, caption: "Final color and circle combination", summary: "" },
   ],
   title: "Circle Me, Circle You",
   technologies: "Technologies: React, Vite, React-P5, P5.js",
@@ -264,10 +292,10 @@ const ProjectData = [
   video:
     flappyvid,
     images: [
-      { src: box3, caption: "demo of game being played", summary: "" },
-      { src: flappy4, caption: "score tracking", summary: "" },
+      { src: box3, caption: "Demo of game being played", summary: "" },
+      { src: flappy4, caption: "Score tracking", summary: "" },
       { src: flappy3, caption: "DE0 board", summary: "" },
-      { src: flappy2, caption: "schema of logic", summary: "" },
+      { src: flappy2, caption: "Schema of logic", summary: "" },
     ],
   title: "Flappy Box",
   collab: "In collaboration with May Sribunwongsa and Jordan Green",
@@ -288,12 +316,12 @@ const ProjectData = [
 {
     ProjectId: "pokedex",
     images: [
-      { src: pokedex1, caption: "logic/sign up screen", summary: "" },
-      { src: pokemon1, caption: "landing page", summary: "" },
-      { src: pokemon2, caption: "viewing a pokemon (politoad)", summary: "" },
-      { src: pokemon3, caption: "viewing a favourited pokemon", summary: "" },
-      { src: pokemon4, caption: "viewing a pokemon (espeon)", summary: "" },
-      { src: pokemon5, caption: "favourites list of other accounts' favourites", summary: "" },
+      { src: pokedex1, caption: "Logic/sign up screen", summary: "" },
+      { src: pokemon1, caption: "Landing page", summary: "" },
+      { src: pokemon2, caption: "Viewing a pokemon (politoad)", summary: "" },
+      { src: pokemon3, caption: "Viewing a favourited pokemon", summary: "" },
+      { src: pokemon4, caption: "Viewing a pokemon (espeon)", summary: "" },
+      { src: pokemon5, caption: "Favourites list of other accounts' favourites", summary: "" },
     ],
     title: "Pokedex",
     technologies: "Technologies: Mongo DB, Express, React, Node",
@@ -312,11 +340,11 @@ const ProjectData = [
   {
     ProjectId: "designboard",
     images: [
-      { src: board1, caption: "app design", summary: "" },
-      { src: board5, caption: "full 3 panel board", summary: "" },
-      { src: board2, caption: "graphics of analytics", summary: "" },
-      { src: board3, caption: "magazine design", summary: "" },
-      { src: board4, caption: "website design", summary: "" },
+      { src: board1, caption: "App design", summary: "" },
+      { src: board5, caption: "Full 3 panel board", summary: "" },
+      { src: board2, caption: "Graphics of analytics", summary: "" },
+      { src: board3, caption: "Magazine design", summary: "" },
+      { src: board4, caption: "Website design", summary: "" },
     ],
     title: "Scholarship Design Board",
     technologies: "Technologies: Adobe Illustrator",
@@ -336,8 +364,8 @@ const ProjectData = [
     ProjectId: "objectdetection",
     video: objectvid,
     images: [
-      { src: ml1, caption: "multiple object detection", summary: "" },
-      { src: ml2, caption: "snorlax", summary: "" },
+      { src: ml1, caption: "Multiple object detection", summary: "" },
+      { src: ml2, caption: "Snorlax", summary: "" },
     ],
     title: "Object Detection",
     technologies: "Technologies: CocoSSD, p5.js",
@@ -353,10 +381,10 @@ const ProjectData = [
   {
     ProjectId: "bootleg-spotify",
     images: [
-      { src: app1, caption: "landing page", summary: "" },
-      { src: app2, caption: "artist list", summary: "" },
-      { src: app3, caption: "selected artist and their album (frank)", summary: "" },
-      { src: app4, caption: "selected artist and their album (ariana)", summary: "" },
+      { src: app1, caption: "Landing page", summary: "" },
+      { src: app2, caption: "Artist list", summary: "" },
+      { src: app3, caption: "Selected artist and their album (frank)", summary: "" },
+      { src: app4, caption: "Selected artist and their album (ariana)", summary: "" },
     ],
     title: "Bootleg Spotify",
     collab: "In collaboration with Clinton Philathong",
@@ -373,9 +401,9 @@ const ProjectData = [
   {
     ProjectId: "mowynndotcom",
     images: [
-      { src: page1, caption: "landing page", summary: "" },
-      { src: page2, caption: "projects list", summary: "" },
-      { src: page3, caption: "project information", summary: "" },
+      { src: page1, caption: "Landing page", summary: "" },
+      { src: page2, caption: "Projects list", summary: "" },
+      { src: page3, caption: "Project information", summary: "" },
     ],
     title: "mowynn.com",
     technologies: "Technologies: Html, css",

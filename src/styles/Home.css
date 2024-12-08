@@ -106,6 +106,7 @@
   padding: 0.5vh 10px; /* Adjusted padding to avoid excess space */
   color: var(--background-color) !important; /* Text color */
   width:fit-content;
+  cursor: pointer;
 }
 
 
@@ -118,8 +119,8 @@
   position: relative;
   bottom: 0px; 
   font-family: 'Times Now Light';
-  font-size: 1.2rem;
-
+  font-size: 2rem;
+  margin-bottom: 0;
 }
 
 
@@ -148,7 +149,7 @@
   font-family: 'Times Now Light';
   font-size: 1.4rem;
   margin-top:0;
-  padding-top:0;
+  padding-top:2vh;
   margin-bottom:0;
 }
 
@@ -162,8 +163,8 @@
   font-family: 'Times Now Light';
   font-size: 0.9rem;
   margin-top:0;
-  padding-top:4vh;
-  padding-bottom: 4vh;
+  padding-top:1vh;
+  margin-bottom:1.5vh;
 }
 
 .about-caption {
@@ -176,18 +177,15 @@
   font-family: 'Times Now Light';
   font-size: 0.9rem;
   margin-top:0;
-  opacity: 60%;
-  padding-top:1vh;
+  padding-top:4vh;
 }
 
 
 .ardemo{
-  max-width: 100%;
+  width: 15vw;
   height: auto; /* Ensures the height scales proportionally */
   position:relative;
-  margin: 0 auto; 
-  padding-bottom:0; 
-  border-radius: 12px;
+  border-radius: 5px;
 }
 
 
@@ -203,25 +201,23 @@
 }
 
 .argraphic {
-  width: 30vw;
-  max-width: 100%;
+  width: 15vw;
   height: auto; /* Ensures the height scales proportionally */
   position: relative;
-  padding-top: 5vh;
   padding-bottom: 0;
   margin: 0 auto; 
 }
 
 
 .arreality{
-  max-width: 100%;
+  width: 15vw;
   position:relative;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 
 .arposter{
-  max-width: 100%;
+  width: 15vw;
   position:relative;
   align-items: center;
   border-radius: 12px;
@@ -230,11 +226,10 @@
 
 
 .about-video{
-  max-width: 100%;
+  width: 15vw;
   position:relative;
   align-items: center;
-  border-radius: 12px;
-  margin-top: 4vh;
+  border-radius: 5px;
 }
 
 .about-title-box {
@@ -445,9 +440,9 @@
   transition: opacity 2s ease-in-out;
   background: transparent;
   /* padding-left: 0vw; */
-  padding-right: 10vw; 
+  padding-right: 15vw; 
   flex: 1; 
-  top: 8vh;
+  top: 4vh;
 }
 
 
@@ -457,15 +452,12 @@
   z-index: 0;
   opacity: 0;
   top: 2vh;
+  transition: opacity 1s ease-in-out;
 }
 
 .home-details-inner::after {
   content: '';
   background: linear-gradient(to bottom, var(--background-color), transparent) !important;
-}
-
-.home-details-inner.fade-enter {
-  opacity: 1;
 }
 
 .home-details-inner.fade-enter {
@@ -497,6 +489,18 @@
 
   font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, arial, sans-serif !important;
 }
+
+.image-array-columns {
+  display:flex;
+  position:relative;
+  flex-direction: row; /* Arrange items in a column */
+  align-items: flex-start; /* Align items to the left */
+  justify-content:flex-start; /* Spread items evenly */
+  gap: 10px; /* Optional: Add space between items */
+  flex-wrap:wrap;
+  margin-top:2vh;
+}
+
 
 @keyframes text-shadow-fade-in {
   from {

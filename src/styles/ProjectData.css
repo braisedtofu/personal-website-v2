@@ -40,7 +40,7 @@
     flex-direction: column;
     display: flex;
     opacity: 0;
-    margin: 0 auto;
+    padding-left: 0vw;
     transition: opacity 2s ease-in-out;
     bottom: 6vh; /* Add bottom: 0 to position it at the bottom of the page */
   }
@@ -71,9 +71,9 @@
     align-items: flex-start; /* Align items to the left */
     position: relative;
     z-index: 99999; /* Adjust the z-index as needed */
-    padding-top:4%;
+    padding-top:1%;
     overflow-y:hidden;
-    width:50vw; 
+    width:60.2vw; 
     margin: 0 auto;
   }
 
@@ -93,7 +93,7 @@
   
   .image-container {
     margin-top:0px;
-    width: 50vw;
+    width: 60.2vw;
     max-width: 100%;
     margin: 0 auto;
     margin-bottom:5%;
@@ -102,9 +102,8 @@
   .image-container img,
   .image-container video {
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     display: block;
-    box-shadow: 0 0 10px 2px var(--box-shadow);
   }
 
 
@@ -129,7 +128,7 @@
     font-family: 'Times Now Light';
     font-size: 2rem;
     top:0; 
-    margin-top:0; 
+    margin-top:2vh; 
     margin-bottom: 0px;
   }
 
@@ -156,20 +155,30 @@
 
 
   .return{
-  border: none;
-  border-color: transparent;
-  background-color: transparent;
-  color: black;
-  font-size: 15px;
-  margin-bottom:0; 
-  padding-left:0 !important; 
-  padding-right: 0 !important;
-  z-index: 99999;
-  outline:none; 
-  padding-bottom:5px; 
-  font-family: 'Times Now Light';
-  cursor: pointer; 
-  }
+    display: inline; /* Ensures the background only spans the length of the text */
+    justify-content: right;
+    user-select: none;
+    background-color: transparent !important; /* Background color */
+    border-radius: 20px; /* Rounded corners */
+    text-align: right;
+    position: relative;
+    font-family: 'Times Now Light';
+    font-size: 0.9rem;
+    margin-top: 0;
+    border: 0.1rem solid var(--main-color) !important;
+    padding: 0.5vh 10px; /* Adjusted padding to avoid excess space */
+    color: var(--main-color) !important; /* Text color */
+    width:fit-content;
+    cursor: pointer;
+    margin-bottom: 1vh;
+    }
+
+    .return-box {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      padding-bottom: 1vh;
+    }
   
   .project-videos{
     max-width: 100%;

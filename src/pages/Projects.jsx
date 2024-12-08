@@ -20,6 +20,7 @@ import julia1 from '../assets/juliafractals/julia1.png';
 import bootleg1 from '../assets/bootlegspotify/app1.png';
 import ripple1 from '../assets/ripples/ripple1.png';
 import soundsihear from '../assets/soundsihear/soundsihear2.png';
+import ARdemo from '../assets/HomeImages/ARdemo.png';
 
 export default function Projects() {
     const { isNightMode, color, backgroundColor, boxShadow, emoji, changeEmojis, isGridView, toggleView } = useContext(NightModeContext);
@@ -35,7 +36,7 @@ export default function Projects() {
     // Preload function
     const preloadAssets = () => {
         const images = [
-            village, predict4, ml1, dogtitle, line1,
+            ARdemo, village, predict4, ml1, dogtitle, line1,
             circle1, trebuchet1, box3, pokedex1,
             board1, wynn1, julia1, bootleg1, ripple1,
             soundsihear
@@ -52,6 +53,7 @@ export default function Projects() {
     }, []);
 
     const dataList = [
+        { image: ARdemo, name: 'artangible', caption: 'Tangible AR for data structure learning', subcaption: 'Unity, C#, AR Foundation, OpenCV, XCode', summary: 'A tangible augmentd reality tool to help teach students data structure concepts.' },
         { image: village, name: 'pikatune', caption: 'Pikatune', subcaption: 'Mongo DB, Express, React, Node, Spotify API', summary: 'A Pokémon-themed playlist generator game. Have gym battles, add friends, customise your playlist, and level up!' },
         { image: soundsihear, name: 'soundsihear', caption: 'sounds i hear', subcaption: 'Mongo DB, Express, React, Node', summary: 'A lyric bank that shows all my favourite song lines.' },
         { image: dogtitle, name: 'bodypawsitive', caption: 'Body Pawsitive', subcaption: 'Mongo DB, Express, React, Node, Raspberry Pico W, C/C++', summary: 'A smart scale system designed from scratch to weigh and log the weights of our furry friends, all managed through a web application.' },

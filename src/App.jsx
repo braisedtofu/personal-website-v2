@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import NightModeContext from './NightModeContext';
 
 function App() {
+  
   const { isNightMode, color, backgroundColor, boxShadow } = useContext(NightModeContext);
 
   return (

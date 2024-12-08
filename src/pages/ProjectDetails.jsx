@@ -64,10 +64,12 @@ const ProjectDetails = () => {
       <Navigation />
       <div className={`project-details-inner fade ${isPageLoaded ? 'fade-enter' : 'fade-enter-active'}`}>
         <div className="project-information">
-          <button className="return" onClick={handleProjectsClick}>(return)</button>
+          <div className="return-box">
+          <button className="return" onClick={handleProjectsClick}>return</button>
+          </div>
           <div className="project-navigation">
-            <button className="return" onClick={handlePreviousClick}>previous</button>
-            <button className="return" onClick={handleNextClick}>next</button>
+            <button className="background-text-highlight" onClick={handlePreviousClick}>previous</button>
+            <button className="background-text-highlight" onClick={handleNextClick}>next</button>
           </div>
           <p className="project-title">{project.title}</p>
           <p className="project-technologies">{project.technologies}</p>
