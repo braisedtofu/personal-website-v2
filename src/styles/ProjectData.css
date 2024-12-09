@@ -251,13 +251,22 @@
 
     .image-container img,
     .image-container video {
-      border-radius: 10px;
+      border-radius: 5px;
       display: block;
-      box-shadow: 0 0 10px 2px var(--box-shadow);
     }  
     .grid-item {
       max-width: 100%;
     }
     
+    .project-title{
+      margin-top:0;
+    }
+    .return-box{
+      padding-bottom:0;
+    }
+
+    .grid-item{
+      padding-top:0;
+    }
   
   }

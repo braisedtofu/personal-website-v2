@@ -83,6 +83,11 @@
     padding-bottom: 4vh;
   }
 
+  .list-container{
+    width: 88vw;
+    margin:0 auto;
+
+  }
   .list-row::before {
     content: ""; /* Remove numbering in mobile view */
   }

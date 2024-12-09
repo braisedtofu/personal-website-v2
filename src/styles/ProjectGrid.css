@@ -190,15 +190,19 @@
     font-size: 10px;
     position: relative;
     cursor: pointer;
-    width:20rem;
-    height: 10rem;
-    margin-bottom:5rem;
+    width:23rem;
+    height: 12rem;
+    margin-bottom:3rem;
     background: transparent;
     background-color: transparent;
   }
 
   .grid-list{
     padding-bottom: 5vh;
+  }
+
+  .grid-container {
+    margin:0;
   }
 
 }
