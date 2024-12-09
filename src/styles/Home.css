@@ -103,11 +103,31 @@
   font-family: 'Times Now Light';
   font-size: 0.9rem;
   margin-top: 0;
+  margin-bottom: 1.5vh;
   padding: 0.5vh 10px; /* Adjusted padding to avoid excess space */
   color: var(--background-color) !important; /* Text color */
   width:fit-content;
   cursor: pointer;
 }
+
+.see-more {
+  display: inline-block; /* Ensures the background only spans the length of the text */
+  justify-content: left;
+  user-select: none;
+  background-color: var(--main-color) !important; /* Background color */
+  border-radius: 20px; /* Rounded corners */
+  text-align: left;
+  position: relative;
+  font-family: 'Times Now Light';
+  font-size: 0.9rem;
+  margin-top: 0;
+  padding: 0.5vh 10px; /* Adjusted padding to avoid excess space */
+  margin-bottom:6vh;
+  color: var(--background-color) !important; /* Text color */
+  width:fit-content;
+  cursor: pointer;
+}
+
 
 
 .about-title {
@@ -165,6 +185,7 @@
   margin-top:0;
   padding-top:1vh;
   margin-bottom:1.5vh;
+  opacity: 70%;
 }
 
 .about-caption {
@@ -178,6 +199,7 @@
   font-size: 0.9rem;
   margin-top:0;
   padding-top:4vh;
+  margin-bottom: 1vh;
 }
 
 
@@ -498,7 +520,6 @@
   justify-content:flex-start; /* Spread items evenly */
   gap: 10px; /* Optional: Add space between items */
   flex-wrap:wrap;
-  margin-top:2vh;
 }
 
 
@@ -528,8 +549,18 @@
     top:1vh;
     justify-content: center;
     margin:0 auto;
-    margin-left:16vw;
+    margin-left:14vw;
   }
+
+  .about-caption {
+    padding-top: 1vh; 
+  }
+
+  .about-title{
+    font-size: 1.2rem;
+    margin-bottom: 1vh;
+  }
+
 
   /* width: 17vw;
   display: flex;
@@ -547,7 +578,20 @@
   .home-details-inner {
     flex-direction: column;
   }
-
+  
+  .ardemo{
+    width:20vw;
+  }
+  .arreality{
+    width:20vw;
+  }
+  .see-more{
+    margin-top: 0vh;
+    margin-bottom:4vh;
+  }
+  .about-subtitle{
+    padding-top:1vh;
+  }
 
   .argraphic {
     width: 60vw;

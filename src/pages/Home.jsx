@@ -189,7 +189,7 @@ export default function Home() {
                       <p className="about-body"> 
                       We get it - data structures is hard to understand, especially when reading off a textbook. That's why we created an augmented reality (AR) tool. This tool aims to reinforce students' mental models and facilitate their comprehension of data structure concepts by leveraging mobile AR. It allows users to interact with real-world representations of data structures while viewing virtual, abstract information overlaid on top. 
                       </p>
-                      <p    className="background-text-highlight" onClick={handleTangibleArClick}> 
+                      <p    className="see-more" onClick={handleTangibleArClick}> 
                         See more
                       </p>
 
@@ -215,7 +215,7 @@ export default function Home() {
                       Do you think you’ve caught them all? Well, YOU HAVEN’T! There are still so many tunes to catch out there. Pikatune is a Pokémon-themed playlist generator featuring quiz type pokemon battles and a level up system. 
                       This game was built using a MERN stack, and I worked on front-end engineering and UX/UI design (heavily inspired by exisitng Pokémon games).
                       </p>
-                      <p    className="background-text-highlight" onClick={handlePikatuneClick}> 
+                      <p    className="see-more" onClick={handlePikatuneClick}> 
                         See more
                       </p>
 
