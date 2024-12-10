@@ -13,6 +13,12 @@
   src: url('../fonts/Untitled-Sans-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'USM';
+  src: url('../fonts/UntitledSans-Medium.otf') format('opentype');
+}
+
+
 .container{
   display:flex;
   flex-direction: column;
@@ -195,11 +201,11 @@
   align-items: left;
   text-align:left;
   position: relative;
-  font-family: 'Times Now Light';
+  font-family: 'USM' !important;
   font-size: 0.9rem;
   margin-top:0;
-  padding-top:4vh;
-  margin-bottom: 1vh;
+  padding-top:5vh;
+  margin-bottom: 3.5vh;
 }
 
 
@@ -539,7 +545,7 @@
   .smiski4{
     z-index: 99999999 !important;
     background: transparent !important;
-    width:60vw;
+    width:50vw;
   }
   .smiski-images{
     justify-content: center;
@@ -549,11 +555,11 @@
     top:1vh;
     justify-content: center;
     margin:0 auto;
-    margin-left:14vw;
   }
 
   .about-caption {
-    padding-top: 1vh; 
+    padding-top: 2vh; 
+    margin-bottom:2vh;
   }
 
   .about-title{
@@ -586,11 +592,11 @@
     width:20vw;
   }
   .see-more{
-    margin-top: 0vh;
-    margin-bottom:4vh;
+    margin-top: 0.5vh;
+    margin-bottom:5vh;
   }
   .about-subtitle{
-    padding-top:1vh;
+    padding-top:1.5vh;
   }
 
   .argraphic {
