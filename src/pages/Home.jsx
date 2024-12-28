@@ -7,16 +7,10 @@ import NightModeContext from '../NightModeContext';
 import ardemo from '../assets/HomeImages/ARdemo.webp';
 import arreality from '../assets/HomeImages/arreality.webp';
 import arremovetail from '../assets/HomeImages/arremovetail.webp';
-import battle1 from '../assets/pikatune/battle1.png';
 import battle3 from '../assets/pikatune/battle3.png';
-import building3 from '../assets/pikatune/building3.png';
-import building4 from '../assets/pikatune/building4.png';
-import pikatune1 from '../assets/pikatune/pikatune1.png';
 import pikatune2 from '../assets/pikatune/pikatune2.png';
 import village from '../assets/pikatune/village.png';
 import playlist from '../assets/pikatune/playlist.png';
-import generate1 from '../assets/pikatune/generate1.png';
-import generate2 from '../assets/pikatune/generate2.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 
@@ -174,14 +168,9 @@ export default function Home() {
                       <p className="about-caption"> 
                       Recent projects
                       </p>
-                      {/* <img ref={graphicRef} className='argraphic'  src={argraphic} draggable="false" id="draggable-image"></img> */}
                       <div ref={realityRef}  className="image-array-columns">
                         <img className='ardemo'  src={ardemo} draggable="false" id="draggable-image"></img>
                         <img  className='arreality'  src={arreality} draggable="false" id="draggable-image"></img>
-                        <img  className='arreality'  src={arremovetail} draggable="false" id="draggable-image"></img>
-                        {/* <video className="about-video" playsInline autoPlay muted loop>
-                            <source src={arremovetail} type="video/webp" />
-                          </video> */}
                         </div>
                         <p className="about-subtitle"> 
                       Tangible AR for data structure learning
@@ -194,23 +183,14 @@ export default function Home() {
                       </p>
 
                       <div ref={demoRef} className="image-array-columns">
-                        <img  className='ardemo'  src={pikatune1} draggable="false" id="draggable-image"></img>
                         <img  className='ardemo'  src={pikatune2} draggable="false" id="draggable-image"></img>
                         <img  className='ardemo'  src={village} draggable="false" id="draggable-image"></img>
                         <img  className='ardemo'  src={playlist} draggable="false" id="draggable-image"></img>
-                        <img  className='ardemo'  src={building3} draggable="false" id="draggable-image"></img>
-                        <img  className='ardemo'  src={building4} draggable="false" id="draggable-image"></img>
-                        <img  className='ardemo'  src={battle1} draggable="false" id="draggable-image"></img>
                         <img  className='ardemo'  src={battle3} draggable="false" id="draggable-image"></img>
-                        <img  className='ardemo'  src={generate1} draggable="false" id="draggable-image"></img>
-                        <img  className='ardemo'  src={generate2} draggable="false" id="draggable-image"></img>
                         </div>
                         <p className="about-subtitle"> 
                       Pikatune
                       </p>
-                      {/* <p className="about-caption"> 
-                      in collaboration with danika chhour
-                      </p> */}
                       <p className="about-body"> 
                       Do you think you’ve caught them all? Well, YOU HAVEN’T! There are still so many tunes to catch out there. Pikatune is a Pokémon-themed playlist generator featuring quiz type pokemon battles and a level up system. 
                       This game was built using a MERN stack, and I worked on front-end engineering and UX/UI design (heavily inspired by exisitng Pokémon games).
