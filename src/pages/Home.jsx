@@ -199,6 +199,7 @@ export default function Home() {
                         See more
                       </p>
 
+                      <button onClick={handleEmojiClick} className="footer">site from scratch by wynn</button>
                       <button onClick={handleEmojiClick} className="emoji">{emoji}</button>
             </div>
           </div>

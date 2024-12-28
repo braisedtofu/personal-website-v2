@@ -194,6 +194,32 @@
   opacity: 70%;
 }
 
+.footer{
+  font-family: 'Times Now Light';
+  font-size: 0.9rem;
+  margin-top:0;
+  height:fit-content;
+  margin-bottom: 0;
+  padding-bottom: 2px;
+  padding-top: 0;
+  opacity: 60%;
+}
+
+
+.emoji{
+  font-family: 'Times Now Light';
+  font-size: 0.9rem;
+  margin-top:0;
+  width: 80%;
+  position:relative;
+  top:0;
+  height:6vh;
+  margin-bottom: 0;
+  padding-bottom: 3vh;
+  padding-top: 0;
+  opacity: 60%;
+}
+
 .about-caption {
   justify-content: left;
   user-select: none;
