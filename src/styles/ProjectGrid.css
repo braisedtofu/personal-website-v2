@@ -70,7 +70,6 @@
     color: var(--main-color);
     font-size: 0.8rem;
     background-color: transparent;
-    cursor: pointer;
     width: 10rem; 
     height: 5vh;
     text-align: center;
@@ -168,7 +167,6 @@
   font-size: 0.8rem;
   outline: none; 
   font-family: 'Times Now Light';
-  cursor: pointer; 
   opacity: 1;
   left: 0;
   display: flex; 
