@@ -49,3 +49,10 @@
     z-index: 99999999999;
   }
   
+  @media only screen and (max-width: 768px) {
+    .custom-cursor {
+      width: 0;
+      height: 0;
+    }
+  
+  }

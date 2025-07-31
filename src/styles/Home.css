@@ -245,7 +245,7 @@
 
 
 .ardemo{
-  width: 15vw;
+  width: 25vw;
   height: auto; /* Ensures the height scales proportionally */
   position:relative;
   border-radius: 5px;
@@ -273,7 +273,7 @@
 
 
 .arreality{
-  width: 15vw;
+  width: 25vw;
   position:relative;
   align-items: center;
   border-radius: 5px;
@@ -624,10 +624,10 @@
   }
   
   .ardemo{
-    width:20vw;
+    width:40vw;
   }
   .arreality{
-    width:20vw;
+    width:40vw;
   }
   .see-more{
     margin-top: 0.5vh;
