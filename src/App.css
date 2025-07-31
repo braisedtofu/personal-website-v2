@@ -20,9 +20,19 @@
 body{
   margin:0;
   background-color: var(--background-color);
+  cursor: none;
 }
 
 p{
   background-color: transparent !important;
 }
+
+button,
+a,
+input,
+textarea,
+select {
+  cursor: none !important;
+}
+
 

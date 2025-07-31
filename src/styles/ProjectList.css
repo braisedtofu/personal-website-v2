@@ -11,6 +11,7 @@
   padding: 1.2rem;
   box-sizing: border-box;
   padding: 0;
+  margin-top: 2.5vh;
 }
 
 /* Each row contains the title, tech info, and caption */
@@ -19,7 +20,6 @@
   flex-direction: row; /* Default row layout */
   justify-content: space-between; /* Spread out content across the row */
   padding: 0.08rem 0; /* Add space between rows */
-  cursor: pointer;
   transition: opacity 0.2s ease;
   position: relative; /* Important for hover */
   opacity: 0.5; /* Default opacity set to 50% */

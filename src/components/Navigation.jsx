@@ -84,7 +84,7 @@ export default function Navigation() {
     };
 
     const handleProjectsClick = () => {
-        navigate('/projects'); // Navigate to the projects page
+        navigate('/creativework'); // Navigate to the projects page
     };
     
     const handleHomeClick = () => {
@@ -122,13 +122,13 @@ export default function Navigation() {
             <div className="top-buttons">
                 <button className={`wynnmo ${location.pathname === '/' ? 'unclicked' : ''}`} onClick={handleHomeClick}>Wynn Mo</button>
                 <button className={`about ${location.pathname === '/' ? 'unclicked' : ''}`} onClick={handleHomeClick}>About</button>
-                <button className={`projects ${location.pathname.startsWith('/projects') ? 'unclicked' : ''}`} onClick={handleProjectsClick}>Projects</button>
+                <button className={`projects ${location.pathname.startsWith('/creativework') ? 'unclicked' : ''}`} onClick={handleProjectsClick}>Creative Work</button>
                 <button onClick={handleColorChange} className="projects">Colour</button>
                 <button className="projects" onClick={toggleNightMode}>
                     {isNightMode ? 'Night' + '\u00A0' + '\u00A0' : 'Day'}
                 </button>
                 {/* Conditionally render grid/list view toggle button */}
-                {location.pathname.startsWith('/projects') && (
+                {location.pathname.startsWith('/creativework') && (
                     <button className="projects" onClick={toggleView}>
                         {isGridView ? 'Grid' : 'List'}
                     </button>

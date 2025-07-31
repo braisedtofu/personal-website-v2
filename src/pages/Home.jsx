@@ -37,12 +37,12 @@ export default function Home() {
     const smiskiImages = [image1, image2, image3, image4];
 
     const handleTangibleArClick = () => {
-      navigate('/projects/artangible'); // Navigate to the projects page
+      navigate('/creativework/artangible'); // Navigate to the projects page
   };
   
 
   const handlePikatuneClick = () => {
-    navigate('/projects/pikatune'); // Navigate to the projects page
+    navigate('/creativework/pikatune'); // Navigate to the projects page
 };
 
 
@@ -105,7 +105,7 @@ export default function Home() {
       const fadeUpAnimation = (target) => {
         gsap.fromTo(
           target,
-          { opacity: 0, y: 50 },
+          { opacity: 0 },
           {
             opacity: 1,
             y: 0,
@@ -147,7 +147,7 @@ export default function Home() {
           <img className='smiski2'   src={currentSmiski}
             alt="Smiski"
             onClick={handleSmiskiClick}
-            style={{ cursor: "pointer" }} ></img>
+           ></img>
         </div>    
           <div className={`home-details-container`}>
 
@@ -156,19 +156,19 @@ export default function Home() {
                       I love to solve challenging human-centered problems and creating things that bring people joy.
                       In my spare time, I enjoy cafe hopping, collecting Smiskis, and working on creative projects.                        
                       </p>
-                      <p    className="about-caption"> 
+                      {/* <p    className="about-caption"> 
                         Connect with me
                       </p>
 
                         <p onClick={handleArenaClick} className="background-text-highlight">are.na</p>
                         <p onClick={handleInstagramClick} className="background-text-highlight">instagram</p>
                         <p onClick={handleGithubClick} className="background-text-highlight">github</p>
-                        <p onClick={handleLinkedinClick} className="background-text-highlight">linkedin</p>
+                        <p onClick={handleLinkedinClick} className="background-text-highlight">linkedin</p> */}
 
                       <p className="about-caption"> 
-                      Recent projects
+                      Recent creations
                       </p>
-                      <div ref={realityRef}  className="image-array-columns">
+                      <div className="image-array-columns">
                         <img className='ardemo'  src={ardemo} draggable="false" id="draggable-image"></img>
                         <img  className='arreality'  src={arreality} draggable="false" id="draggable-image"></img>
                         </div>
@@ -182,7 +182,7 @@ export default function Home() {
                         See more
                       </p>
 
-                      <div ref={demoRef} className="image-array-columns">
+                      <div className="image-array-columns">
                         <img  className='ardemo'  src={pikatune2} draggable="false" id="draggable-image"></img>
                         <img  className='ardemo'  src={village} draggable="false" id="draggable-image"></img>
                         <img  className='ardemo'  src={playlist} draggable="false" id="draggable-image"></img>

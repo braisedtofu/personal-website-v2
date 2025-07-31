@@ -8,7 +8,7 @@ const ProjectGrid = ({ data }) => {
   const navigate = useNavigate();
 
   const handleProjectClick = (name) => {
-    navigate(`/projects/${encodeURIComponent(name)}`); // Navigate to the projects page with the project name in the URL
+    navigate(`/creativework/${encodeURIComponent(name)}`); // Navigate to the projects page with the project name in the URL
     };
 
     return (

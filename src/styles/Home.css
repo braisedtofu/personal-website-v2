@@ -116,6 +116,10 @@
   cursor: pointer;
 }
 
+.background-text-highlight:hover{
+  opacity: 0.5;
+}
+
 .see-more {
   display: inline-block; /* Ensures the background only spans the length of the text */
   justify-content: left;
@@ -131,8 +135,13 @@
   margin-bottom:6vh;
   color: var(--background-color) !important; /* Text color */
   width:fit-content;
-  cursor: pointer;
+
 }
+
+.see-more:hover {
+  opacity: 0.5;
+}
+
 
 
 
@@ -228,7 +237,7 @@
   text-align:left;
   position: relative;
   font-family: 'USM' !important;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-top:0;
   padding-top:5vh;
   margin-bottom: 2vh;
@@ -501,11 +510,12 @@
 
 
 .home-details-inner {
-  position: relative;
+  position: sticky;
   display: flex;
   z-index: 0;
   opacity: 0;
-  top: 2vh;
+  margin-top: -10vh;
+  padding-top: 10vh;
   transition: opacity 1s ease-in-out;
 }
 
@@ -529,13 +539,15 @@
 }
 
 .smiski-images{
-  width: 20vw;
+  margin-right: 1vw;
+  margin-left:5vw;
+  top: 12vh;
   display: flex;
-  top: 10vh;
   height: max-content;
   position: sticky;
   background: transparent !important;
   z-index: 999999;
+
 }
 
 

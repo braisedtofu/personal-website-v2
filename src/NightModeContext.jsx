@@ -11,6 +11,8 @@ import Smiski4NightGray from './assets/HomeImages/Smiski4NightGray.png';
 
 const NightModeContext = createContext();
 
+import CustomCursor from './CustomCursor'; 
+
 export function NightModeProvider({ children }) {
   const [isNightMode, setIsNightMode] = useState(false);
   const [color, setColor] = useState('#104BA6');

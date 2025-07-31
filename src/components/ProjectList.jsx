@@ -7,7 +7,7 @@ const ProjectList = ({ data }) => {
   const navigate = useNavigate();
 
   const handleProjectClick = (name) => {
-    navigate(`/projects/${encodeURIComponent(name)}`);
+    navigate(`/creativework/${encodeURIComponent(name)}`);
   };
 
   const handleMouseEnter = (image) => {

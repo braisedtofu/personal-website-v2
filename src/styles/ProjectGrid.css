@@ -43,7 +43,6 @@
     align-items: flex-start;
     object-fit: cover;
     margin-top:0;
-    cursor: pointer;
     transition: opacity 0.2s ease; /* Add transition property */
   }
   
@@ -53,7 +52,6 @@
     font-family: 'Times Now Light';
     font-size: 10px;
     position: relative;
-    cursor: pointer;
     width:100%;
     height: 13rem;
     margin-bottom:2rem;
@@ -189,7 +187,6 @@
     font-family: 'Times Now Light';
     font-size: 10px;
     position: relative;
-    cursor: pointer;
     width:23rem;
     height: 12rem;
     margin-bottom:3rem;

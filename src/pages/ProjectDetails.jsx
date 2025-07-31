@@ -32,7 +32,7 @@ const ProjectDetails = () => {
 
   // Navigate to the project list
   const handleProjectsClick = () => {
-    navigate('/projects'); 
+    navigate('/creativework'); 
   };
 
   const handleNextClick = () => {
@@ -40,7 +40,7 @@ const ProjectDetails = () => {
     setTimeout(() => {
       const nextIndex = (currentIndex + 1) % ProjectData.length;
       const nextProjectId = ProjectData[nextIndex].ProjectId;
-      navigate(`/projects/${nextProjectId}`);
+      navigate(`/creativework/${nextProjectId}`);
       setIsPageLoaded(true); // Set fade-in after navigation
     }, 300); // Set timeout matching fade-out duration
   };
@@ -50,7 +50,7 @@ const ProjectDetails = () => {
     setTimeout(() => {
       const prevIndex = (currentIndex - 1 + ProjectData.length) % ProjectData.length;
       const prevProjectId = ProjectData[prevIndex].ProjectId;
-      navigate(`/projects/${prevProjectId}`);
+      navigate(`/creativework/${prevProjectId}`);
       setIsPageLoaded(true); // Set fade-in after navigation
     }, 300); // Set timeout matching fade-out duration
   };
