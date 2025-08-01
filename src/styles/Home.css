@@ -155,7 +155,8 @@
   bottom: 0px; 
   font-family: 'Times Now Light';
   font-size: 2rem;
-  margin-bottom: 0;
+  margin-bottom: 10vh;
+  margin-top:11.5vh;
 }
 
 
@@ -234,21 +235,21 @@
   user-select: none;
   background-color: transparent;
   align-items: left;
+  font-family: 'Times Now Light';
   text-align:left;
   position: relative;
-  font-family: 'USM' !important;
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-top:0;
   padding-top:5vh;
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
 }
 
 
 .ardemo{
-  width: 25vw;
+  width: 30vw;
   height: auto; /* Ensures the height scales proportionally */
   position:relative;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 
@@ -273,10 +274,10 @@
 
 
 .arreality{
-  width: 25vw;
+  width: 30vw;
   position:relative;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .arposter{
@@ -541,7 +542,8 @@
 .smiski-images{
   margin-right: 1vw;
   margin-left:5vw;
-  top: 12vh;
+  margin-top: 7vh;
+  top: 16vh;
   display: flex;
   height: max-content;
   position: sticky;
@@ -583,7 +585,7 @@
   .smiski4{
     z-index: 99999999 !important;
     background: transparent !important;
-    width:50vw;
+    width:80vw;
   }
   .smiski-images{
     justify-content: center;
@@ -596,12 +598,14 @@
   }
 
   .about-caption {
-    padding-top: 2vh; 
+    padding-top: 3vh; 
     margin-bottom:2vh;
+    font-size: 1.5rem;
   }
 
   .about-title{
-    font-size: 1.2rem;
+    margin-top: 1.5vh;
+    font-size: 0.7rem;
     margin-bottom: 1vh;
   }
 
@@ -624,10 +628,10 @@
   }
   
   .ardemo{
-    width:40vw;
+    width:89vw;
   }
   .arreality{
-    width:40vw;
+    width:89vw;
   }
   .see-more{
     margin-top: 0.5vh;

@@ -133,7 +133,7 @@
 
 .image-modal img {
   height: auto; /* Maintain aspect ratio */
-  border-radius: 5px;
+  border-radius: 15px;
   width: 70%;
   object-fit:contain;
   background: transparent;
