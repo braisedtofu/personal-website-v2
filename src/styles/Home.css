@@ -600,12 +600,24 @@
   .about-caption {
     padding-top: 3vh; 
     margin-bottom:2vh;
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .about-body {
+    font-size: 0rem;
+    padding:0;
+    margin:0;
+    margin-top: 0.5vh;
+  }
+
+  .about-subtitle{
+    font-size: 1rem;
+    margin-bottom: 0;
   }
 
   .about-title{
     margin-top: 1.5vh;
-    font-size: 0.7rem;
+    font-size: 1rem;
     margin-bottom: 1vh;
   }
 
@@ -629,13 +641,16 @@
   
   .ardemo{
     width:89vw;
+    margin-top:1vh;
   }
   .arreality{
     width:89vw;
+    margin-top:1vh;
   }
   .see-more{
     margin-top: 0.5vh;
     margin-bottom:5vh;
+    font-size: 0.8rem;
   }
   .about-subtitle{
     padding-top:1.5vh;
